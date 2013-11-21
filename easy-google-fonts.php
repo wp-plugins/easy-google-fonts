@@ -157,7 +157,7 @@ function tt_font_enqueue_admin_page_scripts() {
     wp_deregister_script( 'tag-it' );
     wp_register_script( 
         'tag-it', 
-        plugins_url( 'custom-theme-fonts' ) . '/js/tag-it.js', 
+        plugins_url( 'easy-google-fonts' ) . '/js/tag-it.js', 
         array('jquery', 'jquery-ui-core', 'jquery-ui-widget'), 
         '1.0',  
         false 
@@ -168,7 +168,7 @@ function tt_font_enqueue_admin_page_scripts() {
     wp_deregister_script( 'tt-font-admin' );
     wp_register_script( 
         'tt-font-admin', 
-        plugins_url( 'custom-theme-fonts' ) . '/js/tt-font-admin.js', 
+        plugins_url( 'easy-google-fonts' ) . '/js/tt-font-admin.js', 
         array('jquery', 'jquery-ui-core', 'jquery-ui-widget'), 
         '1.0', 
         false 
@@ -207,7 +207,7 @@ function tt_font_enqueue_admin_page_styles() {
     wp_deregister_style( 'font-admin-css' );
     wp_register_style( 
         'font-admin-css', 
-        plugins_url( 'custom-theme-fonts' ) . '/css/font-admin-page.css', 
+        plugins_url( 'easy-google-fonts' ) . '/css/font-admin-page.css', 
         null, 
         '1.0', 
         false 

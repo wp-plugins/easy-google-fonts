@@ -659,11 +659,11 @@ function tt_font_get_google_fonts() {
 				$json = $response['body'];
 
 			} else {
-				$json  = wp_remote_fopen( plugins_url( 'custom-theme-fonts' ) . '/includes/fonts/webfonts.json' );	
+				$json  = wp_remote_fopen( plugins_url( 'easy-google-fonts' ) . '/includes/fonts/webfonts.json' );	
 			}
 
 		} else {
-			$json  = wp_remote_fopen( plugins_url( 'custom-theme-fonts' ) . '/includes/fonts/webfonts.json' );
+			$json  = wp_remote_fopen( plugins_url( 'easy-google-fonts' ) . '/includes/fonts/webfonts.json' );
 		}
 
 

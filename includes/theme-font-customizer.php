@@ -43,7 +43,7 @@ function tt_font_customize_control_scripts() {
 	wp_deregister_script( 'tt-font-customizer-controls-js' );
 	wp_register_script( 
 		'tt-font-customizer-controls-js', 
-		plugins_url( 'custom-theme-fonts' ) . '/js/font-customizer-controls.js', 
+		plugins_url( 'easy-google-fonts' ) . '/js/font-customizer-controls.js', 
 		false, 
 		'1.0', 
 		false 
@@ -86,7 +86,7 @@ function tt_font_customize_live_preview_scripts() {
 	wp_deregister_script( 'tt-font-customizer-preview-js' );
 	wp_register_script( 
 		'tt-font-customizer-preview-js', 
-		plugins_url( 'custom-theme-fonts' ) . '/js/font-customizer-preview.js', 
+		plugins_url( 'easy-google-fonts' ) . '/js/font-customizer-preview.js', 
 		false, 
 		'1.0', 
 		false 
@@ -175,7 +175,7 @@ function tt_font_customize_preview_styles() {
 	// Load CSS to style custom customizer controls
 	wp_register_style( 
 		'tt-font-customizer-css', 
-		plugins_url( 'custom-theme-fonts' ) . '/css/font-customizer.css', 
+		plugins_url( 'easy-google-fonts' ) . '/css/font-customizer.css', 
 		false, 
 		1.0 
 	);
