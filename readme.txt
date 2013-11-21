@@ -1,7 +1,7 @@
 === Easy Google Fonts ===
 Contributors: sunny_johal
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=28M8NWPHVQNYU
-Tags: comments, spam
+Tags: WordPress Google Fonts Plugin, Google Webfonts, Google Fonts WordPress, Typography, Webfonts, WordPress Webfonts, Fonts, WordPress Fonts, Theme Fonts, Theme Fonts Plugin
 Requires at least: 3.6
 Tested up to: 3.7.1
 Stable tag: 1.0
@@ -12,6 +12,8 @@ Adds google fonts to any theme without coding and integrates with the WordPress 
 
 == Description ==
 For a quick video demo please view the [vimeo screencast](https://vimeo.com/77878709).
+
+[Follow us on twitter!](https://twitter.com/titaniumthemes)
 
 A simple and easy way to add custom google fonts to any WordPress theme without coding. This plugin integrates with the WordPress Customizer so you can preview google fonts on your site in realtime. It's compatible with any theme. 
 
