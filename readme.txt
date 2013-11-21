@@ -76,7 +76,7 @@ e.g.
 1. Download the plugin
 1. Unzip the package and upload to your /wp-content/plugins/ directory or upload in the admin area.
 1. Log into WordPress and navigate to the "Plugins" panel.
-1. Activate the plugin labeled "WordPress Google Fonts Plugin".
+1. Activate the plugin labeled "Easy Google Fonts".
 1. You're done!
 
 == Screenshots ==
