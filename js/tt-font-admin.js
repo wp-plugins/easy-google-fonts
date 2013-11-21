@@ -681,5 +681,3 @@ jQuery(document).ready(function($) {"use strict";
 	$(this).themeFontManager();
 
 });
-// AIzaSyAJDAK93hf12Xj2JdkPqf61FrgDUHRSWDo
-// AIzaSyBDWURF74wcg4knBMudqB5n4Z0uSVhvtS4
