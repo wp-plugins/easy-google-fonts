@@ -11,7 +11,7 @@
  * @subpackage  WordPress_Google_Fonts
  * @author      Sunny Johal - Titanium Themes
  * @copyright   Copyright (c) 2013, Titanium Themes
- * @version     1.0
+ * @version     1.1
  * 
  */
 
@@ -28,7 +28,7 @@
  * @param	callback	$sanitize_callback	Name of the callback function in which user input data are sanitized
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  */
 register_setting( 
 	'tt_font_theme_options', 	
@@ -53,7 +53,7 @@ register_setting(
  * @return	array	$input	Sanitized user-input data passed to the database
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  */
 /**
  * Performance Enhancement: Store Validation Function Call Count
@@ -200,7 +200,7 @@ function tt_font_options_validate( $input ) {
  * @global	array	Settings Page Tab definitions
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 global $tt_font_tabs;
@@ -221,7 +221,7 @@ $tt_font_tabs = tt_font_get_settings_page_tabs();
  * @param	string		$pageid		Name of the Settings page to which to add the section; passed to do_settings_sections()
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 foreach ( $tt_font_tabs as $tab ) {
@@ -253,7 +253,7 @@ foreach ( $tt_font_tabs as $tab ) {
  * @param	array	$section_passed	Array passed from add_settings_section()
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_sections_callback( $section_passed ) {
@@ -279,7 +279,7 @@ function tt_font_sections_callback( $section_passed ) {
  * @global	array	Theme options parameters
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 global $tt_font_parameters;

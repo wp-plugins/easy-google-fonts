@@ -31,7 +31,7 @@
  * @link 	http://codex.wordpress.org/Function_Reference/register_post_type 	register_post_type()
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_register_google_font_post_type() {
@@ -191,7 +191,7 @@ function tt_font_add_font_control( $control_name, $selectors = array(), $descrip
  * @return string $post_id The post ID of the updated/created post.
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_update_font_control( $control_id, $control_name, $selectors = array(), $description = '', $force_styles = false ) {
@@ -306,7 +306,7 @@ function tt_font_update_font_control( $control_id, $control_name, $selectors = a
  * @return boolean - true if there is another font control instance that has a matching $control_name
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_control_exists( $control_name, $control_exclusion_id ) {
@@ -427,7 +427,7 @@ function tt_font_get_all_font_controls( $orderby = 'title', $order = 'ASC' ) {
  * @return boolean $deleted       True if the control has been located and deleted, false otherwise.
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_delete_font_control( $control_id ) {
@@ -476,7 +476,7 @@ function tt_font_delete_font_control( $control_id ) {
  * @link http://codex.wordpress.org/Function_Reference/wp_reset_postdata    wp_reset_postdata()
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_delete_all_font_controls() {
@@ -519,7 +519,7 @@ function tt_font_delete_all_font_controls() {
  * @return array $fonts - All websafe fonts with their properties
  *
  * @since  1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_get_default_fonts() {
@@ -610,7 +610,7 @@ function tt_font_get_default_fonts() {
  * @return [type] [description]
  * 
  * @since  1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_get_google_fonts() {
@@ -718,7 +718,7 @@ function tt_font_get_google_fonts() {
  * @return string $api_key - The Google API Key
  * 
  * @since  1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_get_google_api_key() {
@@ -739,7 +739,7 @@ function tt_font_get_google_api_key() {
  * @return string $api_key - The Google API Key
  * 
  * @since  1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_set_google_api_key( $api_key ) {
@@ -758,7 +758,7 @@ function tt_font_set_google_api_key( $api_key ) {
  * @return string $api_key - The Google API Key
  * 
  * @since  1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_is_valid_google_api_key( $api_key = '' ) {
@@ -783,7 +783,7 @@ function tt_font_is_valid_google_api_key( $api_key = '' ) {
 }
 
 /**
- * Get Default Websafe Fonts
+ * Delete Default Websafe Fonts
  *
  * Defines a list of default websafe fonts and generates
  * an array with all of the necessary properties. Returns
@@ -796,7 +796,7 @@ function tt_font_is_valid_google_api_key( $api_key = '' ) {
  * @return array $fonts - All websafe fonts with their properties
  *
  * @since  1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_delete_font_transients() {
@@ -817,7 +817,7 @@ function tt_font_delete_font_transients() {
  * @return array $fonts - All websafe fonts with their properties
  *
  * @since  1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_get_font( $id ) {

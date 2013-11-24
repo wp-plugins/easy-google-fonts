@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Easy Google Fonts
  * Description: A simple and easy way to add google fonts to your WordPress theme.
- * Version: 1.0
+ * Version: 1.1
  * Author: Titanium Themes
  * Author URI: http://www.titaniumthemes.com
  * License: GPL2
@@ -19,7 +19,7 @@
  * @subpackage  WordPress_Google_Fonts
  * @author      Sunny Johal - Titanium Themes
  * @copyright   Copyright (c) 2013, Titanium Themes
- * @version     1.0
+ * @version     1.1
  * 
  */
 
@@ -34,7 +34,7 @@
  * @link    http://codex.wordpress.org/Function_Reference/plugin_dir_path            plugin_dir_path()
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_load_plugin_files() {
@@ -63,7 +63,7 @@ add_action( 'init', 'tt_font_load_plugin_files', 0 ); // High Priority Loading
  * @link    http://codex.wordpress.org/Function_Reference/add_action                add_action() 
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_add_admin_page() {
@@ -106,7 +106,7 @@ add_action( 'admin_menu', 'tt_font_add_admin_page' );
  * the html settings page for the google font generator.
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_output_admin_page() {
@@ -128,7 +128,7 @@ function tt_font_output_admin_page() {
  * @link    http://codex.wordpress.org/Function_Reference/plugins_url           plugins_url()
  * 
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  *
  */
 function tt_font_enqueue_admin_page_scripts() {
@@ -227,7 +227,7 @@ function tt_font_enqueue_admin_page_styles() {
  * @link    http://codex.wordpress.org/Function_Reference/add_help_tab            add_help_tab()
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_add_admin_page_help_tabs(){
@@ -317,7 +317,7 @@ function tt_font_add_admin_page_help_tabs(){
  * a hook by which to add their own screen options.
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_add_admin_page_options_tab() {

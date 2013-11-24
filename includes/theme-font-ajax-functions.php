@@ -9,7 +9,7 @@
  * @subpackage  WordPress_Google_Fonts
  * @author      Sunny Johal - Titanium Themes
  * @copyright   Copyright (c) 2013, Titanium Themes
- * @version     1.0
+ * @version     1.1
  * 
  */
 
@@ -30,7 +30,7 @@
  * @uses tt_font_get_font_control() 	defined in \includes\theme-font-functions.php
  * 
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_control_force_styles() {
@@ -74,7 +74,7 @@ add_action( 'wp_ajax_tt_font_control_force_styles', 'tt_font_control_force_style
  * @uses tt_font_update_font_control() defined in \includes\theme-font-functions.php
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_ajax_create_control_instance() {
@@ -137,7 +137,7 @@ add_action( 'wp_ajax_tt_font_create_control_instance', 'tt_font_ajax_create_cont
  * @uses tt_font_update_font_control() defined in \includes\theme-font-functions.php
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_ajax_update_control_instance() {
@@ -209,7 +209,7 @@ add_action( 'wp_ajax_tt_font_update_control_instance', 'tt_font_ajax_update_cont
  * @uses tt_font_delete_font_control() 	defined in \includes\theme-font-functions.php
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_ajax_delete_control_instance() {
@@ -244,7 +244,7 @@ add_action( 'wp_ajax_tt_font_delete_control_instance', 'tt_font_ajax_delete_cont
  * @uses tt_font_delete_all_font_controls() defined in \includes\theme-font-functions.php
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_ajax_delete_all_control_instances() {
@@ -277,7 +277,7 @@ add_action( 'wp_ajax_tt_font_delete_all_control_instances', 'tt_font_ajax_delete
  * @uses tt_font_set_google_api_key() defined in \includes\theme-font-functions.php
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_ajax_set_google_api_key() {
@@ -294,6 +294,9 @@ function tt_font_ajax_set_google_api_key() {
 		$apiKey = $_POST['apiKey'];
 		tt_font_set_google_api_key( $apiKey );
 	}
+
+	// Delete Font Transients
+	tt_font_delete_font_transients(); 
 
 	wp_die();	
 }

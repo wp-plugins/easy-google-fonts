@@ -26,7 +26,7 @@
  * 1. jQuery			( http://jquery.com/ )
  * 2. jQuery UI			( http://jqueryui.com/ )
  *
- * @version 1.0
+ * @version 1.1
  *
  * =============================================================== */
 /**============================================================
@@ -49,7 +49,7 @@
 		 * @uses object _wpCustomizeSettings  
 		 *
 		 * @since 1.0
-		 * @version 1.0
+		 * @version 1.1
 		 * 
 		 */
 		preview.init = function() {

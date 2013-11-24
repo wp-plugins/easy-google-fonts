@@ -30,7 +30,7 @@
  * @todo increase dependancy on JS in future releases.
  * 
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  *
  * =============================================================== */
 
@@ -50,7 +50,7 @@
 		 * @return void
 		 *
 		 * @since 1.0
-		 * @version 1.0
+		 * @version 1.1
 		 */
 		option.init = function() {
 			option.initToggle();
@@ -69,7 +69,7 @@
 		 * @return void
 		 *
 		 * @since 1.0
-		 * @version 1.0
+		 * @version 1.1
 		 */
 		option.initToggle = function() {
 
@@ -97,7 +97,7 @@
 		 * @return void
 		 *
 		 * @since 1.0
-		 * @version 1.0
+		 * @version 1.1
 		 */
 		option.initTabs = function() {
 			$( '.tt-font-control' ).each( function(e) {		
@@ -135,7 +135,7 @@
 		 * @return {[type]} [description]
 		 * 
 		 * @since 1.0
-		 * @version 1.0
+		 * @version 1.1
 		 */
 		option.initFontControls = function() {
 			
@@ -164,7 +164,7 @@
 		 * @return {void}
 		 * 
 		 * @since 1.0
-		 * @version 1.0
+		 * @version 1.1
 		 */
 		option.resetFontControl = function( setting ) {
 
@@ -203,7 +203,7 @@
 		 * @return void
 		 *
 		 * @since 1.0
-		 * @version 1.0
+		 * @version 1.1
 		 */
 		option.initFontSelection = function() {
 			$( '.tt-font-control' ).each( function(e) {
@@ -349,7 +349,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.0
-		 * @version 1.0
+		 * @version 1.1
 		 */		
 		option.initColorControls = function() {
 			$( '.tt-font-control' ).each( function(e) {
@@ -384,7 +384,7 @@
 		 * @return {json} fontObj - The font object if it exists
 		 *
 		 * @since 1.0
-		 * @version 1.0
+		 * @version 1.1
 		 */
 		option.getFontObject = function( setting, fontId, fontType ) {
 			var fontObj = {};
@@ -420,7 +420,7 @@
 		 * @return {json} fontControl - The font control object if it exists
 		 *
 		 * @since 1.0
-		 * @version 1.0
+		 * @version 1.1
 		 */
 		option.getFontControl = function( setting ) {
 			var fontControl = {};
@@ -447,7 +447,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.0
-		 * @version 1.0
+		 * @version 1.1
 		 */
 		option.initFontSliders = function( setting ) {
 
@@ -574,7 +574,7 @@
 		 * @return void
 		 *
 		 * @since 1.0
-		 * @version 1.0
+		 * @version 1.1
 		 */
 		option.resetFontSliders = function( setting ) {
 			var control     = $( '[data-font-control-id="' + setting + '"]' );
@@ -664,7 +664,7 @@
 		 * @return void
 		 *
 		 * @since 1.0
-		 * @version 1.0
+		 * @version 1.1
 		 */		
 		option.resetFontStyles = function( setting ) {
 			var control     = $( '[data-font-control-id="' + setting + '"]' );

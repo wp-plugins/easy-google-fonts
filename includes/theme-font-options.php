@@ -17,7 +17,7 @@
  * @subpackage  WordPress_Google_Fonts
  * @author      Sunny Johal - Titanium Themes
  * @copyright   Copyright (c) 2013, Titanium Themes
- * @version     1.0
+ * @version     1.1
  * 
  */
 
@@ -39,7 +39,7 @@ global $tt_font_options;
  * @link	http://planetozh.com/blog/2009/05/handling-plugins-options-in-wordpress-28-with-register_setting/	Ozh
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_register_options() {
@@ -60,7 +60,7 @@ add_action( 'admin_init', 'tt_font_register_options' );
  * @return	array	$defaults	associative array of option defaults
  * 
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_get_option_defaults() {
@@ -102,7 +102,7 @@ function tt_font_get_option_defaults() {
  * @return	array	$options	array of arrays of option parameters
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_get_option_parameters() {
@@ -121,7 +121,7 @@ function tt_font_get_option_parameters() {
 		 * Customizer
 		 *
 		 * @since 1.0
-		 * @version 1.0
+		 * @version 1.1
 		 */
 		'tt_default_body' => array(
 			'name'        => 'tt_default_body',
@@ -483,7 +483,7 @@ function tt_font_get_option_parameters() {
  * @return	array	$tt_font_options	current values for all Theme options
  * 
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_get_options( $with_transient = true ) {
@@ -531,7 +531,7 @@ function tt_font_get_options( $with_transient = true ) {
  * @return	array	$settings_by_tab	array of arrays of settings by tab
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_get_settings_by_tab() {
@@ -580,7 +580,7 @@ function tt_font_get_settings_by_tab() {
  * @return	array	$tabs	array of arrays of tab parameters
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_get_settings_page_tabs() {

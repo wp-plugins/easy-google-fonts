@@ -23,7 +23,7 @@
  * @uses tt_font_get_option_parameters()	defined in \includes\theme-font-options.php
  * 
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_enqueue_stylesheets() {
@@ -62,7 +62,7 @@ add_action( 'wp_enqueue_scripts', 'tt_font_enqueue_stylesheets' );
  * @uses tt_font_generate_css()				defined in \includes\theme-font-frontend-functions.php
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_output_styles() {
@@ -103,7 +103,7 @@ add_action( 'wp_head', 'tt_font_output_styles' );
  * @return string $output 	Inline styles
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_generate_css( $option, $force_styles = false ) {
@@ -166,7 +166,7 @@ function tt_font_generate_css( $option, $force_styles = false ) {
  * @return string $output 	Inline styles
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_generate_customizer_css( $option, $selector, $id = '', $force_styles = false ) {

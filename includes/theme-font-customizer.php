@@ -13,7 +13,7 @@
  * @subpackage  WordPress_Google_Fonts
  * @author      Sunny Johal - Titanium Themes
  * @copyright   Copyright (c) 2013, Titanium Themes
- * @version     1.0
+ * @version     1.1
  * 
  */
 /**
@@ -31,7 +31,7 @@
  * @return void
  *
  * @since  1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_customize_control_scripts() {
@@ -76,7 +76,7 @@ add_action( 'customize_controls_enqueue_scripts', 'tt_font_customize_control_scr
  * @return void
  *
  * @since  1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_customize_live_preview_scripts() {
@@ -105,7 +105,7 @@ add_action( 'customize_preview_init', 'tt_font_customize_live_preview_scripts' )
  * @return void
  *
  * @since  1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_customize_control_l10n() {
@@ -126,7 +126,7 @@ function tt_font_customize_control_l10n() {
  * @return array $controls 	Control properties which will be enqueues as a JSON object on the page
  *
  * @since  1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_customize_live_preview_l10n() {
@@ -167,7 +167,7 @@ function tt_font_customize_live_preview_l10n() {
  * @return void
  *
  * @since  1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_customize_preview_styles() {
@@ -196,7 +196,7 @@ add_action( 'customize_register', 'tt_font_customize_preview_styles' );
  * @link http://codex.wordpress.org/Function_Reference/add_action  					add_action()
  * 
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_customize_save_after() {
@@ -242,7 +242,7 @@ function tt_font_get_custom_controls() {
  * 
  *
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  * 
  */
 function tt_font_register_theme_customizer( $wp_customize ) {

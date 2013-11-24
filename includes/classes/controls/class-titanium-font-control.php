@@ -11,7 +11,7 @@
  * @subpackage  WordPress_Google_Fonts
  * @author      Sunny Johal - Titanium Themes
  * @copyright   Copyright (c) 2013, Titanium Themes
- * @version     1.0
+ * @version     1.1
  *
  * 
  */
@@ -264,7 +264,7 @@ if ( ! class_exists( 'TT_Font_Control' ) && class_exists( 'WP_Customize_Control'
 						 * - Text decoration control
 						 * - Text transform control
 						 *
-						 * @version 1.0
+						 * @version 1.1
 						 * 
 						 */
 					?>
@@ -372,7 +372,7 @@ if ( ! class_exists( 'TT_Font_Control' ) && class_exists( 'WP_Customize_Control'
 						 * - Text decoration control
 						 * - Text transform control
 						 *
-						 * @version 1.0
+						 * @version 1.1
 						 * 
 						 */
 					?>

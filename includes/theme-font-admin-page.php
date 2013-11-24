@@ -10,7 +10,7 @@
  * @subpackage  WordPress_Google_Fonts
  * @author      Sunny Johal - Titanium Themes
  * @copyright   Copyright (c) 2013, Titanium Themes
- * @version     1.0
+ * @version     1.1
  * 
  */
 
@@ -378,7 +378,7 @@
 										 * of the query variables appended to it via AJAX.
 										 *
 										 * @since 1.0
-										 * @version 1.0
+										 * @version 1.1
 										 * 
 										 */
 										$edit_redirect_link = esc_url( 
@@ -415,7 +415,7 @@
 										 * of the query variables appended to it via AJAX.
 										 *
 										 * @since 1.0
-										 * @version 1.0
+										 * @version 1.1
 										 * 
 										 */
 										$save_redirect_link = esc_url( 
@@ -525,7 +525,7 @@
 										 * of the query variables appended to it via AJAX.
 										 *
 										 * @since 1.0
-										 * @version 1.0
+										 * @version 1.1
 										 * 
 										 */
 										$edit_redirect_link = esc_url( 
@@ -562,7 +562,7 @@
 										 * of the query variables appended to it via AJAX.
 										 *
 										 * @since 1.0
-										 * @version 1.0
+										 * @version 1.1
 										 * 
 										 */
 										$save_redirect_link = esc_url( 
