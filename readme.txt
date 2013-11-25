@@ -93,6 +93,9 @@ e.g.
 
 == Changelog ==
 
+= 1.1 =
+* Full google fonts transient integration.
+
 = 1.0 =
 * First plugin release.
 
