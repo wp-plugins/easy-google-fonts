@@ -23,7 +23,7 @@
  * @uses tt_font_get_option_parameters()	defined in \includes\theme-font-options.php
  * 
  * @since 1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 function tt_font_enqueue_stylesheets() {
@@ -62,7 +62,7 @@ add_action( 'wp_enqueue_scripts', 'tt_font_enqueue_stylesheets' );
  * @uses tt_font_generate_css()				defined in \includes\theme-font-frontend-functions.php
  *
  * @since 1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 function tt_font_output_styles() {
@@ -103,7 +103,7 @@ add_action( 'wp_head', 'tt_font_output_styles' );
  * @return string $output 	Inline styles
  *
  * @since 1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 function tt_font_generate_css( $option, $force_styles = false ) {
@@ -113,6 +113,11 @@ function tt_font_generate_css( $option, $force_styles = false ) {
 	// Font Family
 	if ( ! empty( $option['font_name'] ) ) {
 		$output .= "font-family: {$option['font_name']}{$importance}; ";
+	}
+
+	// Background Color
+	if ( ! empty( $option['background_color'] ) ) {
+		$output .= "background-color: {$option['background_color']}{$importance}; ";
 	}
 
 	// Color
@@ -150,6 +155,46 @@ function tt_font_generate_css( $option, $force_styles = false ) {
 		$output .= "letter-spacing: {$option['letter_spacing']['amount']}{$option['letter_spacing']['unit']}{$importance}; ";
 	}
 
+	// Margin Top
+	if ( ! empty( $option['margin_top']['amount'] ) ) {
+		$output .= "margin-top: {$option['margin_top']['amount']}{$option['margin_top']['unit']}{$importance}; ";
+	}
+
+	// Margin Right
+	if ( ! empty( $option['margin_right']['amount'] ) ) {
+		$output .= "margin-right: {$option['margin_right']['amount']}{$option['margin_right']['unit']}{$importance}; ";
+	}
+
+	// Margin Bottom
+	if ( ! empty( $option['margin_bottom']['amount'] ) ) {
+		$output .= "margin-bottom: {$option['margin_bottom']['amount']}{$option['margin_bottom']['unit']}{$importance}; ";
+	}	
+
+	// Margin Left
+	if ( ! empty( $option['margin_left']['amount'] ) ) {
+		$output .= "margin-left: {$option['margin_left']['amount']}{$option['margin_left']['unit']}{$importance}; ";
+	}	
+
+	// Padding Top
+	if ( ! empty( $option['padding_top']['amount'] ) ) {
+		$output .= "padding-top: {$option['padding_top']['amount']}{$option['padding_top']['unit']}{$importance}; ";
+	}
+
+	// Padding Right
+	if ( ! empty( $option['padding_right']['amount'] ) ) {
+		$output .= "padding-right: {$option['padding_right']['amount']}{$option['padding_right']['unit']}{$importance}; ";
+	}
+
+	// Padding Bottom
+	if ( ! empty( $option['padding_bottom']['amount'] ) ) {
+		$output .= "padding-bottom: {$option['padding_bottom']['amount']}{$option['padding_bottom']['unit']}{$importance}; ";
+	}	
+
+	// Padding Left
+	if ( ! empty( $option['padding_left']['amount'] ) ) {
+		$output .= "padding-left: {$option['padding_left']['amount']}{$option['padding_left']['unit']}{$importance}; ";
+	}
+
 	return $output;
 }
 
@@ -166,7 +211,7 @@ function tt_font_generate_css( $option, $force_styles = false ) {
  * @return string $output 	Inline styles
  *
  * @since 1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 function tt_font_generate_customizer_css( $option, $selector, $id = '', $force_styles = false ) {
@@ -180,12 +225,18 @@ function tt_font_generate_customizer_css( $option, $selector, $id = '', $force_s
 		$output .= "}</style>";
 	}
 
+	// Background Color
+	if ( ! empty( $option['background_color'] ) ) {
+		$output .= "<style id='tt-font-{$id}-background-color' type='text/css'>{$selector}{";
+		$output .= "background-color: {$option['background_color']}{$importance}; ";
+		$output .= "}</style>";
+	}
+
 	// Color
 	if ( ! empty( $option['font_color'] ) ) {
 		$output .= "<style id='tt-font-{$id}-color' type='text/css'>{$selector}{";
 		$output .= "color: {$option['font_color']}{$importance}; ";
 		$output .= "}</style>";
-
 	}
 
 	// Font Weight
@@ -227,6 +278,62 @@ function tt_font_generate_customizer_css( $option, $selector, $id = '', $force_s
 	if ( ! empty( $option['letter_spacing']['amount'] ) ) {
 		$output .= "<style id='tt-font-{$id}-letter-spacing' type='text/css'>{$selector}{";
 		$output .= "letter-spacing: {$option['letter_spacing']['amount']}{$option['letter_spacing']['unit']}{$importance}; ";
+		$output .= "}</style>";
+	}
+
+	// Margin Top
+	if ( ! empty( $option['margin_top']['amount'] ) ) {
+		$output .= "<style id='tt-font-{$id}-margin-top' type='text/css'>{$selector}{";
+		$output .= "margin-top: {$option['margin_top']['amount']}{$option['margin_top']['unit']}{$importance}; ";
+		$output .= "}</style>";
+	}
+
+	// Margin Right
+	if ( ! empty( $option['margin_right']['amount'] ) ) {
+		$output .= "<style id='tt-font-{$id}-margin-right' type='text/css'>{$selector}{";
+		$output .= "margin-right: {$option['margin_right']['amount']}{$option['margin_right']['unit']}{$importance}; ";
+		$output .= "}</style>";
+	}
+
+	// Margin Bottom
+	if ( ! empty( $option['margin_bottom']['amount'] ) ) {
+		$output .= "<style id='tt-font-{$id}-margin-bottom' type='text/css'>{$selector}{";
+		$output .= "margin-bottom: {$option['margin_bottom']['amount']}{$option['margin_bottom']['unit']}{$importance}; ";
+		$output .= "}</style>";
+	}
+
+	// Margin Left
+	if ( ! empty( $option['margin_left']['amount'] ) ) {
+		$output .= "<style id='tt-font-{$id}-margin-left' type='text/css'>{$selector}{";
+		$output .= "margin-left: {$option['margin_left']['amount']}{$option['margin_left']['unit']}{$importance}; ";
+		$output .= "}</style>";
+	}
+
+	// Padding Top
+	if ( ! empty( $option['padding_top']['amount'] ) ) {
+		$output .= "<style id='tt-font-{$id}-padding-top' type='text/css'>{$selector}{";
+		$output .= "padding-top: {$option['padding_top']['amount']}{$option['padding_top']['unit']}{$importance}; ";
+		$output .= "}</style>";
+	}
+
+	// Padding Right
+	if ( ! empty( $option['padding_right']['amount'] ) ) {
+		$output .= "<style id='tt-font-{$id}-padding-right' type='text/css'>{$selector}{";
+		$output .= "padding-right: {$option['padding_right']['amount']}{$option['padding_right']['unit']}{$importance}; ";
+		$output .= "}</style>";
+	}
+
+	// Padding Bottom
+	if ( ! empty( $option['padding_bottom']['amount'] ) ) {
+		$output .= "<style id='tt-font-{$id}-padding-bottom' type='text/css'>{$selector}{";
+		$output .= "padding-bottom: {$option['padding_bottom']['amount']}{$option['padding_bottom']['unit']}{$importance}; ";
+		$output .= "}</style>";
+	}
+
+	// Padding Left
+	if ( ! empty( $option['padding_left']['amount'] ) ) {
+		$output .= "<style id='tt-font-{$id}-padding-left' type='text/css'>{$selector}{";
+		$output .= "padding-left: {$option['padding_left']['amount']}{$option['padding_left']['unit']}{$importance}; ";
 		$output .= "}</style>";
 	}
 

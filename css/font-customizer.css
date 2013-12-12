@@ -13,7 +13,7 @@
  * @subpackage  WordPress_Google_Fonts
  * @author      Sunny Johal - Titanium Themes
  * @copyright   Copyright (c) 2013, Titanium Themes
- * @version     1.1
+ * @version     1.1.1
  * 
  */
 
@@ -48,6 +48,14 @@
 	margin-top: 10px;
 }
 
+.tt-font-control .dropdown.preview-thumbnail {
+	background: #EEE;
+}
+
+.tt-font-control .dropdown-arrow {
+	top: 4px;
+}
+
 .tt-customizer-tabs ul {
     border-bottom: 1px solid #DFDFDF;	
 	float: left;
@@ -65,18 +73,19 @@
 	color: #999999;
 	float: left;
 	margin: 0;
-	padding: 3px 5px;
+	padding: 3px 8px;
 	cursor: pointer;
 }
 
 .tt-customizer-tabs ul li.selected {
 	background: none repeat scroll 0 0 #FDFDFD;
 	border-color: #DFDFDF;
-	border-radius: 3px 3px 0 0;
+	border-radius: 0;
 	color: #777777;
 	margin-bottom: -1px;
 	padding-bottom: 4px;	
 }
+
 
 .tt-font-properties {
 	display: none;
@@ -87,11 +96,22 @@
 	display: none;
 	padding: 8px;
 	padding-top: 12px;
+	font-size: 13px;
+}
+
+.tt-font-content-fullwidth {
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .tt-font-properties.selected,
 .tt-font-content.selected {
 	display: block;
+}
+
+.tt-font-content .customize-control-title,
+.tt-font-content select {
+	font-size: 13px;
 }
 
 .tt-font-weight {
@@ -408,4 +428,70 @@
 }
 .tt-font-control .ui-slider-horizontal .ui-slider-range-max {
 	right: 0;
+}
+
+/* Fields: Font Positioning Tab
+----------------------------------*/
+.tt-font-toggle {
+	border: 1px solid #EEEEEE;
+	margin-bottom: 6px;
+}
+
+.tt-font-toggle .customize-control-title.inner-control-title {
+	margin: 0;
+	padding: 8px;
+}
+
+.tt-font-toggle .customize-control-title.inner-control-title:hover {
+	background: #F5F5F5;
+	cursor: pointer;
+}
+
+.tt-font-toggle .customize-control-title.inner-control-title:after {
+	float: right;
+ 	position: absolute;
+    right: 10px;
+    top: 2px;
+    z-index: 1;
+    background: none repeat scroll 0 center rgba(0, 0, 0, 0);
+    border: 0 none;
+    content: "";
+    display: block;
+    font: 400 20px/1 dashicons;
+    padding: 0;
+    position: relative;
+    right: 0;
+    text-align: center;
+    text-decoration: none !important;
+    text-indent: 0;
+    color: #AAAAAA;
+}
+
+.tt-font-toggle .customize-control-title.inner-control-title:hover:after {
+	color: #555555;
+}
+
+.tt-font-toggle.selected .customize-control-title.inner-control-title {
+	background: #F5F5F5;
+}
+
+.tt-font-toggle.selected .customize-control-title.inner-control-title:after {
+	color: #555555;
+	content: "";
+}
+
+.toggle-section-content {
+	padding: 10px 15px;
+	border-top: 1px solid #EEEEEE;
+	display: none;
+}
+
+.tt-font-toggle.selected .toggle-section-content {
+	display: block;
+}
+
+
+.margin-slider,
+.padding-slider {
+	margin-bottom: 20px;
 }

@@ -13,7 +13,7 @@
  * @subpackage  WordPress_Google_Fonts
  * @author      Sunny Johal - Titanium Themes
  * @copyright   Copyright (c) 2013, Titanium Themes
- * @version     1.1
+ * @version     1.1.1
  * 
  */
 /**
@@ -31,7 +31,7 @@
  * @return void
  *
  * @since  1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 function tt_font_customize_control_scripts() {
@@ -76,7 +76,7 @@ add_action( 'customize_controls_enqueue_scripts', 'tt_font_customize_control_scr
  * @return void
  *
  * @since  1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 function tt_font_customize_live_preview_scripts() {
@@ -105,7 +105,7 @@ add_action( 'customize_preview_init', 'tt_font_customize_live_preview_scripts' )
  * @return void
  *
  * @since  1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 function tt_font_customize_control_l10n() {
@@ -126,7 +126,7 @@ function tt_font_customize_control_l10n() {
  * @return array $controls 	Control properties which will be enqueues as a JSON object on the page
  *
  * @since  1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 function tt_font_customize_live_preview_l10n() {
@@ -167,7 +167,7 @@ function tt_font_customize_live_preview_l10n() {
  * @return void
  *
  * @since  1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 function tt_font_customize_preview_styles() {
@@ -196,7 +196,7 @@ add_action( 'customize_register', 'tt_font_customize_preview_styles' );
  * @link http://codex.wordpress.org/Function_Reference/add_action  					add_action()
  * 
  * @since 1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 function tt_font_customize_save_after() {
@@ -242,15 +242,17 @@ function tt_font_get_custom_controls() {
  * 
  *
  * @since 1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
+
 function tt_font_register_theme_customizer( $wp_customize ) {
 
 	// Failsafe is safe
 	if ( ! isset( $wp_customize ) ) {
 		return;
 	}
+	
 
 	global $tt_font_options;
 	$tt_font_options = tt_font_get_options( false );
@@ -284,7 +286,7 @@ function tt_font_register_theme_customizer( $wp_customize ) {
 	$priority = 0;
 
 	foreach ( $option_parameters as $option_parameter ) {
-
+		
 		/**
 		 * Set Transport Method:
 		 * 
@@ -328,91 +330,66 @@ function tt_font_register_theme_customizer( $wp_customize ) {
 
 			case 'font' :
 
-				// Register all font settings
-				$wp_customize->add_setting( 'tt_font_theme_options[' . $option_parameter['name'] . '][font_id]', array(
-					'default'        => $option_parameter['default']['font_id'],
-					'type'           => 'option',
-					'transport'      => $transport,
-				) );
+				// Default Values
+				$default_font_id = isset( $option_parameter['default']['font_id'] ) ? $option_parameter['default']['font_id'] : '';
 
-				$wp_customize->add_setting( 'tt_font_theme_options[' . $option_parameter['name'] . '][font_name]', array(
-					'default'        => $option_parameter['default']['font_name'],
-					'type'           => 'option',
-					'transport'      => $transport,
-				) );
+				$option_arr_name = 'tt_font_theme_options[' . $option_parameter['name'] . ']';
 
-				$wp_customize->add_setting( 'tt_font_theme_options[' . $option_parameter['name'] . '][font_color]', array(
-					'default'        => $option_parameter['default']['font_color'],
-					'type'           => 'option',
-					'transport'      => $transport,
-				) );
-
-				$wp_customize->add_setting( 'tt_font_theme_options[' . $option_parameter['name'] . '][font_weight]', array(
-					'default'        => $option_parameter['default']['font_weight'],
-					'type'           => 'option',
-					'transport'      => $transport,
-				) );
-
-				$wp_customize->add_setting( 'tt_font_theme_options[' . $option_parameter['name'] . '][font_weight_style]', array(
-					'default'        => $option_parameter['default']['font_weight_style'],
-					'type'           => 'option',
-					'transport'      => $transport,
-				) );				
-
-				$wp_customize->add_setting( 'tt_font_theme_options[' . $option_parameter['name'] . '][font_style]', array(
-					'default'        => $option_parameter['default']['font_style'],
-					'type'           => 'option',
-					'transport'      => $transport,
-				) );				
-
-				$wp_customize->add_setting( 'tt_font_theme_options[' . $option_parameter['name'] . '][text_decoration]', array(
-					'default'        => $option_parameter['default']['text_decoration'],
-					'type'           => 'option',
-					'transport'      => $transport,
-				) );
-
-				$wp_customize->add_setting( 'tt_font_theme_options[' . $option_parameter['name'] . '][text_transform]', array(
-					'default'        => $option_parameter['default']['text_transform'],
-					'type'           => 'option',
-					'transport'      => $transport,
-				) );
-
-				$wp_customize->add_setting( 'tt_font_theme_options[' . $option_parameter['name'] . '][font_size][amount]', array(
-					'default'        => $option_parameter['default']['font_size']['amount'],
-					'type'           => 'option',
-					'transport'      => $transport,
-				) );				
-
-				$wp_customize->add_setting( 'tt_font_theme_options[' . $option_parameter['name'] . '][font_size][unit]', array(
-					'default'        => $option_parameter['default']['font_size']['unit'],
-					'type'           => 'option',
-					'transport'      => $transport,
-				) );	
-
-				$wp_customize->add_setting( 'tt_font_theme_options[' . $option_parameter['name'] . '][line_height]', array(
-					'default'        => $option_parameter['default']['line_height'],
-					'type'           => 'option',
-					'transport'      => $transport,
-				) );				
-
-				$wp_customize->add_setting( 'tt_font_theme_options[' . $option_parameter['name'] . '][letter_spacing][amount]', array(
-					'default'        => $option_parameter['default']['letter_spacing']['amount'],
-					'type'           => 'option',
-					'transport'      => $transport,
-				) );				
-
-				$wp_customize->add_setting( 'tt_font_theme_options[' . $option_parameter['name'] . '][letter_spacing][unit]', array(
-					'default'        => $option_parameter['default']['letter_spacing']['unit'],
-					'type'           => 'option',
-					'transport'      => $transport,
-				) );
-
-				$wp_customize->add_setting( 'tt_font_theme_options[' . $option_parameter['name'] . '][stylesheet_url]', array(
-					'default'        => $option_parameter['default']['stylesheet_url'],
-					'type'           => 'option',
-					'transport'      => $transport,
-				) );				
+				// Holds all font settings
+				$font_settings_arr = array( 
+					array( 'name' => 'font_id', 			'default_value' => $option_parameter['default']['font_id'], 			'has_unit' => false ),
+					array( 'name' => 'font_name', 			'default_value' => $option_parameter['default']['font_name'], 			'has_unit' => false ),
+					array( 'name' => 'font_color', 			'default_value' => $option_parameter['default']['font_color'], 			'has_unit' => false ),
+					array( 'name' => 'background_color', 	'default_value' => $option_parameter['default']['background_color'], 	'has_unit' => false ),
+					array( 'name' => 'font_weight', 		'default_value' => $option_parameter['default']['font_weight'], 		'has_unit' => false ),
+					array( 'name' => 'font_weight_style', 	'default_value' => $option_parameter['default']['font_weight_style'], 	'has_unit' => false ),
+					array( 'name' => 'font_style', 			'default_value' => $option_parameter['default']['font_style'], 			'has_unit' => false ),
+					array( 'name' => 'text_decoration', 	'default_value' => $option_parameter['default']['text_decoration'], 	'has_unit' => false ),
+					array( 'name' => 'text_transform', 		'default_value' => $option_parameter['default']['text_transform'], 		'has_unit' => false ),
+					array( 'name' => 'stylesheet_url', 		'default_value' => $option_parameter['default']['stylesheet_url'], 		'has_unit' => false ),
+					array( 'name' => 'line_height', 		'default_value' => $option_parameter['default']['line_height'], 		'has_unit' => false ),
+					array( 'name' => 'font_size', 			'default_value' => $option_parameter['default']['font_size'], 			'has_unit' => true ),
+					array( 'name' => 'letter_spacing', 		'default_value' => $option_parameter['default']['letter_spacing'], 		'has_unit' => true ),
+					// array( 'name' => 'margin_top', 			'default_value' => $option_parameter['default']['margin_top'], 			'has_unit' => true ),
+					// array( 'name' => 'margin_right', 		'default_value' => $option_parameter['default']['margin_right'], 		'has_unit' => true ),
+					// array( 'name' => 'margin_bottom', 		'default_value' => $option_parameter['default']['margin_bottom'],		'has_unit' => true ),
+					// array( 'name' => 'margin_left', 		'default_value' => $option_parameter['default']['margin_left'], 		'has_unit' => true ),
+					// array( 'name' => 'padding_top', 		'default_value' => $option_parameter['default']['padding_top'], 		'has_unit' => true ),
+					// array( 'name' => 'padding_right', 		'default_value' => $option_parameter['default']['padding_right'], 		'has_unit' => true ),
+					// array( 'name' => 'padding_bottom', 		'default_value' => $option_parameter['default']['padding_bottom'],		'has_unit' => true ),
+					// array( 'name' => 'padding_left', 		'default_value' => $option_parameter['default']['padding_left'], 		'has_unit' => true ),
+				);
 				
+
+				// Register each font setting with the customizer
+				foreach ( $font_settings_arr as $setting ) {
+
+					if ( true === $setting['has_unit'] ) {
+						// print_r( '<pre>'. $option_arr_name . '[' . $setting['name'] . '][amount]' . '</pre>');
+						// print_r( '<pre>'. $option_arr_name . '[' . $setting['name'] . '][unit]' . '</pre>');
+
+						$wp_customize->add_setting(  $option_arr_name . '[' . $setting['name'] . '][amount]', array(
+							'default'        => $setting['default_value']['amount'],
+							'type'           => 'option',
+							'transport'      => $transport,
+						));
+
+						$wp_customize->add_setting(  $option_arr_name . '[' . $setting['name'] . '][unit]', array(
+							'default'        => $setting['default_value']['unit'],
+							'type'           => 'option',
+							'transport'      => $transport,
+						));
+
+					} else {
+						
+						$wp_customize->add_setting(  $option_arr_name . '[' . $setting['name'] . ']', array(
+							'default'        => $setting['default_value'],
+							'type'           => 'option',
+							'transport'      => $transport,
+						));
+
+					}
+				}
 
 				// Register Control
 				$wp_customize->add_control(
@@ -422,11 +399,11 @@ function tt_font_register_theme_customizer( $wp_customize ) {
 						array(
 							'label'                         => $option_parameter['title'],
 							'section'                       => 'tt_font_' . $option_parameter['tab'],
-							'settings'                      => 'tt_font_theme_options['. $option_parameter['name'] . ']',				
+							'settings'                      => 'tt_font_theme_options['. $option_parameter['name'] . ']',			
 							'priority'                      => $priority,
-							'default_values'				=> $option_parameter['default'],
-							'selector'           			=> $option_parameter['properties']['selector'],
-							'force_styles'           		=> $option_parameter['properties']['force_styles'],
+							'default_values'                => $option_parameter['default'],
+							'selector'                      => $option_parameter['properties']['selector'],
+							'force_styles'                  => $option_parameter['properties']['force_styles'],
 							'font_size_min_range'           => $option_parameter['properties']['font_size_min_range'],
 							'font_size_max_range'           => $option_parameter['properties']['font_size_max_range'],
 							'font_size_step'                => $option_parameter['properties']['font_size_step'],
@@ -436,8 +413,14 @@ function tt_font_register_theme_customizer( $wp_customize ) {
 							'letter_spacing_min_range'      => $option_parameter['properties']['letter_spacing_min_range'],
 							'letter_spacing_max_range'      => $option_parameter['properties']['letter_spacing_max_range'],
 							'letter_spacing_step'           => $option_parameter['properties']['letter_spacing_step'],
-							'google_fonts'                  => $option_parameter['properties']['google_fonts'],							
-							'default_fonts'                 => $option_parameter['properties']['default_fonts'],							
+							'margin_min_range'              => $option_parameter['properties']['margin_min_range'],
+							'margin_max_range'              => $option_parameter['properties']['margin_max_range'],
+							'margin_step'                   => $option_parameter['properties']['margin_step'],
+							'padding_min_range'             => $option_parameter['properties']['padding_min_range'],
+							'padding_max_range'             => $option_parameter['properties']['padding_max_range'],
+							'padding_step'                  => $option_parameter['properties']['padding_step'],
+							'google_fonts'                  => $option_parameter['properties']['google_fonts'],
+							'default_fonts'                 => $option_parameter['properties']['default_fonts'],
 							'font_id'                       => $option_parameter['default']['font_id'],
 							'font_name'                     => $option_parameter['default']['font_name'],
 							'font_color'                    => $option_parameter['default']['font_color'],
@@ -451,38 +434,24 @@ function tt_font_register_theme_customizer( $wp_customize ) {
 							'default_font_size_unit'        => $option_parameter['default']['font_size']['unit'],
 							'default_letter_spacing_amount' => $option_parameter['default']['letter_spacing']['amount'],
 							'default_letter_spacing_unit'   => $option_parameter['default']['letter_spacing']['unit'],
+
+
 						)
 					)
 				);
 
 				break;
-			
-			case 'custom' :
-				$valid_options = array();
-
-				foreach ( $option_parameter['valid_options'] as $valid_option ) {
-					$valid_options[ $valid_option['name'] ] = $valid_option['title'];
-				}
-
-				$wp_customize->add_control( 'tt_font_' . $option_parameter['name'], array(
-					'label'    => $option_parameter['title'],
-					'section'  => 'tt_font_' . $option_parameter['tab'],
-					'settings' => 'tt_font_theme_options['. $option_parameter['name'] . ']',
-					'type'     => 'select',
-					'choices'  => $valid_options,
-				) );	
-				break;
 
 			default:
 				# code...
 				break;
-
-
 		} // end switch
 
-
 	} // endforeach
+
+
 }
 
 // Settings API options initilization and validation
-add_action( 'customize_register', 'tt_font_register_theme_customizer' );
+add_action( 'customize_register', 'tt_font_register_theme_customizer', 0 );
+

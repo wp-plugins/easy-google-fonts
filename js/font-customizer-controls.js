@@ -30,7 +30,7 @@
  * @todo increase dependancy on JS in future releases.
  * 
  * @since 1.0
- * @version 1.1
+ * @version 1.1.1
  *
  * =============================================================== */
 
@@ -50,7 +50,7 @@
 		 * @return void
 		 *
 		 * @since 1.0
-		 * @version 1.1
+		 * @version 1.1.1
 		 */
 		option.init = function() {
 			option.initToggle();
@@ -69,15 +69,16 @@
 		 * @return void
 		 *
 		 * @since 1.0
-		 * @version 1.1
+		 * @version 1.1.1
 		 */
 		option.initToggle = function() {
 
 			$( '.tt-font-control' ).each( function(e) {
-				var control    = $(this);
-				var reset      = control.parent().find( '.tt-reset-font' );
-				var toggle     = control.find( '.dropdown.preview-thumbnail' );
-				var properties = control.find( '.tt-font-properties' );
+				var control        = $(this);
+				var reset          = control.parent().find( '.tt-reset-font' );
+				var toggle         = control.find( '.dropdown.preview-thumbnail' );
+				var properties     = control.find( '.tt-font-properties' );
+				var controlToggles = control.find( '.tt-font-toggle' );
 
 				toggle.on( 'click', function(e) {
 					e.preventDefault();
@@ -85,6 +86,16 @@
 					reset.toggle();	
 				});
 
+				controlToggles.each( function(e) {
+					e.preventDefault;
+					var t     = $(this);
+					var title = t.find( '.toggle-section-title' );
+
+					title.on( 'click', function(e) {
+						e.preventDefault();
+						t.toggleClass( 'selected' );
+					});
+				});
 			});
 		};
 
@@ -97,7 +108,7 @@
 		 * @return void
 		 *
 		 * @since 1.0
-		 * @version 1.1
+		 * @version 1.1.1
 		 */
 		option.initTabs = function() {
 			$( '.tt-font-control' ).each( function(e) {		
@@ -135,7 +146,7 @@
 		 * @return {[type]} [description]
 		 * 
 		 * @since 1.0
-		 * @version 1.1
+		 * @version 1.1.1
 		 */
 		option.initFontControls = function() {
 			
@@ -164,7 +175,7 @@
 		 * @return {void}
 		 * 
 		 * @since 1.0
-		 * @version 1.1
+		 * @version 1.1.1
 		 */
 		option.resetFontControl = function( setting ) {
 
@@ -173,14 +184,17 @@
 
 			if ( ! $.isEmptyObject( fontControl ) )	{
 				
-				var resetControl       = control.parent().find( '.tt-reset-font' );
-				var fontSize           = control.find( '.font-size-slider' );
-				var fontSizeReset      = fontSize.find( '.tt-font-slider-reset' );
-				var lineHeight         = control.find( '.line-height-slider' );
-				var lineHeightReset    = lineHeight.find( '.tt-font-slider-reset' );
-				var letterSpacing      = control.find( '.letter-spacing-slider' );
-				var letterSpacingReset = letterSpacing.find( '.tt-font-slider-reset' );
-				var colorReset         = control.find( '.tt-font-color-container .wp-picker-clear, .tt-font-color-container .wp-picker-default' );
+				var resetControl         = control.parent().find( '.tt-reset-font' );
+				var fontSize             = control.find( '.font-size-slider' );
+				var fontSizeReset        = fontSize.find( '.tt-font-slider-reset' );
+				var lineHeight           = control.find( '.line-height-slider' );
+				var lineHeightReset      = lineHeight.find( '.tt-font-slider-reset' );
+				var letterSpacing        = control.find( '.letter-spacing-slider' );
+				var letterSpacingReset   = letterSpacing.find( '.tt-font-slider-reset' );
+				var colorReset           = control.find( '.tt-font-color-container .wp-picker-clear, .tt-font-color-container .wp-picker-default' );
+				var backgroundColorReset = control.find( '.tt-font-background-color-container .wp-picker-clear, .tt-font-background-color-container .wp-picker-default' );
+				var marginReset          = control.find( '.margin-top-slider .tt-font-slider-reset, .margin-bottom-slider .tt-font-slider-reset, .margin-left-slider .tt-font-slider-reset, .margin-right-slider .tt-font-slider-reset' );
+				var paddingReset         = control.find( '.padding-top-slider .tt-font-slider-reset, .padding-bottom-slider .tt-font-slider-reset, .padding-left-slider .tt-font-slider-reset, .padding-right-slider .tt-font-slider-reset' );
 
 				resetControl.on( 'click', function(e) {
 					e.preventDefault();
@@ -189,6 +203,9 @@
 					lineHeightReset.trigger( 'click' );
 					letterSpacingReset.trigger( 'click' );
 					colorReset.trigger( 'click' );
+					backgroundColorReset.trigger( 'click' );
+					marginReset.trigger( 'click' );
+					paddingReset.trigger( 'click' );
 					return false;
 				});
 			}
@@ -203,7 +220,7 @@
 		 * @return void
 		 *
 		 * @since 1.0
-		 * @version 1.1
+		 * @version 1.1.1
 		 */
 		option.initFontSelection = function() {
 			$( '.tt-font-control' ).each( function(e) {
@@ -349,14 +366,17 @@
 		 * @return {void}
 		 *
 		 * @since 1.0
-		 * @version 1.1
+		 * @version 1.1.1
 		 */		
 		option.initColorControls = function() {
 			$( '.tt-font-control' ).each( function(e) {
-				var control    = $(this);
-				var color      = control.find( '.tt-color-picker-hex' );
-				var colorInput = control.find( '.tt-font-color' );
+				var control              = $(this);
+				var color                = control.find( '.tt-color-picker-hex' );
+				var colorInput           = control.find( '.tt-font-color' );
+				var backgroundColor      = control.find( '.tt-background-color-picker-hex' );
+				var backgroundColorInput = control.find( '.tt-font-background-color' );
 				
+				// Font Color Picker
 				color.wpColorPicker({
 					width : 240,
 					change : function( event, ui ) {
@@ -366,6 +386,18 @@
 						colorInput.val('').trigger( 'change' );
 					}
 				});
+
+				// Background Color Picker
+				backgroundColor.wpColorPicker({
+					width : 240,
+					change : function( event, ui ) {
+						backgroundColorInput.val( ui.color.toString() ).trigger( 'change' );
+					},
+					clear : function() {
+						backgroundColorInput.val('').trigger( 'change' );
+					}
+				});				
+
 
 			});	
 		};
@@ -384,7 +416,7 @@
 		 * @return {json} fontObj - The font object if it exists
 		 *
 		 * @since 1.0
-		 * @version 1.1
+		 * @version 1.1.1
 		 */
 		option.getFontObject = function( setting, fontId, fontType ) {
 			var fontObj = {};
@@ -420,7 +452,7 @@
 		 * @return {json} fontControl - The font control object if it exists
 		 *
 		 * @since 1.0
-		 * @version 1.1
+		 * @version 1.1.1
 		 */
 		option.getFontControl = function( setting ) {
 			var fontControl = {};
@@ -447,7 +479,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.0
-		 * @version 1.1
+		 * @version 1.1.1
 		 */
 		option.initFontSliders = function( setting ) {
 
@@ -558,7 +590,111 @@
 						lsUnit.val( lsDefaultUnit );
 					},
 					step  : lsStep 
-				});				
+				});
+
+				/**
+				 * Initialise Margin Slider
+				 * 
+				 * Sets up the margin control using the
+				 * jQuery UI Slider plugin.
+				 * 
+				 */
+				control.find( '.margin-slider' ).each( function(e){
+
+					var marginControl = $(this);
+					var marginSlider  = marginControl.find( '.tt-slider' );
+					var marginAmount  = marginControl.find( '.tt-font-slider-amount' );
+					var marginUnit    = marginControl.find( '.tt-font-slider-unit' );
+					var marginDisplay = marginControl.find( '.tt-font-slider-display span' );
+					var marginValue   = marginAmount.val();
+					var marginMin     = marginSlider.data( 'min-range' ) ? marginSlider.data( 'min-range' ) : 0;
+					var marginMax     = marginSlider.data( 'max-range' ) ? marginSlider.data( 'max-range' ) : 300;
+					var marginStep    = marginSlider.data( 'step' )      ? marginSlider.data( 'step' )      : 1;
+
+					if ( marginControl.hasClass( 'margin-top-slider' ) ) {
+						var marginDefaultUnit  = fontControl.default_values.margin_top.unit.toString();
+
+					} else if ( marginControl.hasClass( 'margin-bottom-slider' ) ) {
+						var marginDefaultUnit  = fontControl.default_values.margin_bottom.unit.toString();
+
+					} else if ( marginControl.hasClass( 'margin-left-slider' ) ) {
+						var marginDefaultUnit  = fontControl.default_values.margin_left.unit.toString();
+
+					} else if ( marginControl.hasClass( 'margin-right-slider' ) ) {
+						var marginDefaultUnit  = fontControl.default_values.margin_right.unit.toString();
+
+					}
+
+					if ( '' === marginAmount.val() ) {
+						marginValue = marginAmount.data( 'default-value' );
+					}
+
+					marginDisplay.text( marginValue + marginDefaultUnit );
+
+					marginSlider.slider({
+						min   : marginMin,
+						max   : marginMax,
+						value : marginValue,
+						slide : function( event, ui ) {
+							marginDisplay.text( ui.value + marginDefaultUnit );
+							marginAmount.val( ui.value ).trigger('change');
+							marginUnit.val( marginDefaultUnit );
+						},
+						step  : marginStep 
+					});
+				});
+
+				/**
+				 * Initialise Padding Slider
+				 * 
+				 * Sets up the margin control using the
+				 * jQuery UI Slider plugin.
+				 * 
+				 */
+				control.find( '.padding-slider' ).each( function(e){
+
+					var paddingControl = $(this);
+					var paddingSlider  = paddingControl.find( '.tt-slider' );
+					var paddingAmount  = paddingControl.find( '.tt-font-slider-amount' );
+					var paddingUnit    = paddingControl.find( '.tt-font-slider-unit' );
+					var paddingDisplay = paddingControl.find( '.tt-font-slider-display span' );
+					var paddingValue   = paddingAmount.val();
+					var paddingMin     = paddingSlider.data( 'min-range' ) ? paddingSlider.data( 'min-range' ) : 0;
+					var paddingMax     = paddingSlider.data( 'max-range' ) ? paddingSlider.data( 'max-range' ) : 300;
+					var paddingStep    = paddingSlider.data( 'step' )      ? paddingSlider.data( 'step' )      : 1;
+
+					if ( paddingControl.hasClass( 'padding-top-slider' ) ) {
+						var paddingDefaultUnit  = fontControl.default_values.padding_top.unit.toString();
+
+					} else if ( paddingControl.hasClass( 'padding-bottom-slider' ) ) {
+						var paddingDefaultUnit  = fontControl.default_values.padding_bottom.unit.toString();
+
+					} else if ( paddingControl.hasClass( 'padding-left-slider' ) ) {
+						var paddingDefaultUnit  = fontControl.default_values.padding_left.unit.toString();
+
+					} else if ( paddingControl.hasClass( 'padding-right-slider' ) ) {
+						var paddingDefaultUnit  = fontControl.default_values.padding_right.unit.toString();
+
+					}
+
+					if ( '' === paddingAmount.val() ) {
+						paddingValue = paddingAmount.data( 'default-value' );
+					}
+
+					paddingDisplay.text( paddingValue + paddingDefaultUnit );
+
+					paddingSlider.slider({
+						min   : paddingMin,
+						max   : paddingMax,
+						value : paddingValue,
+						slide : function( event, ui ) {
+							paddingDisplay.text( ui.value + paddingDefaultUnit );
+							paddingAmount.val( ui.value ).trigger('change');
+							paddingUnit.val( paddingDefaultUnit );
+						},
+						step  : paddingStep 
+					});
+				});
 
 			}
 		};
@@ -574,7 +710,7 @@
 		 * @return void
 		 *
 		 * @since 1.0
-		 * @version 1.1
+		 * @version 1.1.1
 		 */
 		option.resetFontSliders = function( setting ) {
 			var control     = $( '[data-font-control-id="' + setting + '"]' );
@@ -651,6 +787,86 @@
 					lsAmount.val( defaultValue ).trigger( 'change' );
 					return false;
 				});
+				
+				/**
+				 * Margin Sliders
+				 * 
+				 * Resets the margin controls back to
+				 * it's default values.
+				 * 
+				 */
+				control.find( '.margin-slider' ).each( function(e){
+					var marginControl = $(this);
+					var marginReset   = marginControl.find( '.tt-font-slider-reset' );
+					var marginSlider  = marginControl.find( '.tt-slider' );
+					var marginDisplay = marginControl.find( '.tt-font-slider-display span' );
+					var marginAmount  = marginControl.find( '.tt-font-slider-amount' );
+					var marginUnit    = marginControl.find( '.tt-font-slider-unit' );
+
+					if ( marginControl.hasClass( 'margin-top-slider' ) ) {
+						var marginDefaultUnit  = fontControl.default_values.margin_top.unit.toString();
+
+					} else if ( marginControl.hasClass( 'margin-bottom-slider' ) ) {
+						var marginDefaultUnit  = fontControl.default_values.margin_bottom.unit.toString();
+
+					} else if ( marginControl.hasClass( 'margin-left-slider' ) ) {
+						var marginDefaultUnit  = fontControl.default_values.margin_left.unit.toString();
+
+					} else if ( marginControl.hasClass( 'margin-right-slider' ) ) {
+						var marginDefaultUnit  = fontControl.default_values.margin_right.unit.toString();
+
+					}
+
+					// Reset Event
+					marginReset.on('click', function(e){
+						e.preventDefault();
+						var defaultValue = marginSlider.data( 'default-value' );
+						marginSlider.slider({ value : defaultValue });
+						marginDisplay.text( defaultValue + marginDefaultUnit );
+						marginAmount.val( defaultValue ).trigger( 'change' );
+						return false;
+					});					
+				});
+
+				/**
+				 * Padding Sliders
+				 * 
+				 * Resets the margin controls back to
+				 * it's default values.
+				 * 
+				 */
+				control.find( '.padding-slider' ).each( function(e){
+					var paddingControl = $(this);
+					var paddingReset   = paddingControl.find( '.tt-font-slider-reset' );
+					var paddingSlider  = paddingControl.find( '.tt-slider' );
+					var paddingDisplay = paddingControl.find( '.tt-font-slider-display span' );
+					var paddingAmount  = paddingControl.find( '.tt-font-slider-amount' );
+					var paddingUnit    = paddingControl.find( '.tt-font-slider-unit' );
+
+					if ( paddingControl.hasClass( 'padding-top-slider' ) ) {
+						var paddingDefaultUnit  = fontControl.default_values.padding_top.unit.toString();
+
+					} else if ( paddingControl.hasClass( 'padding-bottom-slider' ) ) {
+						var paddingDefaultUnit  = fontControl.default_values.padding_bottom.unit.toString();
+
+					} else if ( paddingControl.hasClass( 'padding-left-slider' ) ) {
+						var paddingDefaultUnit  = fontControl.default_values.padding_left.unit.toString();
+
+					} else if ( paddingControl.hasClass( 'padding-right-slider' ) ) {
+						var paddingDefaultUnit  = fontControl.default_values.padding_right.unit.toString();
+
+					}
+
+					// Reset Event
+					paddingReset.on('click', function(e){
+						e.preventDefault();
+						var defaultValue = paddingSlider.data( 'default-value' );
+						paddingSlider.slider({ value : defaultValue });
+						paddingDisplay.text( defaultValue + paddingDefaultUnit );
+						paddingAmount.val( defaultValue ).trigger( 'change' );
+						return false;
+					});					
+				});
 
 			}
 		};
@@ -664,7 +880,7 @@
 		 * @return void
 		 *
 		 * @since 1.0
-		 * @version 1.1
+		 * @version 1.1.1
 		 */		
 		option.resetFontStyles = function( setting ) {
 			var control     = $( '[data-font-control-id="' + setting + '"]' );
@@ -692,6 +908,7 @@
 				fontWeightVal.val( fontControl.default_values.font_weight ).trigger( 'change' );
 				fontStyleVal.val( fontControl.default_values.font_style ).trigger( 'change' );
 				fontNameVal.val( fontControl.default_values.font_name ).trigger( 'change' );
+
 			}
 		};
 		

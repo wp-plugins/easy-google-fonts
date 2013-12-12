@@ -292,7 +292,7 @@ function tt_font_add_admin_page_help_tabs(){
         'content' => $manage_content,
     ) );
 
-    $api_content  = '<p>' . __( 'To acquire an API key, visit the <a href="https://code.google.com/apis/console">APIs Console</a>. In the Services pane, activate the Google Fonts Developer API; if the Terms of Service appear, read and accept them.', 'theme-translate' ) . '</p>';
+    $api_content  = '<p>' . __( 'To acquire an API key, visit the <a href="https://code.google.com/apis/console" target="_blank">APIs Console</a>. In the Services pane, activate the Google Fonts Developer API; if the Terms of Service appear, read and accept them.', 'theme-translate' ) . '</p>';
     $api_content .= '<p>' . __( 'Next, go to the API Access pane. The API key is near the bottom of that pane, in the section titled "Simple API Access."', 'theme-translate' ) . '</p>';
     $api_content .= '<p>' . __( 'After you have an API key, please enter it in the Google Fonts API Key text field on the "Advanced" settings page.', 'theme-translate' ) . '</p>';
     $api_content .= '<p>' . __( 'Once you have entered a valid API key this plugin will automatically update itself with the latest fonts from google.', 'theme-translate' ) . '</p>';

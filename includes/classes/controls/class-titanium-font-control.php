@@ -11,7 +11,7 @@
  * @subpackage  WordPress_Google_Fonts
  * @author      Sunny Johal - Titanium Themes
  * @copyright   Copyright (c) 2013, Titanium Themes
- * @version     1.1
+ * @version     1.1.1
  *
  * 
  */
@@ -23,90 +23,36 @@ if ( ! class_exists( 'TT_Font_Control' ) && class_exists( 'WP_Customize_Control'
 		 * @var string
 		 */
 		public $type = 'font';
-
-		/**
-		 * @access public
-		 * @var string
-		 */
 		public $default_values;
+		public $selector;
+		public $font_size_min_range;
+		public $font_size_max_range;	
+		public $font_size_step;	
+		public $line_height_min_range;
+		public $line_height_max_range;	
+		public $line_height_step;
+		public $letter_spacing_min_range;
+		public $letter_spacing_max_range;	
+		public $letter_spacing_step;	
+		public $margin_min_range;
+		public $margin_max_range;	
+		public $margin_step;
+		public $padding_min_range;
+		public $padding_max_range;	
+		public $padding_step;	
 
 		/**
 		 * @access public
-		 * @var string
+		 * @var array
 		 */
-		public $selector;
-
+		public $default_fonts;
+		public $google_fonts;
+		
 		/**
 		 * @access public
 		 * @var boolean
 		 */
 		public $force_styles;
-
-		/**
-		 * @access public
-		 * @var string
-		 */
-		public $font_size_min_range;
-
-		/**
-		 * @access public
-		 * @var string
-		 */
-		public $font_size_max_range;	
-		
-		/**
-		 * @access public
-		 * @var string
-		 */
-		public $font_size_step;	
-
-		/**
-		 * @access public
-		 * @var string
-		 */
-		public $line_height_min_range;
-
-		/**
-		 * @access public
-		 * @var string
-		 */
-		public $line_height_max_range;	
-		
-		/**
-		 * @access public
-		 * @var string
-		 */
-		public $line_height_step;
-
-		/**
-		 * @access public
-		 * @var string
-		 */
-		public $letter_spacing_min_range;
-
-		/**
-		 * @access public
-		 * @var string
-		 */
-		public $letter_spacing_max_range;	
-		
-		/**
-		 * @access public
-		 * @var string
-		 */
-		public $letter_spacing_step;			
-
-		/**
-		 * @access public
-		 * @var string
-		 */
-		public $default_fonts;
-
-		/**
-		 * @access public
-		 * @var string
-		 */
-		public $google_fonts;	
 
 		/**
 		 * Constructor.
@@ -127,15 +73,24 @@ if ( ! class_exists( 'TT_Font_Control' ) && class_exists( 'WP_Customize_Control'
 
 			$this->selector                 = isset( $properties['selector'] )					? $properties['selector']       			: '';
 			$this->force_styles             = isset( $properties['force_styles'] )				? $properties['force_styles']       		: false;
-			$this->font_size_min_range      = isset( $properties['font_size_min_range'] )		? $properties['font_size_min_range'] 		: '10';
-			$this->font_size_max_range      = isset( $properties['font_size_max_range'] )		? $properties['font_size_max_range'] 		: '100';
-			$this->font_size_step           = isset( $properties['font_size_step'] )			? $properties['font_size_step'] 			: '100';
-			$this->line_height_min_range    = isset( $properties['line_height_min_range'] )		? $properties['line_height_min_range'] 		: '0.8';
-			$this->line_height_max_range    = isset( $properties['line_height_max_range'] )		? $properties['line_height_max_range'] 		: '4';
-			$this->line_height_step         = isset( $properties['line_height_step'] )			? $properties['line_height_step'] 			: '0.1';
-			$this->letter_spacing_min_range = isset( $properties['letter_spacing_min_range'] )	? $properties['letter_spacing_min_range'] 	: '0.8';
-			$this->letter_spacing_max_range = isset( $properties['letter_spacing_max_range'] )	? $properties['letter_spacing_max_range'] 	: '4';
-			$this->letter_spacing_step      = isset( $properties['letter_spacing_step'] )		? $properties['letter_spacing_step'] 		: '0.1';			
+			$this->font_size_min_range      = isset( $properties['font_size_min_range'] )		? $properties['font_size_min_range'] 		: 10;
+			$this->font_size_max_range      = isset( $properties['font_size_max_range'] )		? $properties['font_size_max_range'] 		: 100;
+			$this->font_size_step           = isset( $properties['font_size_step'] )			? $properties['font_size_step'] 			: 1;
+			$this->line_height_min_range    = isset( $properties['line_height_min_range'] )		? $properties['line_height_min_range'] 		: 0.8;
+			$this->line_height_max_range    = isset( $properties['line_height_max_range'] )		? $properties['line_height_max_range'] 		: 4;
+			$this->line_height_step         = isset( $properties['line_height_step'] )			? $properties['line_height_step'] 			: 0.1;
+			$this->letter_spacing_min_range = isset( $properties['letter_spacing_min_range'] )	? $properties['letter_spacing_min_range'] 	: 0.8;
+			$this->letter_spacing_max_range = isset( $properties['letter_spacing_max_range'] )	? $properties['letter_spacing_max_range'] 	: 4;
+			$this->letter_spacing_step      = isset( $properties['letter_spacing_step'] )		? $properties['letter_spacing_step'] 		: 0.1;
+
+			$this->margin_min_range = isset( $properties['margin_min_range'] )	? $properties['margin_min_range'] 	: 0;
+			$this->margin_max_range = isset( $properties['margin_max_range'] )	? $properties['margin_max_range'] 	: 400;
+			$this->margin_step      = isset( $properties['margin_step'] )		? $properties['margin_step'] 		: 1;
+
+			$this->padding_min_range = isset( $properties['padding_min_range'] )	? $properties['padding_min_range'] 	: 0;
+			$this->padding_max_range = isset( $properties['padding_max_range'] )	? $properties['padding_max_range'] 	: 400;
+			$this->padding_step      = isset( $properties['padding_step'] )			? $properties['padding_step'] 		: 1;			
+
 
 			$this->google_fonts  = $properties['google_fonts'];
 			$this->default_fonts = $properties['default_fonts'];	
@@ -248,8 +203,9 @@ if ( ! class_exists( 'TT_Font_Control' ) && class_exists( 'WP_Customize_Control'
 				<div class="tt-font-properties">
 					<div class="tt-customizer-tabs">
 						<ul>
-							<li data-customize-tab="font-styles" class="selected"><?php _e( 'Font Styles', 'theme-translate' ); ?></li>
-							<li data-customize-tab="font-appearence" class=""><?php _e( 'Font Appearence', 'theme-translate' ); ?></li>									
+							<li data-customize-tab="font-styles" class="selected"><?php _e( 'Styles', 'theme-translate' ); ?></li>
+							<li data-customize-tab="font-appearence" class=""><?php _e( 'Appearence', 'theme-translate' ); ?></li>
+						<!-- 	<li data-customize-tab="font-positioning" class=""><?php _e( 'Positioning', 'theme-translate' ); ?></li> -->
 						</ul>
 						<div class="clearfix"></div>
 					</div>
@@ -264,7 +220,7 @@ if ( ! class_exists( 'TT_Font_Control' ) && class_exists( 'WP_Customize_Control'
 						 * - Text decoration control
 						 * - Text transform control
 						 *
-						 * @version 1.1
+						 * @version 1.1.1
 						 * 
 						 */
 					?>
@@ -359,7 +315,6 @@ if ( ! class_exists( 'TT_Font_Control' ) && class_exists( 'WP_Customize_Control'
 						<input autocomplete="off" class="tt-font-weight-val" type="hidden" value="<?php echo $default_values['font_weight']; ?>" <?php $this->option_link( 'default', 'font_weight' ); ?>>
 						<input autocomplete="off" class="tt-font-style-val" type="hidden" value="<?php echo $default_values['font_style']; ?>" <?php $this->option_link( 'default', 'font_style' ); ?>>
 						<input autocomplete="off" class="tt-font-name-val" type="hidden" value="<?php echo $default_values['font_name']; ?>" <?php $this->option_link( 'default', 'font_name' ); ?>>
-
 					</div>
 
 					<?php 
@@ -372,7 +327,7 @@ if ( ! class_exists( 'TT_Font_Control' ) && class_exists( 'WP_Customize_Control'
 						 * - Text decoration control
 						 * - Text transform control
 						 *
-						 * @version 1.1
+						 * @version 1.1.1
 						 * 
 						 */
 					?>
@@ -397,6 +352,25 @@ if ( ! class_exists( 'TT_Font_Control' ) && class_exists( 'WP_Customize_Control'
 						<!-- Hidden Font Input Color -->
 						<input class="tt-font-color" type="hidden" <?php $this->option_link( 'default', 'font_color' ); ?> />
 						<div class="clearfix"></div>
+
+						<?php 
+							/**
+							 * Background Color Control
+							 * 
+							 * Get the saved color value and the default
+							 * color value and output the color picker 
+							 * markup for Iris.
+							 *
+							 */
+							$background_color = isset( $this_value['background_color'] ) ? $this_value['background_color'] : '';
+						?>
+<!-- 						<span class="customize-control-title"><?php _e( 'Background Color', 'theme-translate' ); ?></span>
+						<div class="customize-control-content tt-font-background-color-container">
+							<input autocomplete="off" class="tt-background-color-picker-hex" data-default-color="<?php echo $default_values['background_color']; ?>" value="<?php echo $background_color; ?>" type="text" maxlength="7" placeholder="<?php esc_attr_e( 'Hex Value', 'theme-translate' ); ?>" <?php $this->option_link( 'default', 'background_color' ); ?>/>
+						</div> -->
+						<!-- Hidden Font Input Color -->
+<!-- 						<input class="tt-font-background-color" type="hidden" <?php $this->option_link( 'default', 'background_color' ); ?> />
+						<div class="clearfix"></div> -->
 
 						<?php 
 							/**
@@ -507,8 +481,276 @@ if ( ! class_exists( 'TT_Font_Control' ) && class_exists( 'WP_Customize_Control'
 							<div class="clearfix"></div>
 
 						</div><!-- END .tt-font-slider-control -->
+					</div>
 
-					</div>	
+					<?php 
+						/**
+						 * Font Positioning Tab
+						 *
+						 * This tab contains the following controls:
+						 * - Font Padding
+						 * - Font Margin
+						 *
+						 * @version 1.1.1
+						 * 
+						 */
+					?>
+					<div class="tt-font-content tt-font-content-fullwidth" data-customize-tab="font-positioning">
+						<div class="tt-font-toggle">
+
+							<div class="toggle-section-title"><span class="customize-control-title inner-control-title"><?php _e( 'Padding', 'theme-translate' ); ?></span></div>
+							<div class="toggle-section-content">
+								<?php 
+									/**
+									 * Padding Top
+									 */
+								?>
+								<div class="tt-font-slider-control padding-slider padding-top-slider">
+									<span class="customize-control-title">
+										<?php _e( 'Padding Top', 'theme-translate' ); ?>
+										<div class="tt-font-slider-display">
+											<span>
+												
+											</span> | 
+											<a class="tt-font-slider-reset" href="#"><?php _e( 'Reset', 'theme-translate' ); ?></a>
+											<div class="clearfix"></div>
+										</div><!-- END .tt-slider-display -->
+									</span><!-- END .customize-control-title -->
+									
+									<div class="tt-slider"
+										data-step="<?php echo $this->padding_step; ?>" 
+										data-default-value="<?php echo $default_values['padding_top']['amount']; ?>" 
+										data-default-unit="<?php echo $default_values['padding_top']['unit']; ?>" 
+										data-min-range="<?php echo $this->padding_min_range; ?>" 
+										data-max-range="<?php echo $this->padding_max_range; ?>">
+									</div>
+									<input class="tt-font-slider-amount" type="hidden" data-default-value="<?php echo $default_values['padding_top']['amount']; ?>" value="<?php echo $this_value['padding_top']['amount']; ?>" <?php $this->option_link( 'default', 'padding_top', 'amount' ); ?>/>
+									<input class="tt-font-slider-unit" type="hidden" data-default-value="<?php echo $default_values['padding_top']['unit']; ?>" value="<?php echo $this_value['padding_top']['unit']; ?>" <?php $this->option_link( 'default', 'padding_top', 'unit' ); ?>/>
+									<div class="clearfix"></div>
+
+								</div><!-- END .tt-font-slider-control -->
+
+								<?php 
+									/**
+									 * Padding Bottom
+									 */
+								?>
+								<div class="tt-font-slider-control padding-slider padding-bottom-slider">
+									<span class="customize-control-title">
+										<?php _e( 'Padding Bottom', 'theme-translate' ); ?>
+										<div class="tt-font-slider-display">
+											<span>
+												
+											</span> | 
+											<a class="tt-font-slider-reset" href="#"><?php _e( 'Reset', 'theme-translate' ); ?></a>
+											<div class="clearfix"></div>
+										</div><!-- END .tt-slider-display -->
+									</span><!-- END .customize-control-title -->
+									
+									<div class="tt-slider"
+										data-step="<?php echo $this->padding_step; ?>" 
+										data-default-value="<?php echo $default_values['padding_bottom']['amount']; ?>" 
+										data-default-unit="<?php echo $default_values['padding_bottom']['unit']; ?>" 
+										data-min-range="<?php echo $this->padding_min_range; ?>" 
+										data-max-range="<?php echo $this->padding_max_range; ?>">
+									</div>
+									<input class="tt-font-slider-amount" type="hidden" data-default-value="<?php echo $default_values['padding_bottom']['amount']; ?>" value="<?php echo $this_value['padding_bottom']['amount']; ?>" <?php $this->option_link( 'default', 'padding_bottom', 'amount' ); ?>/>
+									<input class="tt-font-slider-unit" type="hidden" data-default-value="<?php echo $default_values['padding_bottom']['unit']; ?>" value="<?php echo $this_value['padding_bottom']['unit']; ?>" <?php $this->option_link( 'default', 'padding_bottom', 'unit' ); ?>/>
+									<div class="clearfix"></div>
+									
+								</div><!-- END .tt-font-slider-control -->
+
+								<?php 
+									/**
+									 * Padding Left
+									 */
+								?>
+								<div class="tt-font-slider-control padding-slider padding-left-slider">
+									<span class="customize-control-title">
+										<?php _e( 'Padding Left', 'theme-translate' ); ?>
+										<div class="tt-font-slider-display">
+											<span>
+												
+											</span> | 
+											<a class="tt-font-slider-reset" href="#"><?php _e( 'Reset', 'theme-translate' ); ?></a>
+											<div class="clearfix"></div>
+										</div><!-- END .tt-slider-display -->
+									</span><!-- END .customize-control-title -->
+									
+									<div class="tt-slider"
+										data-step="<?php echo $this->padding_step; ?>" 
+										data-default-value="<?php echo $default_values['padding_left']['amount']; ?>" 
+										data-default-unit="<?php echo $default_values['padding_left']['unit']; ?>" 
+										data-min-range="<?php echo $this->padding_min_range; ?>" 
+										data-max-range="<?php echo $this->padding_max_range; ?>">
+									</div>
+									<input class="tt-font-slider-amount" type="hidden" data-default-value="<?php echo $default_values['padding_left']['amount']; ?>" value="<?php echo $this_value['padding_left']['amount']; ?>" <?php $this->option_link( 'default', 'padding_left', 'amount' ); ?>/>
+									<input class="tt-font-slider-unit" type="hidden" data-default-value="<?php echo $default_values['padding_left']['unit']; ?>" value="<?php echo $this_value['padding_left']['unit']; ?>" <?php $this->option_link( 'default', 'padding_left', 'unit' ); ?>/>
+									<div class="clearfix"></div>
+									
+								</div><!-- END .tt-font-slider-control -->
+
+								<?php 
+									/**
+									 * Padding Right
+									 */
+								?>
+								<div class="tt-font-slider-control padding-slider padding-right-slider">
+									<span class="customize-control-title">
+										<?php _e( 'Padding Right', 'theme-translate' ); ?>
+										<div class="tt-font-slider-display">
+											<span>
+												
+											</span> | 
+											<a class="tt-font-slider-reset" href="#"><?php _e( 'Reset', 'theme-translate' ); ?></a>
+											<div class="clearfix"></div>
+										</div><!-- END .tt-slider-display -->
+									</span><!-- END .customize-control-title -->
+									
+									<div class="tt-slider"
+										data-step="<?php echo $this->padding_step; ?>" 
+										data-default-value="<?php echo $default_values['padding_right']['amount']; ?>" 
+										data-default-unit="<?php echo $default_values['padding_right']['unit']; ?>" 
+										data-min-range="<?php echo $this->padding_min_range; ?>" 
+										data-max-range="<?php echo $this->padding_max_range; ?>">
+									</div>
+									<input class="tt-font-slider-amount" type="hidden" data-default-value="<?php echo $default_values['padding_right']['amount']; ?>" value="<?php echo $this_value['padding_right']['amount']; ?>" <?php $this->option_link( 'default', 'padding_right', 'amount' ); ?>/>
+									<input class="tt-font-slider-unit" type="hidden" data-default-value="<?php echo $default_values['padding_right']['unit']; ?>" value="<?php echo $this_value['padding_right']['unit']; ?>" <?php $this->option_link( 'default', 'padding_right', 'unit' ); ?>/>
+									<div class="clearfix"></div>
+									
+								</div><!-- END .tt-font-slider-control -->
+
+							</div>
+						</div>
+						<div class="tt-font-toggle">
+							<div class="toggle-section-title"><span class="customize-control-title inner-control-title"><?php _e( 'Margin', 'theme-translate' ); ?></span></div>
+							<div class="toggle-section-content">
+								<?php 
+									/**
+									 * Margin Top
+									 */
+								?>
+								<div class="tt-font-slider-control margin-slider margin-top-slider">
+									<span class="customize-control-title">
+										<?php _e( 'Margin Top', 'theme-translate' ); ?>
+										<div class="tt-font-slider-display">
+											<span>
+												
+											</span> | 
+											<a class="tt-font-slider-reset" href="#"><?php _e( 'Reset', 'theme-translate' ); ?></a>
+											<div class="clearfix"></div>
+										</div><!-- END .tt-slider-display -->
+									</span><!-- END .customize-control-title -->
+									
+									<div class="tt-slider"
+										data-step="<?php echo $this->margin_step; ?>" 
+										data-default-value="<?php echo $default_values['margin_top']['amount']; ?>" 
+										data-default-unit="<?php echo $default_values['margin_top']['unit']; ?>" 
+										data-min-range="<?php echo $this->margin_min_range; ?>" 
+										data-max-range="<?php echo $this->margin_max_range; ?>">
+									</div>
+									<input class="tt-font-slider-amount" type="hidden" data-default-value="<?php echo $default_values['margin_top']['amount']; ?>" value="<?php echo $this_value['margin_top']['amount']; ?>" <?php $this->option_link( 'default', 'margin_top', 'amount' ); ?>/>
+									<input class="tt-font-slider-unit" type="hidden" data-default-value="<?php echo $default_values['margin_top']['unit']; ?>" value="<?php echo $this_value['margin_top']['unit']; ?>" <?php $this->option_link( 'default', 'margin_top', 'unit' ); ?>/>
+									<div class="clearfix"></div>
+
+								</div><!-- END .tt-font-slider-control -->
+								
+								<?php 
+									/**
+									 * Margin Bottom
+									 */
+								?>
+								<div class="tt-font-slider-control margin-slider margin-bottom-slider">
+									<span class="customize-control-title">
+										<?php _e( 'Margin Bottom', 'theme-translate' ); ?>
+										<div class="tt-font-slider-display">
+											<span>
+												
+											</span> | 
+											<a class="tt-font-slider-reset" href="#"><?php _e( 'Reset', 'theme-translate' ); ?></a>
+											<div class="clearfix"></div>
+										</div><!-- END .tt-slider-display -->
+									</span><!-- END .customize-control-title -->
+									
+									<div class="tt-slider"
+										data-step="<?php echo $this->margin_step; ?>" 
+										data-default-value="<?php echo $default_values['margin_bottom']['amount']; ?>" 
+										data-default-unit="<?php echo $default_values['margin_bottom']['unit']; ?>" 
+										data-min-range="<?php echo $this->margin_min_range; ?>" 
+										data-max-range="<?php echo $this->margin_max_range; ?>">
+									</div>
+									<input class="tt-font-slider-amount" type="hidden" data-default-value="<?php echo $default_values['margin_bottom']['amount']; ?>" value="<?php echo $this_value['margin_bottom']['amount']; ?>" <?php $this->option_link( 'default', 'margin_bottom', 'amount' ); ?>/>
+									<input class="tt-font-slider-unit" type="hidden" data-default-value="<?php echo $default_values['margin_bottom']['unit']; ?>" value="<?php echo $this_value['margin_bottom']['unit']; ?>" <?php $this->option_link( 'default', 'margin_bottom', 'unit' ); ?>/>
+									<div class="clearfix"></div>
+
+								</div><!-- END .tt-font-slider-control -->
+								
+								<?php 
+									/**
+									 * Margin Left
+									 */
+								?>
+								<div class="tt-font-slider-control margin-slider margin-left-slider">
+									<span class="customize-control-title">
+										<?php _e( 'Margin Left', 'theme-translate' ); ?>
+										<div class="tt-font-slider-display">
+											<span>
+												
+											</span> | 
+											<a class="tt-font-slider-reset" href="#"><?php _e( 'Reset', 'theme-translate' ); ?></a>
+											<div class="clearfix"></div>
+										</div><!-- END .tt-slider-display -->
+									</span><!-- END .customize-control-title -->
+									
+									<div class="tt-slider"
+										data-step="<?php echo $this->margin_step; ?>" 
+										data-default-value="<?php echo $default_values['margin_left']['amount']; ?>" 
+										data-default-unit="<?php echo $default_values['margin_left']['unit']; ?>" 
+										data-min-range="<?php echo $this->margin_min_range; ?>" 
+										data-max-range="<?php echo $this->margin_max_range; ?>">
+									</div>
+									<input class="tt-font-slider-amount" type="hidden" data-default-value="<?php echo $default_values['margin_left']['amount']; ?>" value="<?php echo $this_value['margin_left']['amount']; ?>" <?php $this->option_link( 'default', 'margin_left', 'amount' ); ?>/>
+									<input class="tt-font-slider-unit" type="hidden" data-default-value="<?php echo $default_values['margin_left']['unit']; ?>" value="<?php echo $this_value['margin_left']['unit']; ?>" <?php $this->option_link( 'default', 'margin_left', 'unit' ); ?>/>
+									<div class="clearfix"></div>
+
+								</div><!-- END .tt-font-slider-control -->
+
+								<?php 
+									/**
+									 * Margin Right
+									 */
+								?>
+								<div class="tt-font-slider-control margin-slider margin-right-slider">
+									<span class="customize-control-title">
+										<?php _e( 'Margin Right', 'theme-translate' ); ?>
+										<div class="tt-font-slider-display">
+											<span>
+												
+											</span> | 
+											<a class="tt-font-slider-reset" href="#"><?php _e( 'Reset', 'theme-translate' ); ?></a>
+											<div class="clearfix"></div>
+										</div><!-- END .tt-slider-display -->
+									</span><!-- END .customize-control-title -->
+									
+									<div class="tt-slider"
+										data-step="<?php echo $this->margin_step; ?>" 
+										data-default-value="<?php echo $default_values['margin_right']['amount']; ?>" 
+										data-default-unit="<?php echo $default_values['margin_right']['unit']; ?>" 
+										data-min-range="<?php echo $this->margin_min_range; ?>" 
+										data-max-range="<?php echo $this->margin_max_range; ?>">
+									</div>
+									<input class="tt-font-slider-amount" type="hidden" data-default-value="<?php echo $default_values['margin_right']['amount']; ?>" value="<?php echo $this_value['margin_right']['amount']; ?>" <?php $this->option_link( 'default', 'margin_right', 'amount' ); ?>/>
+									<input class="tt-font-slider-unit" type="hidden" data-default-value="<?php echo $default_values['margin_right']['unit']; ?>" value="<?php echo $this_value['margin_right']['unit']; ?>" <?php $this->option_link( 'default', 'margin_right', 'unit' ); ?>/>
+									<div class="clearfix"></div>
+
+								</div><!-- END .tt-font-slider-control -->
+
+								
+							</div>
+						</div>
+
+					</div>
+
 				</div><!-- END .tt-font-properties -->
 			</div><!-- END .tt-font-control -->
 

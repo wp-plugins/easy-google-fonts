@@ -26,7 +26,7 @@
  * 1. jQuery			( http://jquery.com/ )
  * 2. jQuery UI			( http://jqueryui.com/ )
  *
- * @version 1.1
+ * @version 1.1.1
  *
  * =============================================================== */
 /**============================================================
@@ -49,7 +49,7 @@
 		 * @uses object _wpCustomizeSettings  
 		 *
 		 * @since 1.0
-		 * @version 1.1
+		 * @version 1.1.1
 		 * 
 		 */
 		preview.init = function() {
@@ -62,19 +62,28 @@
 				var importance = value.force_styles ? '!important' : '';
 
 				if ( 'font' === type && 'postMessage' === transport ) {
-					var head          =  $('head')
-					var selector      = value.selector;
-					var fontId        = 'tt_font_theme_options[' + id + '][font_id]';
-					var fontName      = 'tt_font_theme_options[' + id + '][font_name]';
-					var fontColor     = 'tt_font_theme_options[' + id + '][font_color]';
-					var fontWeight    = 'tt_font_theme_options[' + id + '][font_weight]';
-					var fontStyle     = 'tt_font_theme_options[' + id + '][font_style]';
-					var fontSize      = 'tt_font_theme_options[' + id + '][font_size][amount]';
-					var lineHeight    = 'tt_font_theme_options[' + id + '][line_height]';
-					var letterSpacing = 'tt_font_theme_options[' + id + '][letter_spacing][amount]';
-					var textDec       = 'tt_font_theme_options[' + id + '][text_decoration]';
-					var textTransform = 'tt_font_theme_options[' + id + '][text_transform]';
-					var stylesheetUrl = 'tt_font_theme_options[' + id + '][stylesheet_url]';
+					var head            =  $('head')
+					var selector        = value.selector;
+					var fontId          = 'tt_font_theme_options[' + id + '][font_id]';
+					var fontName        = 'tt_font_theme_options[' + id + '][font_name]';
+					var fontColor       = 'tt_font_theme_options[' + id + '][font_color]';
+					var backgroundColor = 'tt_font_theme_options[' + id + '][background_color]';
+					var fontWeight      = 'tt_font_theme_options[' + id + '][font_weight]';
+					var fontStyle       = 'tt_font_theme_options[' + id + '][font_style]';
+					var fontSize        = 'tt_font_theme_options[' + id + '][font_size][amount]';
+					var lineHeight      = 'tt_font_theme_options[' + id + '][line_height]';
+					var letterSpacing   = 'tt_font_theme_options[' + id + '][letter_spacing][amount]';
+					var textDec         = 'tt_font_theme_options[' + id + '][text_decoration]';
+					var textTransform   = 'tt_font_theme_options[' + id + '][text_transform]';
+					var stylesheetUrl   = 'tt_font_theme_options[' + id + '][stylesheet_url]';
+					var marginTop       = 'tt_font_theme_options[' + id + '][margin_top][amount]';
+					var marginBottom    = 'tt_font_theme_options[' + id + '][margin_bottom][amount]';
+					var marginLeft      = 'tt_font_theme_options[' + id + '][margin_left][amount]';
+					var marginRight     = 'tt_font_theme_options[' + id + '][margin_right][amount]';
+					var paddingTop      = 'tt_font_theme_options[' + id + '][padding_top][amount]';
+					var paddingBottom   = 'tt_font_theme_options[' + id + '][padding_bottom][amount]';
+					var paddingLeft     = 'tt_font_theme_options[' + id + '][padding_left][amount]';
+					var paddingRight    = 'tt_font_theme_options[' + id + '][padding_right][amount]';
 
 
 					// Enqueue Stylesheet in Head
@@ -105,6 +114,28 @@
 							}
 
 
+						});
+					});
+
+					// Font Color Live Preview
+					wp.customize( backgroundColor, function( value ) {
+						// Generate unique id for style tag
+						var styleId = 'tt-font-' + id + '-background-color';
+
+						value.bind(function(to) {
+
+							if ( to === '' ) {
+								$( '#' + styleId ).remove(); 
+							} else {
+								// Generate inline styles
+								var style = '<style id="' + styleId + '" type="text/css">';
+								style += selector +' { background-color: ' + to + importance + '; }';
+								style += '</style>';
+
+								// Update live preview for element
+								$( '#' + styleId ).remove(); 
+								$(style).appendTo( head );								
+							}
 						});
 					});
 
@@ -294,11 +325,193 @@
 							}
 						   
 						});
-					});                    
+					});
+
+					// Margin Top Preview
+					wp.customize( marginTop, function( value ) {
+					// Generate unique id for style tag
+						var styleId = 'tt-font-' + id + '-margin-top';
+
+						value.bind(function(to) {
+							if ( to === '' ) {
+								// Remove any applied styles
+								$( '#' + styleId ).remove();
+							} else {
+
+								// Generate inline styles
+								var style = '<style id="' + styleId + '" type="text/css">';
+								style += selector +' { margin-top: ' + to + valueObj.default_values.margin_top.unit + importance + '; }';
+								style += '</style>';
+
+								// Update live preview for element
+								$( '#' + styleId ).remove(); 
+								$(style).appendTo( head );
+							}
+						});
+					});
+
+					// Margin Bottom Preview
+					wp.customize( marginBottom, function( value ) {
+					// Generate unique id for style tag
+						var styleId = 'tt-font-' + id + '-margin-bottom';
+
+						value.bind(function(to) {
+							if ( to === '' ) {
+								// Remove any applied styles
+								$( '#' + styleId ).remove();
+							} else {
+
+								// Generate inline styles
+								var style = '<style id="' + styleId + '" type="text/css">';
+								style += selector +' { margin-bottom: ' + to + valueObj.default_values.margin_bottom.unit + importance + '; }';
+								style += '</style>';
+
+								// Update live preview for element
+								$( '#' + styleId ).remove(); 
+								$(style).appendTo( head );
+							}
+						});
+					});
+
+					// Margin Left Preview
+					wp.customize( marginLeft, function( value ) {
+					// Generate unique id for style tag
+						var styleId = 'tt-font-' + id + '-margin-left';
+
+						value.bind(function(to) {
+							if ( to === '' ) {
+								// Remove any applied styles
+								$( '#' + styleId ).remove();
+							} else {
+
+								// Generate inline styles
+								var style = '<style id="' + styleId + '" type="text/css">';
+								style += selector +' { margin-left: ' + to + valueObj.default_values.margin_left.unit + importance + '; }';
+								style += '</style>';
+
+								// Update live preview for element
+								$( '#' + styleId ).remove(); 
+								$(style).appendTo( head );
+							}
+						});
+					});
+
+					// Margin Right Preview
+					wp.customize( marginRight, function( value ) {
+					// Generate unique id for style tag
+						var styleId = 'tt-font-' + id + '-margin-right';
+
+						value.bind(function(to) {
+							if ( to === '' ) {
+								// Remove any applied styles
+								$( '#' + styleId ).remove();
+							} else {
+
+								// Generate inline styles
+								var style = '<style id="' + styleId + '" type="text/css">';
+								style += selector +' { margin-right: ' + to + valueObj.default_values.margin_right.unit + importance + '; }';
+								style += '</style>';
+
+								// Update live preview for element
+								$( '#' + styleId ).remove(); 
+								$(style).appendTo( head );
+							}
+						});
+					});
+
+					// Padding Top Preview
+					wp.customize( paddingTop, function( value ) {
+					// Generate unique id for style tag
+						var styleId = 'tt-font-' + id + '-padding-top';
+
+						value.bind(function(to) {
+							if ( to === '' ) {
+								// Remove any applied styles
+								$( '#' + styleId ).remove();
+							} else {
+
+								// Generate inline styles
+								var style = '<style id="' + styleId + '" type="text/css">';
+								style += selector +' { padding-top: ' + to + valueObj.default_values.padding_top.unit + importance + '; }';
+								style += '</style>';
+
+								// Update live preview for element
+								$( '#' + styleId ).remove(); 
+								$(style).appendTo( head );
+							}
+						});
+					});
+
+					// Padding Bottom Preview
+					wp.customize( paddingBottom, function( value ) {
+					// Generate unique id for style tag
+						var styleId = 'tt-font-' + id + '-padding-bottom';
+
+						value.bind(function(to) {
+							if ( to === '' ) {
+								// Remove any applied styles
+								$( '#' + styleId ).remove();
+							} else {
+
+								// Generate inline styles
+								var style = '<style id="' + styleId + '" type="text/css">';
+								style += selector +' { padding-bottom: ' + to + valueObj.default_values.padding_bottom.unit + importance + '; }';
+								style += '</style>';
+
+								// Update live preview for element
+								$( '#' + styleId ).remove(); 
+								$(style).appendTo( head );
+							}
+						});
+					});
+
+					// Padding Left Preview
+					wp.customize( paddingLeft, function( value ) {
+					// Generate unique id for style tag
+						var styleId = 'tt-font-' + id + '-padding-left';
+
+						value.bind(function(to) {
+							if ( to === '' ) {
+								// Remove any applied styles
+								$( '#' + styleId ).remove();
+							} else {
+
+								// Generate inline styles
+								var style = '<style id="' + styleId + '" type="text/css">';
+								style += selector +' { padding-left: ' + to + valueObj.default_values.padding_left.unit + importance + '; }';
+								style += '</style>';
+
+								// Update live preview for element
+								$( '#' + styleId ).remove(); 
+								$(style).appendTo( head );
+							}
+						});
+					});
+
+					// Padding Right Preview
+					wp.customize( paddingRight, function( value ) {
+					// Generate unique id for style tag
+						var styleId = 'tt-font-' + id + '-padding-right';
+
+						value.bind(function(to) {
+							if ( to === '' ) {
+								// Remove any applied styles
+								$( '#' + styleId ).remove();
+							} else {
+
+								// Generate inline styles
+								var style = '<style id="' + styleId + '" type="text/css">';
+								style += selector +' { padding-right: ' + to + valueObj.default_values.padding_right.unit + importance + '; }';
+								style += '</style>';
+
+								// Update live preview for element
+								$( '#' + styleId ).remove(); 
+								$(style).appendTo( head );
+							}
+						});
+					});
+
 				}
-
-
-
 			});
 		};
 

@@ -17,7 +17,7 @@
  * @subpackage  WordPress_Google_Fonts
  * @author      Sunny Johal - Titanium Themes
  * @copyright   Copyright (c) 2013, Titanium Themes
- * @version     1.1
+ * @version     1.1.1
  * 
  */
 
@@ -39,7 +39,7 @@ global $tt_font_options;
  * @link	http://planetozh.com/blog/2009/05/handling-plugins-options-in-wordpress-28-with-register_setting/	Ozh
  *
  * @since 1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 function tt_font_register_options() {
@@ -60,7 +60,7 @@ add_action( 'admin_init', 'tt_font_register_options' );
  * @return	array	$defaults	associative array of option defaults
  * 
  * @since 1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 function tt_font_get_option_defaults() {
@@ -102,15 +102,11 @@ function tt_font_get_option_defaults() {
  * @return	array	$options	array of arrays of option parameters
  *
  * @since 1.0
- * @version 1.1
+ * @version 1.2
  * 
  */
 function tt_font_get_option_parameters() {
 	
-	// Get fonts once and reuse for performance
-	$google_fonts  = tt_font_get_google_fonts();
-	$default_fonts = tt_font_get_default_fonts();
-
 	$options = array(
 		
 		/**
@@ -121,339 +117,187 @@ function tt_font_get_option_parameters() {
 		 * Customizer
 		 *
 		 * @since 1.0
-		 * @version 1.1
+		 * @version 1.1.1
 		 */
 		'tt_default_body' => array(
 			'name'        => 'tt_default_body',
 			'title'       => __( 'Paragraphs', 'theme-translate' ),
-			'type'        => 'font',
 			'description' => __( "Please select a font for the theme's body and paragraph text", 'theme-translate' ),
-			'section'     => 'default',
-			'tab'         => 'typography',
-			'transport'   => 'postMessage',
-			'since'       => '1.0',
-			'properties'  => array(
-								'selector'                 => 'p',
-								'force_styles'             => false,
-								'font_size_min_range'      => '10',
-								'font_size_max_range'      => '100',
-								'font_size_step'           => '1',
-								'line_height_min_range'    => '0.8',
-								'line_height_max_range'    => '4',
-								'line_height_step'         => '0.1',
-								'letter_spacing_min_range' => '-5',
-								'letter_spacing_max_range' => '20',
-								'letter_spacing_step'      => '1',
-								'google_fonts'             => $google_fonts,
-								'default_fonts'            => $default_fonts,
-							),
-			'default'     => array(
-								'font_id'             => '',
-								'font_name'           => '',
-								'font_color'          => '',
-								'font_weight'         => '',
-								'font_style'          => '',
-								'font_weight_style'   => '',
-								'stylesheet_url'      => '',
-								'text_decoration'     => '',
-								'text_transform'      => '',
-								'line_height'         => '',
-								'font_size'           => array( 
-															'amount' => '',
-															'unit'   => 'px'
-														),
-								
-								'letter_spacing'      => array( 
-															'amount' => '',
-															'unit'   => 'px'
-														),
-							)
+			'properties'  => array( 'selector' => 'p' ),
 		),
 
 		'tt_default_heading_1' => array(
 			'name'        => 'tt_default_heading_1',
 			'title'       => __( 'Heading 1', 'theme-translate' ),
-			'type'        => 'font',
 			'description' => __( "Please select a font for the theme's heading 1 styles", 'theme-translate' ),
-			'section'     => 'default',
-			'tab'         => 'typography',
-			'transport'   => 'postMessage',
-			'since'       => '1.0',
-			'properties'  => array(
-								'selector'                 => 'h1',
-								'force_styles'             => false,
-								'font_size_min_range'      => '10',
-								'font_size_max_range'      => '100',
-								'font_size_step'           => '1',
-								'line_height_min_range'    => '0.8',
-								'line_height_max_range'    => '4',
-								'line_height_step'         => '0.1',
-								'letter_spacing_min_range' => '-5',
-								'letter_spacing_max_range' => '20',
-								'letter_spacing_step'      => '1',
-								'google_fonts'             => $google_fonts,
-								'default_fonts'            => $default_fonts,
-							),
-			'default'     => array(
-								'font_id'             => '',
-								'font_name'           => '',
-								'font_color'          => '',
-								'font_weight'         => '',
-								'font_style'          => '',
-								'font_weight_style'   => '',
-								'stylesheet_url'      => '',
-								'text_decoration'     => '',
-								'text_transform'      => '',
-								'line_height'         => '',
-								'font_size'           => array( 
-															'amount' => '',
-															'unit'   => 'px'
-														),
-								
-								'letter_spacing'      => array( 
-															'amount' => '',
-															'unit'   => 'px'
-														),
-							)
+			'properties'  => array( 'selector' => 'h1' ),
 		),
 
 		'tt_default_heading_2' => array(
 			'name'        => 'tt_default_heading_2',
 			'title'       => __( 'Heading 2', 'theme-translate' ),
-			'type'        => 'font',
 			'description' => __( "Please select a font for the theme's heading 2 styles", 'theme-translate' ),
-			'section'     => 'default',
-			'tab'         => 'typography',
-			'transport'   => 'postMessage',
-			'since'       => '1.0',
-			'properties'  => array(
-								'selector'                 => 'h2',
-								'force_styles'             => false,
-								'font_size_min_range'      => '10',
-								'font_size_max_range'      => '100',
-								'font_size_step'           => '1',
-								'line_height_min_range'    => '0.8',
-								'line_height_max_range'    => '4',
-								'line_height_step'         => '0.1',
-								'letter_spacing_min_range' => '-5',
-								'letter_spacing_max_range' => '20',
-								'letter_spacing_step'      => '1',
-								'google_fonts'             => $google_fonts,
-								'default_fonts'            => $default_fonts,
-							),
-			'default'     => array(
-								'font_id'             => '',
-								'font_name'           => '',
-								'font_color'          => '',
-								'font_weight'         => '',
-								'font_style'          => '',
-								'font_weight_style'   => '',
-								'stylesheet_url'      => '',
-								'text_decoration'     => '',
-								'text_transform'      => '',
-								'line_height'         => '',
-								'font_size'           => array( 
-															'amount' => '',
-															'unit'   => 'px'
-														),
-								
-								'letter_spacing'      => array( 
-															'amount' => '',
-															'unit'   => 'px'
-														),
-							)
+			'properties'  => array( 'selector' => 'h2' ),
 		),
 
 		'tt_default_heading_3' => array(
 			'name'        => 'tt_default_heading_3',
 			'title'       => __( 'Heading 3', 'theme-translate' ),
-			'type'        => 'font',
 			'description' => __( "Please select a font for the theme's heading 3 styles", 'theme-translate' ),
-			'section'     => 'default',
-			'tab'         => 'typography',
-			'transport'   => 'postMessage',
-			'since'       => '1.0',
-			'properties'  => array(
-								'selector'                 => 'h3',
-								'force_styles'             => false,
-								'font_size_min_range'      => '10',
-								'font_size_max_range'      => '100',
-								'font_size_step'           => '1',
-								'line_height_min_range'    => '0.8',
-								'line_height_max_range'    => '4',
-								'line_height_step'         => '0.1',
-								'letter_spacing_min_range' => '-5',
-								'letter_spacing_max_range' => '20',
-								'letter_spacing_step'      => '1',
-								'google_fonts'             => $google_fonts,
-								'default_fonts'            => $default_fonts,
-							),
-			'default'     => array(
-								'font_id'             => '',
-								'font_name'           => '',
-								'font_color'          => '',
-								'font_weight'         => '',
-								'font_style'          => '',
-								'font_weight_style'   => '',
-								'stylesheet_url'      => '',
-								'text_decoration'     => '',
-								'text_transform'      => '',
-								'line_height'         => '',
-								'font_size'           => array( 
-															'amount' => '',
-															'unit'   => 'px'
-														),
-								
-								'letter_spacing'      => array( 
-															'amount' => '',
-															'unit'   => 'px'
-														),
-							)
+			'properties'  => array( 'selector' => 'h3' ),
 		),
 
 		'tt_default_heading_4' => array(
 			'name'        => 'tt_default_heading_4',
 			'title'       => __( 'Heading 4', 'theme-translate' ),
-			'type'        => 'font',
 			'description' => __( "Please select a font for the theme's heading 4 styles", 'theme-translate' ),
-			'section'     => 'default',
-			'tab'         => 'typography',
-			'transport'   => 'postMessage',
-			'since'       => '1.0',
-			'properties'  => array(
-								'selector'                 => 'h4',
-								'force_styles'             => false,
-								'font_size_min_range'      => '10',
-								'font_size_max_range'      => '100',
-								'font_size_step'           => '1',
-								'line_height_min_range'    => '0.8',
-								'line_height_max_range'    => '4',
-								'line_height_step'         => '0.1',
-								'letter_spacing_min_range' => '-5',
-								'letter_spacing_max_range' => '20',
-								'letter_spacing_step'      => '1',
-								'google_fonts'             => $google_fonts,
-								'default_fonts'            => $default_fonts,
-							),
-			'default'     => array(
-								'font_id'             => '',
-								'font_name'           => '',
-								'font_color'          => '',
-								'font_weight'         => '',
-								'font_style'          => '',
-								'font_weight_style'   => '',
-								'stylesheet_url'      => '',
-								'text_decoration'     => '',
-								'text_transform'      => '',
-								'line_height'         => '',
-								'font_size'           => array( 
-															'amount' => '',
-															'unit'   => 'px'
-														),
-								
-								'letter_spacing'      => array( 
-															'amount' => '',
-															'unit'   => 'px'
-														),
-							)
+			'properties'  => array( 'selector' => 'h4' ),
 		),
 
 		'tt_default_heading_5' => array(
 			'name'        => 'tt_default_heading_5',
 			'title'       => __( 'Heading 5', 'theme-translate' ),
-			'type'        => 'font',
 			'description' => __( "Please select a font for the theme's heading 5 styles", 'theme-translate' ),
-			'section'     => 'default',
-			'tab'         => 'typography',
-			'transport'   => 'postMessage',
-			'since'       => '1.0',
-			'properties'  => array(
-								'selector'                 => 'h5',
-								'force_styles'             => false,
-								'font_size_min_range'      => '10',
-								'font_size_max_range'      => '100',
-								'font_size_step'           => '1',
-								'line_height_min_range'    => '0.8',
-								'line_height_max_range'    => '4',
-								'line_height_step'         => '0.1',
-								'letter_spacing_min_range' => '-5',
-								'letter_spacing_max_range' => '20',
-								'letter_spacing_step'      => '1',
-								'google_fonts'             => $google_fonts,
-								'default_fonts'            => $default_fonts,
-							),
-			'default'     => array(
-								'font_id'             => '',
-								'font_name'           => '',
-								'font_color'          => '',
-								'font_weight'         => '',
-								'font_style'          => '',
-								'font_weight_style'   => '',
-								'stylesheet_url'      => '',
-								'text_decoration'     => '',
-								'text_transform'      => '',
-								'line_height'         => '',
-								'font_size'           => array( 
-															'amount' => '',
-															'unit'   => 'px'
-														),
-								
-								'letter_spacing'      => array( 
-															'amount' => '',
-															'unit'   => 'px'
-														),
-							)
+			'properties'  => array( 'selector' => 'h5' ),
 		),
 
 		'tt_default_heading_6' => array(
 			'name'        => 'tt_default_heading_6',
 			'title'       => __( 'Heading 6', 'theme-translate' ),
-			'type'        => 'font',
 			'description' => __( "Please select a font for the theme's heading 6 styles", 'theme-translate' ),
-			'section'     => 'default',
-			'tab'         => 'typography',
-			'transport'   => 'postMessage',
-			'since'       => '1.0',
-			'properties'  => array(
-								'selector'                 => 'h5',
-								'force_styles'             => false,
-								'font_size_min_range'      => '10',
-								'font_size_max_range'      => '100',
-								'font_size_step'           => '1',
-								'line_height_min_range'    => '0.8',
-								'line_height_max_range'    => '4',
-								'line_height_step'         => '0.1',
-								'letter_spacing_min_range' => '-5',
-								'letter_spacing_max_range' => '20',
-								'letter_spacing_step'      => '1',
-								'google_fonts'             => $google_fonts,
-								'default_fonts'            => $default_fonts,
-							),
-			'default'     => array(
-								'font_id'             => '',
-								'font_name'           => '',
-								'font_color'          => '',
-								'font_weight'         => '',
-								'font_style'          => '',
-								'font_weight_style'   => '',
-								'stylesheet_url'      => '',
-								'text_decoration'     => '',
-								'text_transform'      => '',
-								'line_height'         => '',
-								'font_size'           => array( 
-															'amount' => '',
-															'unit'   => 'px'
-														),
-								
-								'letter_spacing'      => array( 
-															'amount' => '',
-															'unit'   => 'px'
-														),
-							)
+			'properties'  => array( 'selector' => 'h6' ),
 		),
 	);
 
-	return apply_filters( 'tt_font_get_option_parameters', $options );
+	$font_controls = apply_filters( 'tt_font_get_option_parameters', $options );
+
+	foreach ( $font_controls as $id => $control ) {
+		$font_controls[ $id ] = tt_font_parse_font_control_array( $control );
+	}
+
+	return $font_controls;
+}
+
+/**
+ * Parse Font Control with Defaults
+ * 
+ * @param  [type] $args [description]
+ * @return [type]       [description]
+ *
+ * @since  1.2
+ * @version 1.2
+ */
+// Global Fonts Array
+global $google_fonts;
+global $default_fonts;
+
+$google_fonts  = tt_font_get_google_fonts();
+$default_fonts = tt_font_get_default_fonts();
+
+function tt_font_parse_font_control_array( $args ) {
+
+	// Get fonts once and reuse for performance
+global $google_fonts;
+global $default_fonts;
+
+	$defaults = array(
+		'title'       => __( 'Font Control', 'theme-translate' ),
+		'type'        => 'font',
+		'description' => __( "Edit Font Properties", 'theme-translate' ),
+		'section'     => 'default',
+		'tab'         => 'typography',
+		'transport'   => 'postMessage',
+		'since'       => '1.2',
+		'properties'  => array(
+				'selector'                 => '',
+				'force_styles'             => apply_filters( 'tt_font_force_styles', false ),
+				'font_size_min_range'      => apply_filters( 'tt_font_size_min_range', 10 ),
+				'font_size_max_range'      => apply_filters( 'tt_font_size_max_range', 100 ),
+				'font_size_step'           => apply_filters( 'tt_font_size_step', 1 ),
+				'line_height_min_range'    => apply_filters( 'tt_font_line_height_min_range', 0.8 ),
+				'line_height_max_range'    => apply_filters( 'tt_font_line_height_max_range', 4 ),
+				'line_height_step'         => apply_filters( 'tt_font_line_height_step', 0.1 ),
+				'letter_spacing_min_range' => apply_filters( 'tt_font_letter_spacing_min_range', -5 ),
+				'letter_spacing_max_range' => apply_filters( 'tt_font_letter_spacing_max_range', 20 ),
+				'letter_spacing_step'      => apply_filters( 'tt_font_letter_spacing_step', 1 ),
+				'margin_min_range'         => apply_filters( 'tt_font_margin_min_range', 0 ),
+				'margin_max_range'         => apply_filters( 'tt_font_margin_max_range', 300 ),
+				'margin_step'              => apply_filters( 'tt_font_margin_step', 1 ),
+				'padding_min_range'        => apply_filters( 'tt_font_padding_min_range', 0 ),
+				'padding_max_range'        => apply_filters( 'tt_font_padding_max_range', 300 ),
+				'padding_step'             => apply_filters( 'tt_font_padding_step', 1 ),
+				'google_fonts'             => $google_fonts,
+				'default_fonts'            => $default_fonts,
+			),
+		'default'     => array(
+				'font_id'             => '',
+				'font_name'           => '',
+				'font_color'          => '',
+				'font_weight'         => '',
+				'font_style'          => '',
+				'font_weight_style'   => '',
+				'background_color'    => '',
+				'stylesheet_url'      => '',
+				'text_decoration'     => '',
+				'text_transform'      => '',
+				'line_height'         => '',
+				'font_size'           => array( 
+											'amount' => '',
+											'unit'   => 'px'
+										),				
+				'letter_spacing'      => array( 
+											'amount' => '',
+											'unit'   => 'px'
+										),
+				'margin_top'          => array( 
+											'amount' => '',
+											'unit'   => 'px'
+										),
+				'margin_right'        => array( 
+											'amount' => '',
+											'unit'   => 'px'
+										),
+				'margin_bottom'       => array( 
+											'amount' => '',
+											'unit'   => 'px'
+										),
+				'margin_left'         => array( 
+											'amount' => '',
+											'unit'   => 'px'
+										),
+				'padding_top'         => array( 
+											'amount' => '',
+											'unit'   => 'px'
+										),
+				'padding_right'       => array( 
+											'amount' => '',
+											'unit'   => 'px'
+										),
+				'padding_bottom'      => array( 
+											'amount' => '',
+											'unit'   => 'px'
+										),
+				'padding_left'        => array( 
+											'amount' => '',
+											'unit'   => 'px'
+										),
+			),
+	);
+
+	// Parse Properties
+	if ( isset( $args['properties'] ) ) {
+		$args['properties'] = wp_parse_args( $args['properties'], $defaults['properties'] );
+	}
+
+	// Parse default preset values
+	if ( isset( $args['default'] ) ) {
+		$args['default'] = wp_parse_args( $args['default'], $defaults['default'] );
+	}
+
+	// Parse complete control
+	$control = wp_parse_args( $args, $defaults );
+
+	return $control;
 }
 
 /**
@@ -483,7 +327,7 @@ function tt_font_get_option_parameters() {
  * @return	array	$tt_font_options	current values for all Theme options
  * 
  * @since 1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 function tt_font_get_options( $with_transient = true ) {
@@ -531,7 +375,7 @@ function tt_font_get_options( $with_transient = true ) {
  * @return	array	$settings_by_tab	array of arrays of settings by tab
  *
  * @since 1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 function tt_font_get_settings_by_tab() {
@@ -580,7 +424,7 @@ function tt_font_get_settings_by_tab() {
  * @return	array	$tabs	array of arrays of tab parameters
  *
  * @since 1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 function tt_font_get_settings_page_tabs() {
@@ -625,10 +469,6 @@ function tt_font_custom_option_parameters( $options ) {
 	$query  = tt_font_get_all_font_controls();
 	$custom_options = array();
 
-	// Get fonts once and reuse for performance
-	$google_fonts  = tt_font_get_google_fonts();
-	$default_fonts = tt_font_get_default_fonts();
-
 	if ( $query ) {
 		while( $query->have_posts() ) {
 
@@ -655,7 +495,6 @@ function tt_font_custom_option_parameters( $options ) {
 				$selectors = rtrim( $selectors, "," );
 			}				
 	
-
 			// Add control
 			if ( $control_id ) {
 				$custom_options[ $control_id ] = array(
@@ -668,40 +507,9 @@ function tt_font_custom_option_parameters( $options ) {
 					'transport'   => 'postMessage',
 					'since'       => '1.0',
 					'properties'  => array(
-						'selector'                 => $selectors,
-						'force_styles'             => $force_styles,
-						'font_size_min_range'      => '10',
-						'font_size_max_range'      => '100',
-						'font_size_step'           => '1',
-						'line_height_min_range'    => '0.8',
-						'line_height_max_range'    => '4',
-						'line_height_step'         => '0.1',
-						'letter_spacing_min_range' => '-5',
-						'letter_spacing_max_range' => '20',
-						'letter_spacing_step'      => '1',
-						'google_fonts'             => $google_fonts,
-						'default_fonts'            => $default_fonts,
+						'selector'     => $selectors,
+						'force_styles' => $force_styles,
 					),
-					'default'     => array(
-						'font_id'             => '',
-						'font_name'           => '',
-						'font_color'          => '',
-						'font_weight'         => '',
-						'font_style'          => '',
-						'font_weight_style'   => '',
-						'stylesheet_url'      => '',
-						'text_decoration'     => '',
-						'text_transform'      => '',
-						'line_height'         => '',
-						'font_size'           => array( 
-													'amount' => '',
-													'unit'   => 'px'
-												),
-						'letter_spacing'      => array( 
-													'amount' => '',
-													'unit'   => 'px'
-												),
-					)
 
 				);
 			}
@@ -711,6 +519,12 @@ function tt_font_custom_option_parameters( $options ) {
 		// Reset the query globals
 		wp_reset_postdata();
 	}
+
+	// Parse with defaults
+	foreach ( $custom_options as $id => $control ) {
+		$custom_options[ $id ] = tt_font_parse_font_control_array( $control );
+	}
+
 
 	return array_merge( $options, $custom_options );
 }

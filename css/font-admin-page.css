@@ -6,7 +6,7 @@
  * @subpackage  WordPress_Google_Fonts
  * @author      Sunny Johal - Titanium Themes
  * @copyright   Copyright (c) 2013, Titanium Themes
- * @version     1.1
+ * @version     1.1.1
  * 
  */
 /**
@@ -18,14 +18,11 @@
 
 .howto {
     display: block;
-    font-family: sans-serif;
     font-style: italic;
 }
-.wp-admin select {
-    height: auto;
-    height: 24px;
+textarea, input, select {
+    font-size: 14px;
 }
-
 #contextual-help-columns a {
     outline: none !important;
 }
@@ -66,7 +63,7 @@
  * The following styles are used for the Edit
  * Controls screen
  *
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 
@@ -84,18 +81,26 @@
     overflow: hidden;
     margin-top: 23px;
     padding: 10px;
-    border: 1px solid #EEEEEE;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    background-clip: border-box;
-    background-origin: padding-box;
-    background-size: auto;
-    -webkit-background-size: auto;
+    border: 1px solid #ddd;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    -webkit-border-radius: 0;
+    border-radius: 0;
     background: none repeat scroll 0 0 #FBFBFB;
 }
 
 .manage-controls form {
     margin-bottom: 0;
+}
+
+.add-new-control-action {
+    display: inline-block;
+    margin-left: 4px;
+}
+
+.manage-label {
+    display: inline-block;
+    margin-top: 4px;
 }
 
 .manage-controls select {
@@ -106,25 +111,23 @@
 
 #edit-controls-wrap {
 	margin-top: 23px;
+    border: 1px solid #ddd;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
 }
 
 .control-edit {
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	border: 1px solid #DFDFDF;
-	margin-bottom: 20px;
+    background: #FFFFFF;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
 }
 
 /* Header and Footer */
 #edit-control-header,
 #edit-control-footer {
-    background: #F1F1F1;
-	background: -webkit-gradient(linear, 0 0, 0 100%, from(#ECECEC), to(#F9F9F9));
-	background: -webkit-linear-gradient(to top, #ECECEC, #F9F9F9);
-	background: -moz-linear-gradient(to top, #ECECEC, #F9F9F9);
-	background: -o-linear-gradient(to top, #ECECEC, #F9F9F9);
-	background: linear-gradient(to top, #ECECEC, #F9F9F9) repeat scroll 0 0 #F1F1F1;
+    background: #F5F5F5;
+    line-height: 1.4em;
 	padding: 0 10px;
 }
 #edit-control-header {
@@ -162,7 +165,7 @@
 }
 
 .control-edit #post-body {
-	border-top: 1px solid #FFFFFF;
+    background: #FFFFFF;
 	border-bottom: 1px solid #DFDFDF;
 	padding: 0 10px 10px;
 }
@@ -180,7 +183,7 @@
  * The following styles are used for the Tag
  * selection plugin.
  *
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 ul.tagit {
@@ -255,14 +258,11 @@ ul.tagit {
     border: 1px solid #e8e8e8;
     max-width: 100%;
     background: inherit;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
 }
 ul.tagit li.tagit-choice {
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
     border: 1px solid #CAD8F3;
 
     background: none;
@@ -284,10 +284,12 @@ ul.tagit li.tagit-choice .ui-icon {
 }
 ul.tagit li.tagit-choice .tagit-close .text-icon {
     display: inline;
-    font-family: arial, sans-serif;
     font-size: 16px;
     line-height: 16px;
-    color: #777;
+    color: #444444;
+    color: rgba(0,0,0,0.5);
+    font-weight: bold;
+    
 }
 ul.tagit li.tagit-choice:hover, ul.tagit li.tagit-choice.remove {
     background-color: #bbcef1;
@@ -299,6 +301,7 @@ ul.tagit li.tagit-choice a.tagit-close .text-icon:hover {
 }
 ul.tagit input[type="text"] {
     color: #333333;
+    color: rgba(0,0,0,0.6);
     background: none;
 }
 .ui-widget {
@@ -312,7 +315,7 @@ ul.tagit input[type="text"] {
  * The following styles are used for the Manage
  * Font Controls Screen.
  *
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 .manage-controls .new-label {
@@ -356,7 +359,7 @@ ul.tagit input[type="text"] {
  * The following styles are used for the Advanced
  * Font Controls Screen.
  *
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 #google-api-key {

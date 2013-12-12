@@ -77,8 +77,8 @@
             // with the name given in settings.fieldName.
             singleFieldNode: null,
 
-            // Whether to animate tag removals or not.
-            animate: true,
+            // Whether to animate tag removals or not. (Changed)
+            animate: false,
 
             // Optionally set a tabindex attribute on the input that gets
             // created for tag-it.

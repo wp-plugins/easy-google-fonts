@@ -11,7 +11,7 @@
  * @subpackage  WordPress_Google_Fonts
  * @author      Sunny Johal - Titanium Themes
  * @copyright   Copyright (c) 2013, Titanium Themes
- * @version     1.1
+ * @version     1.1.1
  * 
  */
 
@@ -28,7 +28,7 @@
  * @param	callback	$sanitize_callback	Name of the callback function in which user input data are sanitized
  *
  * @since 1.0
- * @version 1.1
+ * @version 1.1.1
  */
 register_setting( 
 	'tt_font_theme_options', 	
@@ -53,7 +53,7 @@ register_setting(
  * @return	array	$input	Sanitized user-input data passed to the database
  *
  * @since 1.0
- * @version 1.1
+ * @version 1.1.1
  */
 /**
  * Performance Enhancement: Store Validation Function Call Count
@@ -139,6 +139,7 @@ function tt_font_options_validate( $input ) {
 						// Sanitize font values
 						$valid_input[ $setting ]['font_id']                  = esc_attr( $input[ $setting ]['font_id'] );
 						$valid_input[ $setting ]['font_name']                = esc_attr( $input[ $setting ]['font_name'] );
+						$valid_input[ $setting ]['background_color']         = sanitize_hex_color( $input[ $setting ]['background_color'] );
 						$valid_input[ $setting ]['font_color']               = sanitize_hex_color( $input[ $setting ]['font_color'] );
 						$valid_input[ $setting ]['font_weight']              = esc_attr( $input[ $setting ]['font_weight'] );
 						$valid_input[ $setting ]['font_style']               = esc_attr( $input[ $setting ]['font_style'] );
@@ -150,7 +151,23 @@ function tt_font_options_validate( $input ) {
 						$valid_input[ $setting ]['font_size']['amount']      = esc_attr( $input[ $setting ]['font_size']['amount'] );
 						$valid_input[ $setting ]['font_size']['unit']        = $option_defaults[ $setting ]['font_size']['unit'];
 						$valid_input[ $setting ]['letter_spacing']['amount'] = esc_attr( $input[ $setting ]['letter_spacing']['amount'] );
-						$valid_input[ $setting ]['letter_spacing']['unit']   = $option_defaults[ $setting ]['letter_spacing']['unit'];		
+						$valid_input[ $setting ]['letter_spacing']['unit']   = $option_defaults[ $setting ]['letter_spacing']['unit'];	
+						$valid_input[ $setting ]['padding_top']['amount']    = esc_attr( $input[ $setting ]['padding_top']['amount'] );
+						$valid_input[ $setting ]['padding_top']['unit']      = $option_defaults[ $setting ]['padding_top']['unit'];
+						$valid_input[ $setting ]['padding_right']['amount']  = esc_attr( $input[ $setting ]['padding_right']['amount'] );
+						$valid_input[ $setting ]['padding_right']['unit']    = $option_defaults[ $setting ]['padding_right']['unit'];
+						$valid_input[ $setting ]['padding_bottom']['amount'] = esc_attr( $input[ $setting ]['padding_bottom']['amount'] );
+						$valid_input[ $setting ]['padding_bottom']['unit']   = $option_defaults[ $setting ]['padding_bottom']['unit'];
+						$valid_input[ $setting ]['padding_left']['amount']   = esc_attr( $input[ $setting ]['padding_left']['amount'] );
+						$valid_input[ $setting ]['padding_left']['unit']     = $option_defaults[ $setting ]['padding_left']['unit'];
+						$valid_input[ $setting ]['margin_top']['amount']     = esc_attr( $input[ $setting ]['margin_top']['amount'] );
+						$valid_input[ $setting ]['margin_top']['unit']       = $option_defaults[ $setting ]['margin_top']['unit'];
+						$valid_input[ $setting ]['margin_right']['amount']   = esc_attr( $input[ $setting ]['margin_right']['amount'] );
+						$valid_input[ $setting ]['margin_right']['unit']     = $option_defaults[ $setting ]['margin_right']['unit'];
+						$valid_input[ $setting ]['margin_bottom']['amount']  = esc_attr( $input[ $setting ]['margin_bottom']['amount'] );
+						$valid_input[ $setting ]['margin_bottom']['unit']    = $option_defaults[ $setting ]['margin_bottom']['unit'];
+						$valid_input[ $setting ]['margin_left']['amount']    = esc_attr( $input[ $setting ]['margin_left']['amount'] );
+						$valid_input[ $setting ]['margin_left']['unit']      = $option_defaults[ $setting ]['margin_left']['unit'];
 
 					} 
 
@@ -162,15 +179,15 @@ function tt_font_options_validate( $input ) {
 					else if ( 'font_basic' ==  $option_details['type'] ) {
 
 						// Sanitize font values
-						$valid_input[ $setting ]['font_id']                  = esc_attr( $input[ $setting ]['font_id'] );
-						$valid_input[ $setting ]['font_name']                = esc_attr( $input[ $setting ]['font_name'] );
-						$valid_input[ $setting ]['font_color']               = sanitize_hex_color( $input[ $setting ]['font_color'] );
-						$valid_input[ $setting ]['font_weight']              = esc_attr( $input[ $setting ]['font_weight'] );
-						$valid_input[ $setting ]['font_style']               = esc_attr( $input[ $setting ]['font_style'] );
-						$valid_input[ $setting ]['font_weight_style']        = esc_attr( $input[ $setting ]['font_weight_style'] );
-						$valid_input[ $setting ]['stylesheet_url']           = esc_url( $input[ $setting ]['stylesheet_url'] );
-						$valid_input[ $setting ]['text_decoration']          = esc_attr( $input[ $setting ]['text_decoration'] );
-						$valid_input[ $setting ]['text_transform']           = esc_attr( $input[ $setting ]['text_transform'] );
+						$valid_input[ $setting ]['font_id']           = esc_attr( $input[ $setting ]['font_id'] );
+						$valid_input[ $setting ]['font_name']         = esc_attr( $input[ $setting ]['font_name'] );
+						$valid_input[ $setting ]['font_color']        = sanitize_hex_color( $input[ $setting ]['font_color'] );
+						$valid_input[ $setting ]['font_weight']       = esc_attr( $input[ $setting ]['font_weight'] );
+						$valid_input[ $setting ]['font_style']        = esc_attr( $input[ $setting ]['font_style'] );
+						$valid_input[ $setting ]['font_weight_style'] = esc_attr( $input[ $setting ]['font_weight_style'] );
+						$valid_input[ $setting ]['stylesheet_url']    = esc_url( $input[ $setting ]['stylesheet_url'] );
+						$valid_input[ $setting ]['text_decoration']   = esc_attr( $input[ $setting ]['text_decoration'] );
+						$valid_input[ $setting ]['text_transform']    = esc_attr( $input[ $setting ]['text_transform'] );
 
 					}
 
@@ -185,6 +202,7 @@ function tt_font_options_validate( $input ) {
 				// Set $setting to the default value
 				$valid_input[ $setting ] = $option_defaults[ $setting ];
 			}
+
 		} // endforeach
 
 		return $valid_input;
@@ -200,7 +218,7 @@ function tt_font_options_validate( $input ) {
  * @global	array	Settings Page Tab definitions
  *
  * @since 1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 global $tt_font_tabs;
@@ -221,7 +239,7 @@ $tt_font_tabs = tt_font_get_settings_page_tabs();
  * @param	string		$pageid		Name of the Settings page to which to add the section; passed to do_settings_sections()
  *
  * @since 1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 foreach ( $tt_font_tabs as $tab ) {
@@ -253,7 +271,7 @@ foreach ( $tt_font_tabs as $tab ) {
  * @param	array	$section_passed	Array passed from add_settings_section()
  *
  * @since 1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 function tt_font_sections_callback( $section_passed ) {
@@ -279,7 +297,7 @@ function tt_font_sections_callback( $section_passed ) {
  * @global	array	Theme options parameters
  *
  * @since 1.0
- * @version 1.1
+ * @version 1.1.1
  * 
  */
 global $tt_font_parameters;
