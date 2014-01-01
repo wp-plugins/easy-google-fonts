@@ -130,6 +130,7 @@ if ( ! class_exists( 'EGF_Customizer' ) ) :
 			// Load JSON Library by Douglas Crockford
 			wp_enqueue_script( 'json2' );
 
+			wp_enqueue_style( 'wp-color-picker' );
 			wp_enqueue_script( 'iris' );
 
 			// Load WordPress media lightbox
