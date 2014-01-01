@@ -1,0 +1,505 @@
+/**
+ * WordPress Administration Theme Customizer Screen
+ * Interface CSS Styles.
+ *
+ * NOTE: Please take care when adding styles to this
+ * stylesheet to ensure that you dont affect the live
+ * site preview. This stylesheet is only designed to 
+ * style the custom controls on the customizer screen
+ * therefore specifity should be used as appropriate
+ * to ensure no conflicts with the live site preview.
+ *
+ * @package   Easy_Google_Fonts
+ * @author    Sunny Johal - Titanium Themes <support@titaniumthemes.com>
+ * @license   GPL-2.0+
+ * @link      http://wordpress.org/plugins/easy-google-fonts/
+ * @copyright Copyright (c) 2013, Titanium Themes
+ * @version   1.2
+ * 
+ */
+.accordion-section-content a {
+	outline: none!important;
+}
+
+.accordion-section-content select {
+	width: 100%;
+}
+
+.clearfix {
+	clear: both;
+}
+
+/* Fields: Font Control
+----------------------------------*/
+.tt-font-control-title {
+	margin-bottom: 5px;
+}
+.tt-font-control-title .customize-control-title {
+	float: left;
+}
+.tt-font-control-title .tt-reset-font {
+	float: right;
+	font-weight: bold;
+	line-height: 24px;
+	display: none;
+}
+
+.tt-font-properties {
+	margin-top: 10px;
+}
+
+.tt-font-control .dropdown.preview-thumbnail {
+	background: #EEE;
+}
+
+.tt-font-control .dropdown-arrow {
+	top: 4px;
+}
+
+.tt-customizer-tabs ul {
+    border-bottom: 1px solid #DFDFDF;	
+	float: left;
+	width: 100%;
+	margin-left: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.tt-customizer-tabs ul li {
+	border-color: transparent;
+	border-color: rgba(0, 0, 0, 0);
+	border-style: solid;
+	border-width: 1px 1px 0;
+	color: #999999;
+	float: left;
+	margin: 0;
+	padding: 3px 8px;
+	cursor: pointer;
+}
+
+.tt-customizer-tabs ul li.selected {
+	background: none repeat scroll 0 0 #FDFDFD;
+	border-color: #DFDFDF;
+	border-radius: 0;
+	color: #777777;
+	margin-bottom: -1px;
+	padding-bottom: 4px;	
+}
+
+
+.tt-font-properties {
+	display: none;
+	padding-bottom: 5px;
+}
+
+.tt-font-content {
+	display: none;
+	padding: 8px;
+	padding-top: 12px;
+	font-size: 13px;
+}
+
+.tt-font-content.font-positioning,
+.tt-font-content-fullwidth {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.tt-font-properties.selected,
+.tt-font-content.selected {
+	display: block;
+}
+
+.tt-font-content .customize-control-title,
+.tt-font-content select {
+	font-size: 13px;
+}
+
+.tt-font-weight {
+	text-transform: capitalize;
+}
+
+.tt-font-color-container {
+	margin-bottom: 5px;
+}
+.tt-font-color-container input.wp-color-picker{
+	width: 65px;
+}
+
+.tt-font-control .wp-picker-container .ui-widget-content {
+    border: medium none;
+}
+
+.tt-font-control .wp-picker-container .iris-picker {
+	border-color: transparent;
+	margin-left: -11px;
+}
+
+/* Fields: Font Styles Selects
+----------------------------------*/
+.tt-font-subsets,
+.tt-font-family,
+.tt-font-weight,
+.tt-text-decoration {
+	margin-bottom: 8px;
+}
+
+/* Fields: Slider
+----------------------------------*/
+.font-size-slider,
+.line-height-slider {
+	margin-bottom: 10px;
+}
+
+.tt-slider {
+	margin-top: 3px;
+}
+
+.tt-font-slider {
+	width: 100%;
+	float: left;
+	margin-top: 12px;
+	margin-bottom: 5px;
+}
+
+.tt-font-slider-title {
+	display: inline-block;
+	position: relative;
+	width: 150px;
+	line-height: 1.5;
+	float: left;
+}
+
+.tt-font-slider-display {
+	margin-left: 10px;
+	float:right;
+	line-height: 1.5;
+}
+
+.tt-font-slider-clear {
+	font-size: 11px;
+	line-height: 1;
+	margin-top: 2px;
+}
+
+.tt-font-control .ui-slider {
+	position: relative;
+	text-align: left;
+}
+.tt-font-control .ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 1.2em;
+	height: 1.2em;
+	cursor: pointer;
+	-webkit-box-shadow: inset 0 1px 1px rgba(255,255,255,0.5);
+	-moz-box-shadow: inset 0 1px 1px rgba(255,255,255,0.5);
+	box-shadow: inset 0 1px 1px rgba(255,255,255,0.5);
+}
+
+.tt-font-control .ui-slider .ui-slider-handle.ui-state-hover {
+	border-color: #BBBBBB;
+}
+
+.tt-font-control .ui-slider .ui-slider-range {
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	background-position: 0 0;
+}
+
+/* Interaction states
+----------------------------------*/
+.tt-font-control .ui-state-default,
+.tt-font-control .ui-widget-content .ui-state-default,
+.tt-font-control .ui-widget-header .ui-state-default {
+	border: 1px solid #d3d3d3;
+	background: #F5F5F5;
+
+	background-image: -webkit-linear-gradient(to top, #EEEEEE, #F5F5F5);
+	background-image: -moz-linear-gradient(to top, #EEEEEE, #F5F5F5);
+	background-image: -o-linear-gradient(to top, #EEEEEE, #F5F5F5);
+	background-image: -ms-linear-gradient(to top, #EEEEEE, #F5F5F5);
+	background-image: linear-gradient(to top, #EEEEEE, #F5F5F5);
+	font-weight: normal;
+	color: #555555;
+}
+
+
+.tt-font-control .ui-state-default a,
+.tt-font-control .ui-state-default a:link,
+.tt-font-control .ui-state-default a:visited {
+	color: #555555;
+	text-decoration: none;
+}
+.tt-font-control .ui-state-hover,
+.tt-font-control .ui-widget-content .ui-state-hover,
+.tt-font-control .ui-widget-header .ui-state-hover,
+.tt-font-control .ui-state-focus,
+.tt-font-control .ui-widget-content .ui-state-focus,
+.tt-font-control .ui-widget-header .ui-state-focus {
+	border: 1px solid #CFCFCF;
+	background: #EEEEEE;
+	background-image: -webkit-linear-gradient(to top, #EEEEEE, #F5F5F5);
+	background-image: -moz-linear-gradient(to top, #EEEEEE, #F5F5F5);
+	background-image: -o-linear-gradient(to top, #EEEEEE, #F5F5F5);
+	background-image: -ms-linear-gradient(to top, #EEEEEE, #F5F5F5);
+	background-image: linear-gradient(to top, #EEEEEE, #F5F5F5);	
+	font-weight: normal;
+	color: #212121;
+}
+.tt-font-control .ui-state-hover a,
+.tt-font-control .ui-state-hover a:hover,
+.tt-font-control .ui-state-hover a:link,
+.tt-font-control .ui-state-hover a:visited {
+	color: #212121;
+	text-decoration: none;
+}
+.tt-font-control .ui-state-active,
+.tt-font-control .ui-widget-content .ui-state-active,
+.tt-font-control .ui-widget-header .ui-state-active {
+	border: 1px solid #BBBBBB;
+	background: #EEEEEE;
+	font-weight: normal;
+	color: #212121;
+}
+.tt-font-control .ui-state-active a,
+.tt-font-control .ui-state-active a:link,
+.tt-font-control .ui-state-active a:visited {
+	color: #212121;
+	text-decoration: none;
+}
+
+/* Interaction Cues
+----------------------------------*/
+.tt-font-control .ui-state-highlight,
+.tt-font-control .ui-widget-content .ui-state-highlight,
+.tt-font-control .ui-widget-header .ui-state-highlight {
+	border: 1px solid #fcefa1;
+	background: #fbf9ee url(images/ui-bg_glass_55_fbf9ee_1x400.png) 50% 50% repeat-x;
+	color: #363636;
+}
+.tt-font-control .ui-state-highlight a,
+.tt-font-control .ui-widget-content .ui-state-highlight a,
+.tt-font-control .ui-widget-header .ui-state-highlight a {
+	color: #363636;
+}
+.tt-font-control .ui-state-error,
+.tt-font-control .ui-widget-content .ui-state-error,
+.tt-font-control .ui-widget-header .ui-state-error {
+	border: 1px solid #cd0a0a;
+	background: #fef1ec url(images/ui-bg_glass_95_fef1ec_1x400.png) 50% 50% repeat-x;
+	color: #cd0a0a;
+}
+.tt-font-control .ui-state-error a,
+.tt-font-control .ui-widget-content .ui-state-error a,
+.tt-font-control .ui-widget-header .ui-state-error a {
+	color: #cd0a0a;
+}
+.tt-font-control .ui-state-error-text,
+.tt-font-control .ui-widget-content .ui-state-error-text,
+.tt-font-control .ui-widget-header .ui-state-error-text {
+	color: #cd0a0a;
+}
+.tt-font-control .ui-priority-primary,
+.tt-font-control .ui-widget-content .ui-priority-primary,
+.tt-font-control .ui-widget-header .ui-priority-primary {
+	font-weight: bold;
+}
+.tt-font-control .ui-priority-secondary,
+.tt-font-control .ui-widget-content .ui-priority-secondary,
+.tt-font-control .ui-widget-header .ui-priority-secondary {
+	opacity: .7;
+	filter:Alpha(Opacity=70);
+	font-weight: normal;
+}
+.tt-font-control .ui-state-disabled,
+.tt-font-control .ui-widget-content .ui-state-disabled,
+.tt-font-control .ui-widget-header .ui-state-disabled {
+	opacity: .35;
+	filter:Alpha(Opacity=35);
+	background-image: none;
+}
+.tt-font-control .tt-font-control .ui-state-disabled .ui-icon {
+	filter:Alpha(Opacity=35); /* For IE8 - See #6059 */
+}
+
+/* Component containers
+----------------------------------*/
+.tt-font-control .ui-widget {
+	font-family: Verdana,Arial,sans-serif;
+	font-size: 1.1em;
+}
+.tt-font-control .ui-widget .ui-widget {
+	font-size: 1em;
+}
+.tt-font-control .ui-widget input,
+.tt-font-control .ui-widget select,
+.tt-font-control .ui-widget textarea,
+.tt-font-control .ui-widget button {
+	font-family: Verdana,Arial,sans-serif;
+	font-size: 1em;
+}
+.tt-font-control .ui-widget-content {
+	border: 1px solid #dfdfdf;
+	color: #222222;
+}
+.tt-font-control .ui-widget-content a {
+	color: #222222;
+}
+.tt-font-control .ui-widget-header {
+	border: 1px solid #aaaaaa;
+	background: #cccccc url(images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x;
+	color: #222222;
+	font-weight: bold;
+}
+.tt-font-control .ui-widget-header a {
+	color: #222222;
+}
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.tt-font-control .ui-corner-all,
+.tt-font-control .ui-corner-top,
+.tt-font-control .ui-corner-left,
+.tt-font-control .ui-corner-tl {
+	border-top-left-radius: 2px;
+}
+
+.tt-font-control .ui-corner-all,
+.tt-font-control .ui-corner-top,
+.tt-font-control .ui-corner-right,
+.tt-font-control .ui-corner-tr {
+	border-top-right-radius: 2px;
+}
+
+.tt-font-control .ui-corner-all,
+.tt-font-control .ui-corner-bottom,
+.tt-font-control .ui-corner-left,
+.tt-font-control .ui-corner-bl {
+	border-bottom-left-radius: 2px;
+}
+
+.tt-font-control .ui-corner-all,
+.tt-font-control .ui-corner-bottom,
+.tt-font-control .ui-corner-right,
+.tt-font-control .ui-corner-br {
+	border-bottom-right-radius: 2px;
+}
+
+
+/* Overlays */
+.tt-font-control .ui-widget-overlay {
+	background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;
+	opacity: .3;
+	filter: Alpha(Opacity=30);
+}
+.tt-font-control .ui-widget-shadow {
+	margin: -8px 0 0 -8px;
+	padding: 8px;
+	background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;
+	opacity: .3;
+	filter: Alpha(Opacity=30);
+	border-radius: 8px;
+}
+
+
+/* For IE8 - See #6727 */
+.tt-font-control .ui-slider.ui-state-disabled .ui-slider-handle,
+.tt-font-control .ui-slider.ui-state-disabled .ui-slider-range {
+	filter: inherit;
+}
+
+.tt-font-control .ui-slider-horizontal {
+	height: .8em;
+}
+.tt-font-control .ui-slider-horizontal .ui-slider-handle {
+	top: -.3em;
+	margin-left: -.6em;
+}
+.tt-font-control .ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+}
+.tt-font-control .ui-slider-horizontal .ui-slider-range-min {
+	left: 0;
+}
+.tt-font-control .ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+
+/* Fields: Font Positioning Tab
+----------------------------------*/
+.tt-font-toggle {
+	border: 1px solid #EEEEEE;
+	margin-bottom: 6px;
+}
+
+.tt-font-toggle .customize-control-title.inner-control-title {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin: 0;
+	padding: 8px;
+}
+
+.tt-font-toggle .customize-control-title.inner-control-title:hover {
+	background: #F5F5F5;
+	cursor: pointer;
+}
+
+.tt-font-toggle .customize-control-title.inner-control-title:after {
+	float: right;
+ 	position: absolute;
+    right: 10px;
+    top: 2px;
+    z-index: 1;
+    background: none repeat scroll 0 center rgba(0, 0, 0, 0);
+    border: 0 none;
+    content: "";
+    display: block;
+    font: 400 20px/1 dashicons;
+    padding: 0;
+    position: relative;
+    right: 0;
+    text-align: center;
+    text-decoration: none !important;
+    text-indent: 0;
+    color: #AAAAAA;
+}
+
+.tt-font-toggle .customize-control-title.inner-control-title:hover:after {
+	color: #555555;
+}
+
+.tt-font-toggle.selected .customize-control-title.inner-control-title {
+	background: #F5F5F5;
+}
+
+.tt-font-toggle.selected .customize-control-title.inner-control-title:after {
+	color: #555555;
+	content: "";
+}
+
+.toggle-section-content {
+	padding: 10px 15px;
+	border-top: 1px solid #EEEEEE;
+	display: none;
+}
+
+.tt-font-toggle.selected .toggle-section-content {
+	display: block;
+}
+
+
+.margin-slider,
+.padding-slider {
+	margin-bottom: 20px;
+}
