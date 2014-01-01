@@ -173,7 +173,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * 
 		 */
 		public function get_control_title() {
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/control-title.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/control-title.php' );
 		}
 
 		/**
@@ -184,7 +184,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * 
 		 */
 		public function get_control_start() {
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/control-start.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/control-start.php' );
 		}
 
 		/**
@@ -195,7 +195,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * 
 		 */
 		public function get_control_end() {
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/control-end.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/control-end.php' );
 		}
 
 		/**
@@ -206,7 +206,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * 
 		 */
 		public function get_control_properties_start() {
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/properties-start.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/properties-start.php' );
 		}
 
 		/**
@@ -217,7 +217,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * 
 		 */
 		public function get_control_properties_end() {
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/properties-end.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/properties-end.php' );
 		}
 
 		/**
@@ -228,7 +228,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * 
 		 */
 		public function get_control_toggle() {
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/control-toggle.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/control-toggle.php' );
 		}
 
 		/**
@@ -239,7 +239,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * 
 		 */
 		public function get_control_tabs() {
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/control-tabs.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/control-tabs.php' );
 		}
 
 		/**
@@ -258,7 +258,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * 
 		 */
 		public function get_control_tab_panes() {
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/control-tab-panes.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/control-tab-panes.php' );
 		}
 
 		/**
@@ -362,7 +362,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$font_subset_options = apply_filters( 'tt_font_subset_options', $font_subset_options );
 
 			// Get control view
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/controls/styles/subsets.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/styles/subsets.php' );
 		}
 
 		/**
@@ -393,7 +393,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$default_fonts = EGF_Font_Utilities::get_default_fonts();
 	
 			// Get control view
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/controls/styles/font-family.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/styles/font-family.php' );
 		}
 
 		/**
@@ -417,7 +417,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$font_weight_style         = empty( $this_value['font_weight_style'] ) ? $default_font_weight_style : $this_value['font_weight_style'];
 
 			// Get control view
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/controls/styles/font-weight.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/styles/font-weight.php' );
 		}
 
 		/**
@@ -450,7 +450,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$text_decoration_options = apply_filters( 'tt_font_text_decoration_options', $text_decoration_options );
 
 			// Get control view
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/controls/styles/text-decoration.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/styles/text-decoration.php' );
 		}
 
 		/**
@@ -482,7 +482,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$text_transform_options = apply_filters( 'tt_font_text_transform_options', $text_transform_options );
 
 			// Get control view
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/controls/styles/text-transform.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/styles/text-transform.php' );
 		}
 
 		/**
@@ -518,7 +518,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$current_font_name      = isset( $this_value['font_name'] )      ? $this_value['font_name']      : $default_font_name;
 
 			// Get control view
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/controls/styles/hidden-inputs.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/styles/hidden-inputs.php' );
 		}
 
 		/**
@@ -537,7 +537,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$current_color = isset( $value['font_color'] ) ? $value['font_color'] : $default_color;
 
 			// Get control view
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/controls/appearance/font-color.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/appearance/font-color.php' );
 		}
 
 		/**
@@ -556,7 +556,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$current_color = isset( $value['background_color'] ) ? $value['background_color'] : $default_color;
 
 			// Get control view
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/controls/appearance/background-color.php' );			
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/appearance/background-color.php' );			
 		}
 
 		/**
@@ -582,7 +582,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$current_unit   = $default_unit;
 			
 			// Get control view
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/controls/appearance/font-size.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/appearance/font-size.php' );
 		}
 
 		/**
@@ -605,7 +605,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$current_amount = isset( $value['line_height'] ) ? $value['line_height'] : '';
 
 			// Get control view
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/controls/appearance/line-height.php' );			
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/appearance/line-height.php' );			
 		}
 
 		/**
@@ -630,7 +630,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$current_unit   = $default_unit;
 			
 			// Get control view
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/controls/appearance/letter-spacing.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/appearance/letter-spacing.php' );
 		}
 
 		/**
@@ -650,7 +650,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			);
 
 			// Get control view
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/controls/positioning/display.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/positioning/display.php' );
 		}
 		
 		/**
@@ -686,7 +686,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$current_amount_right  = isset( $value['margin_right']['amount'] )  ? $value['margin_right']['amount']  : $default_amount_right;
 
 			// Get control view
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/controls/positioning/margin.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/positioning/margin.php' );
 		}
 
 		/**
@@ -724,7 +724,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$current_amount_right  = isset( $value['padding_right']['amount'] )  ? $value['padding_right']['amount']  : $default_amount_right;
 
 			// Get control view
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/controls/positioning/padding.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/positioning/padding.php' );
 		}
 
 		/**
@@ -739,7 +739,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 */
 		public function get_border_controls() {
 			// Get control view
-			include( plugin_dir_path( __DIR__ ) . '../views/customizer/controls/positioning/border.php' );
+			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/positioning/border.php' );
 		}
 
 		/**
