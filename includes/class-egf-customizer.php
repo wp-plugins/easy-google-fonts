@@ -230,6 +230,8 @@ if ( ! class_exists( 'EGF_Customizer' ) ) :
 		 */
 		public function customize_preview_styles() {
 
+			wp_enqueue_style( 'wp-color-picker' );
+
 			// Load CSS to style custom customizer controls
 			wp_register_style( 
 				$this->plugin_slug . '-customizer-css',
