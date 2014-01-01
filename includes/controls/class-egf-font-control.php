@@ -92,6 +92,16 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		}
 
 		/**
+		 * Enqueue control related scripts/styles.
+		 *
+		 * @since 1.2
+		 */
+		public function enqueue() {
+			wp_enqueue_script( 'wp-color-picker' );
+			wp_enqueue_style( 'wp-color-picker' );
+		}
+
+		/**
 		 * Render the data link parameter for a setting
 		 *
 		 * @since 3.4.0
