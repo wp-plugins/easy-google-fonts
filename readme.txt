@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: WordPress Google Fonts Plugin, Google Webfonts, Google Fonts WordPress, Typography, Webfonts, WordPress Webfonts, Fonts, WordPress Fonts, Theme Fonts, Theme Fonts Plugin
 Requires at least: 3.8
 Tested up to: 3.8
-Stable tag: 1.1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,6 +14,8 @@ Adds google fonts to any theme without coding and integrates with the WordPress 
 For a quick video demo please view the [vimeo screencast](https://vimeo.com/77878709).
 
 [Follow us on twitter!](https://twitter.com/titaniumthemes)
+
+If you have found this plugin useful please [donate here](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=28M8NWPHVQNYU)
 
 A simple and easy way to add custom google fonts to any WordPress theme without coding. This plugin integrates with the WordPress Customizer so you can preview google fonts on your site in realtime. It's compatible with any theme. 
 
@@ -92,6 +94,19 @@ e.g.
 9. View and manage all of your custom controls in the admin area.
 
 == Changelog ==
+= 1.2 =
+* Big Update: Complete Rewrite of Plugin
+* New controls: Background Color, Margin, Padding and Display.
+* Added Subset support.
+* Introduced a large amount of actions and filters for theme developers.
+* Big performance enhancement. The old version used to register 32 settings per control, this is now down to 3.
+* Lightning fast customizer loading times, under 1 second.
+* Rewrote the plugin into classes and views to make it more managable for future development.
+* Rewrote the plugin into classes.
+* MO/PO language files now included.
+
+= 1.1.1=
+* 3.8 Admin integration
 
 = 1.1 =
 * Full google fonts transient integration.
