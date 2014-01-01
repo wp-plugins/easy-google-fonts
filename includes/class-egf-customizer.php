@@ -130,7 +130,7 @@ if ( ! class_exists( 'EGF_Customizer' ) ) :
 			// Load JSON Library by Douglas Crockford
 			wp_enqueue_script( 'json2' );
 
-			wp_enqueue_style( 'wp-color-picker' );
+			wp_enqueue_script( 'wp-color-picker' );
 			wp_enqueue_script( 'iris' );
 
 			// Load WordPress media lightbox
@@ -212,9 +212,6 @@ if ( ! class_exists( 'EGF_Customizer' ) ) :
 
 			$all_fonts = $this->customize_load_all_fonts();
 			wp_localize_script( $this->plugin_slug . '-customizer-preview-js', 'ttFontAllFonts', $all_fonts );
-
-			$fudee = array( 'another' => 'one', 'to' => 'test' );
-			wp_localize_script( $this->plugin_slug . '-customizer-preview-js', 'Fudee', $fudee );
 		}
 
 		/**
