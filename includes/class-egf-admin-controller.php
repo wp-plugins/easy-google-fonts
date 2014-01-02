@@ -11,7 +11,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2013, Titanium Themes
- * @version   1.2
+ * @version   1.2.1
  * 
  */
 if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
@@ -81,7 +81,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * @uses Easy_Google_Fonts::get_instance() defined in \includes\class-easy-google-fonts.php
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		function __construct() {
@@ -108,7 +108,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * @return    object    A single instance of this class.
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public static function get_instance() {
@@ -128,7 +128,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * admin settings page.
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		private function set_urls() {
@@ -145,7 +145,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * admin settings page.
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function set_font_controls() {
@@ -222,7 +222,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * screen the user is currently on.
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function set_screen_state() {
@@ -310,7 +310,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * Add any custom actions in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function register_actions() {
@@ -322,7 +322,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * Add any custom filters in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function register_filters() {
@@ -337,7 +337,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * @return boolean true
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function is_edit_screen() {
@@ -354,7 +354,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * @return boolean true
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function is_create_screen() {
@@ -370,7 +370,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * @return boolean true
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function is_manage_screen() {
@@ -386,7 +386,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * @return boolean true
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function is_advanced_screen() {
@@ -400,11 +400,11 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * Gets the page container openining tag markup.
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function get_page_start() {
-			include_once( plugin_dir_path( __DIR__ ) . 'views/admin-page/page-start.php' );
+			include_once( plugin_dir_path( dirname(__FILE__) ) . 'views/admin-page/page-start.php' );
 		}
 
 		/**
@@ -413,11 +413,11 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * Gets the page container closing tag markup.
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function get_page_end() {
-			include_once( plugin_dir_path( __DIR__ ) . 'views/admin-page/page-end.php' );
+			include_once( plugin_dir_path( dirname(__FILE__) ) . 'views/admin-page/page-end.php' );
 		}
 
 		/**
@@ -427,30 +427,30 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * settings page.
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function get_page_tabs() {
-			include_once( plugin_dir_path( __DIR__ ) . 'views/admin-page/tabs.php' );
+			include_once( plugin_dir_path( dirname(__FILE__) ) . 'views/admin-page/tabs.php' );
 		}
 
 		public function get_deleted_dialog() {
-			include_once( plugin_dir_path( __DIR__ ) . 'views/admin-page/dialog-deleted.php' );
+			include_once( plugin_dir_path( dirname(__FILE__) ) . 'views/admin-page/dialog-deleted.php' );
 		}
 
 		public function get_updated_dialog() {
-			include_once( plugin_dir_path( __DIR__ ) . 'views/admin-page/dialog-updated.php' );
+			include_once( plugin_dir_path( dirname(__FILE__) ) . 'views/admin-page/dialog-updated.php' );
 		}
 
 		public function get_manage_control_form() {
-			include_once( plugin_dir_path( __DIR__ ) . 'views/admin-page/form-manage-control.php' );
+			include_once( plugin_dir_path( dirname(__FILE__) ) . 'views/admin-page/form-manage-control.php' );
 		}
 
 		public function get_create_screen() {
 			$control_name        = '';
 			$control_description = '';
 			
-			include_once( plugin_dir_path( __DIR__ ) . 'views/admin-page/create-screen.php' );
+			include_once( plugin_dir_path( dirname(__FILE__) ) . 'views/admin-page/create-screen.php' );
 		}
 
 		public function get_edit_screen() {
@@ -458,17 +458,17 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 			$control_selectors   = get_post_meta( $this->control_instance->ID, 'control_selectors', true );
 			$control_description = get_post_meta( $this->control_instance->ID, 'control_description', true );	
 			
-			include_once( plugin_dir_path( __DIR__ ) . 'views/admin-page/edit-screen.php' );
+			include_once( plugin_dir_path( dirname(__FILE__) ) . 'views/admin-page/edit-screen.php' );
 		}
 
 		public function get_manage_screen() {
-			include_once( plugin_dir_path( __DIR__ ) . 'views/admin-page/manage-screen.php' );
+			include_once( plugin_dir_path( dirname(__FILE__) ) . 'views/admin-page/manage-screen.php' );
 		}
 
 		public function get_advanced_screen() {
 			$api_key  = EGF_Font_Utilities::get_google_api_key();
 			$validity = EGF_Font_Utilities::is_valid_google_api_key( $api_key ) ? 'valid-key' : 'invalid-key';
-			include_once( plugin_dir_path( __DIR__ ) . 'views/admin-page/advanced-screen.php' );
+			include_once( plugin_dir_path( dirname(__FILE__) ) . 'views/admin-page/advanced-screen.php' );
 		}
 
 

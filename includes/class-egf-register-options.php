@@ -17,7 +17,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2013, Titanium Themes
- * @version   1.2
+ * @version   1.2.1
  * 
  */
 if ( ! class_exists( 'EGF_Register_Options' ) ) :
@@ -51,7 +51,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * settings page and menu.
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		function __construct() {
@@ -72,7 +72,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return    object    A single instance of this class.
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public static function get_instance() {
@@ -91,7 +91,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * Add any custom actions in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function register_actions() {
@@ -105,7 +105,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * Add any custom filters in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function register_filters() {
@@ -121,7 +121,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @link http://codex.wordpress.org/Function_Reference/register_setting 	register_setting()
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function register_settings() {
@@ -141,86 +141,89 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @todo  Increase sanitization checks
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function validate_settings( $input ) {
-			if ( ! $this->validated )  {
-				// Get default options
-				$all_options = array_merge( self::get_option_parameters(), self::get_custom_option_parameters( array() ) );
-			
-				// Array of whitelisted values
-				$whitelist   = array(
-						'subset',
-					    'font_id',
-	                    'font_name',
-	                    'font_color',
-	                    'font_weight',
-	                    'font_style',
-	                    'font_weight_style',
-	                    'background_color',
-	                    'stylesheet_url',
-	                    'text_decoration',
-	                    'text_transform',
-	                    'line_height',
-	                    'font_size',
-	                    'letter_spacing',
-	                    'margin_top',
-	                    'margin_right',
-	                    'margin_bottom',
-	                    'margin_left',
-	                    'padding_top',
-	                    'padding_right',
-	                    'padding_bottom',
-	                    'padding_left',
-	                    'border_top',
-	                    'border_right',
-	                    'border_bottom',
-	                    'border_left',
-				);
+		
+			// Get default options
+			$all_options = array_merge( self::get_option_parameters(), self::get_custom_option_parameters( array() ) );
+		
+			// Array of whitelisted values
+			$whitelist   = array(
+					'subset',
+				    'font_id',
+                    'font_name',
+                    'font_color',
+                    'font_weight',
+                    'font_style',
+                    'font_weight_style',
+                    'background_color',
+                    'stylesheet_url',
+                    'text_decoration',
+                    'text_transform',
+                    'line_height',
+                    'font_size',
+                    'letter_spacing',
+                    'margin_top',
+                    'margin_right',
+                    'margin_bottom',
+                    'margin_left',
+                    'padding_top',
+                    'padding_right',
+                    'padding_bottom',
+                    'padding_left',
+                    'border_top',
+                    'border_right',
+                    'border_bottom',
+                    'border_left',
+			);
 
-				/**
-				 * Remove any values from $input that 
-				 * are not in the safe $whitelist array
-				 *
-				 * $option is the option name
-				 * $setting is all of the properties in the option
-				 *
-				 */
-				foreach ( $input as $option => $setting ) {
+			/**
+			 * Remove any values from $input that 
+			 * are not in the safe $whitelist array
+			 *
+			 * $option is the option name
+			 * $setting is all of the properties in the option
+			 *
+			 */
+			foreach ( $input as $option => $setting ) {
 
-					$defaults = $all_options[ $option ]['default'];
+				$defaults = $all_options[ $option ]['default'];
 
-					// Parse setting into array if it is a json string
-					if ( is_string( $setting ) ) {
-						$setting = json_decode( $setting );
-					} elseif ( empty( $setting ) ) {
-						$setting = $defaults;
-					}
-
-					// Convert setting into array if it is StdClass Object
-					$setting = $this->object_to_array( $setting );
-
-					if ( is_array( $setting ) ) {
-						// Remove blacklisted values if they exist
-						foreach ( $setting as $key => $value ) {
-							if ( ! in_array( $key, $whitelist ) ) {
-								unset( $setting[ $key ] );
-							}
-						}
-					}
-
-					// Parse args with default
-					$input[ $option ] = wp_parse_args( $setting, $defaults );		
+				// Parse setting into array if it is a json string
+				if ( is_string( $setting ) ) {
+					$setting = json_decode( $setting );
+				} elseif ( empty( $setting ) ) {
+					$setting = $defaults;
 				}
 
-				/**
-				 * Specific Validation
-				 */
+				// Convert setting into array if it is StdClass Object
 				
-				// Set validated flag
-				$this->validated = true;
+				if ( is_object( $setting ) ) {
+					$setting = $this->object_to_array( $setting );
+				}
+				
+				if ( is_array( $setting ) ) {
+					// Remove blacklisted values if they exist
+					foreach ( $setting as $key => $value ) {
+						if ( ! in_array( $key, $whitelist ) ) {
+							unset( $setting[ $key ] );
+						}
+					}
+				}
+
+				// Parse args with default
+				$input[ $option ] = wp_parse_args( $setting, $defaults );		
 			}
+
+			/**
+			 * Specific Validation
+			 */
+			
+			// Set validated flag
+			$this->validated = true;
+	
 			
 			return $input;
 		}
@@ -232,11 +235,13 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return array $arr The object converted into an associative array
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function object_to_array( $obj ) {
 			$arrObj = is_object( $obj ) ? get_object_vars( $obj ) : $obj;
+
+			$arr = array();
 			
 			foreach ( $arrObj as $key => $val ) {
 				$val = ( is_array( $val ) || is_object( $val ) ) ? $this->object_to_array( $val ) : $val;
@@ -249,7 +254,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * [add_settings_section description]
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function add_settings_section() {
@@ -284,7 +289,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * section specified for each tab.
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function settings_section_callback() {
@@ -311,7 +316,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return	array	$settings_by_tab	array of arrays of settings by tab
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public static function get_settings_by_tab() {
@@ -355,7 +360,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return [type] [description]
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public static function get_setting_tabs() {
@@ -423,7 +428,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return array $control   The font control parsed with the default values
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public static function parse_font_control_array( $args ) {
@@ -562,7 +567,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return	array	$options	array of arrays of option parameters
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */		
 		public static function get_option_parameters() {
@@ -576,7 +581,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 				 * Customizer
 				 *
 				 * @since 1.2
-				 * @version 1.2
+				 * @version 1.2.1
 				 * 
 				 */
 				'tt_default_body' => array(
@@ -656,7 +661,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return	array	$options	array of arrays of option parameters
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */		
 		public static function get_custom_option_parameters( $options ) {
@@ -704,7 +709,6 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 								'selector'     => $selectors,
 								'force_styles' => $force_styles,
 							),
-
 						);
 					}
 
@@ -731,7 +735,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return	array	$defaults	associative array of option defaults
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public static function get_option_defaults() {
@@ -776,7 +780,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return	array	$tt_font_options	current values for all Theme options
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public static function get_options( $with_transient = true ) {

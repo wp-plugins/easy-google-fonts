@@ -13,7 +13,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2013, Titanium Themes
- * @version   1.2
+ * @version   1.2.1
  * 
  */
 if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
@@ -45,7 +45,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * settings page and menu.
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		function __construct() {
@@ -65,7 +65,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * @return    object    A single instance of this class.
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public static function get_instance() {
@@ -84,7 +84,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * Add any custom actions in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function register_actions() {
@@ -96,7 +96,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * Add any custom filters in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public function register_filters() {
@@ -120,7 +120,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * @return array $fonts - All websafe fonts with their properties
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public static function get_default_fonts() {
@@ -210,7 +210,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * @return array $fonts - All websafe fonts with their properties
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public static function get_google_fonts() {
@@ -266,6 +266,15 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 					$json  = wp_remote_fopen( plugins_url( self::$plugin_slug ) . '/assets/fonts/webfonts.json' );
 				}
 
+				/**
+				 * Pull in raw file from the WordPress subversion 
+				 * repository as a last resort. 
+				 * 
+				 */
+				if ( false == $json ) {
+					$fonts_from_repo = wp_remote_fopen( "https://plugins.svn.wordpress.org/easy-google-fonts/trunk/assets/fonts/webfonts.json", array( 'sslverify' => false ) );
+					$json            = $fonts_from_repo;
+				}
 
 				$font_output = json_decode( $json, true );
 
@@ -318,7 +327,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * @return array All fonts with their properties
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public static function get_all_fonts() {
@@ -349,7 +358,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * @return string $api_key - The Google API Key
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public static function get_google_api_key() {
@@ -370,7 +379,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * @return string $api_key - The Google API Key
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public static function set_google_api_key( $api_key ) {
@@ -389,7 +398,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * @return string $api_key - The Google API Key
 		 * 
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public static function is_valid_google_api_key( $api_key = '' ) {
@@ -421,7 +430,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * all of the fonts as an array to the user.
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public static function delete_font_transients() {
@@ -442,7 +451,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * @return array $fonts - All websafe fonts with their properties
 		 *
 		 * @since 1.2
-		 * @version 1.2
+		 * @version 1.2.1
 		 * 
 		 */
 		public static function get_font( $id = '' ) {
