@@ -10,8 +10,8 @@
  * @author    Sunny Johal - Titanium Themes <support@titaniumthemes.com>
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
- * @copyright Copyright (c) 2013, Titanium Themes
- * @version   1.2.3
+ * @copyright Copyright (c) 2014, Titanium Themes
+ * @version   1.2.4
  * 
  */
 ?>

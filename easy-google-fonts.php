@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Easy Google Fonts
  * Description: A simple and easy way to add google fonts to your WordPress theme.
- * Version: 1.2.3
+ * Version: 1.2.4
  * Author: Titanium Themes
  * Author URI: http://www.titaniumthemes.com
  * License: GPL2
@@ -21,8 +21,8 @@
  * @author    Sunny Johal - Titanium Themes <support@titaniumthemes.com>
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
- * @copyright Copyright (c) 2013, Titanium Themes
- * @version   1.2.3
+ * @copyright Copyright (c) 2014, Titanium Themes
+ * @version   1.2.4
  * 
  */
 
@@ -37,7 +37,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Loads required classes for this plugin to function.
  *
  * @since 1.2
- * @version 1.2.3
+ * @version 1.2.4
  * 
  */
 require_once( plugin_dir_path( __FILE__ ) . 'includes/class-easy-google-fonts.php' );
@@ -56,7 +56,7 @@ require_once( plugin_dir_path( __FILE__ ) . 'includes/class-egf-frontend.php' );
  * Required in order to make this plugin translatable.
  *
  * @since 1.2
- * @version 1.2.3
+ * @version 1.2.4
  * 
  */
 function easy_google_fonts_text_domain() {
@@ -71,7 +71,7 @@ add_action( 'plugins_loaded', 'easy_google_fonts_text_domain' );
  * the 'plugins_loaded' action is fired.
  *
  * @since 1.2
- * @version 1.2.3
+ * @version 1.2.4
  * 
  */
 add_action( 'plugins_loaded', array( 'Easy_Google_Fonts', 'get_instance' ) );
@@ -90,7 +90,7 @@ add_action( 'plugins_loaded', array( 'EGF_Frontend', 'get_instance' ) );
  * When the plugin is deleted, the uninstall.php file is loaded.
  * 
  * @since 1.2
- * @version 1.2.3
+ * @version 1.2.4
  * 
  */
 register_activation_hook( __FILE__, array( 'Easy_Google_Fonts', 'activate' ) );

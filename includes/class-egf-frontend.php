@@ -10,8 +10,8 @@
  * @author    Sunny Johal - Titanium Themes <support@titaniumthemes.com>
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
- * @copyright Copyright (c) 2013, Titanium Themes
- * @version   1.2.3
+ * @copyright Copyright (c) 2014, Titanium Themes
+ * @version   1.2.4
  * 
  */
 if ( ! class_exists( 'EGF_Frontend' ) ) :
@@ -42,7 +42,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * settings page and menu.
 		 *
 		 * @since 1.2
-		 * @version 1.2.3
+		 * @version 1.2.4
 		 * 
 		 */
 		function __construct() {
@@ -62,7 +62,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @return    object    A single instance of this class.
 		 *
 		 * @since 1.2
-		 * @version 1.2.3
+		 * @version 1.2.4
 		 * 
 		 */
 		public static function get_instance() {
@@ -81,7 +81,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * Add any custom actions in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.2.3
+		 * @version 1.2.4
 		 * 
 		 */
 		public function register_actions() {
@@ -95,7 +95,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * Add any custom filters in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.2.3
+		 * @version 1.2.4
 		 * 
 		 */
 		public function register_filters() {
@@ -114,7 +114,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 *
 		 * @global $wp_customize
 		 * @since 1.2
-		 * @version 1.2.3
+		 * @version 1.2.4
 		 * 
 		 */
 		public function enqueue_stylesheets() {
@@ -152,7 +152,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @link http://codex.wordpress.org/Function_Reference/add_action 	add_action()
 		 *
 		 * @since 1.2
-		 * @version 1.2.3
+		 * @version 1.2.4
 		 * 
 		 */
 		public function output_styles() {
@@ -192,7 +192,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @return string $output 	Inline styles
 		 *
 		 * @since 1.2
-		 * @version 1.2.3
+		 * @version 1.2.4
 		 * 
 		 */
 		public function generate_css( $option, $force_styles = false ) {
@@ -310,7 +310,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @return string $output 	Inline styles
 		 *
 		 * @since 1.2
-		 * @version 1.2.3
+		 * @version 1.2.4
 		 * 
 		 */
 		public function generate_customizer_css( $option, $selector, $id = '', $force_styles = false ) {
@@ -470,7 +470,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @return array $arr The object converted into an associative array
 		 *
 		 * @since 1.2
-		 * @version 1.2.3
+		 * @version 1.2.4
 		 * 
 		 */
 		public function object_to_array( $obj ) {
