@@ -18,7 +18,7 @@ if ( ! class_exists( 'Easy_Google_Fonts' ) ) :
 		 * plugin file.
 		 *
 		 * @since 1.2
-		 * @version 1.2.4
+		 * @version 1.2.5
 		 *
 		 */
 		protected $plugin_slug = 'easy-google-fonts';
@@ -29,7 +29,7 @@ if ( ! class_exists( 'Easy_Google_Fonts' ) ) :
 		 * @var      object
 		 *
 		 * @since 1.2
-		 * @version 1.2.4
+		 * @version 1.2.5
 		 *
 		 */
 		protected static $instance = null;
@@ -73,7 +73,7 @@ if ( ! class_exists( 'Easy_Google_Fonts' ) ) :
 		 * Add any custom actions in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.2.4
+		 * @version 1.2.5
 		 * 
 		 */
 		public function register_actions() {
@@ -86,7 +86,7 @@ if ( ! class_exists( 'Easy_Google_Fonts' ) ) :
 		 * Add any custom filters in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.2.4
+		 * @version 1.2.5
 		 * 
 		 */
 		public function register_filters() {
@@ -104,7 +104,7 @@ if ( ! class_exists( 'Easy_Google_Fonts' ) ) :
 		 *                                       activated on an individual blog.
 		 *
 		 * @since 1.2
-		 * @version 1.2.4
+		 * @version 1.2.5
 		 * 
 		 */
 		public static function activate( $network_wide ) {
@@ -143,7 +143,7 @@ if ( ! class_exists( 'Easy_Google_Fonts' ) ) :
 		 *                                       deactivated on an individual blog.
 		 *
 		 * @since 1.2
-		 * @version 1.2.4
+		 * @version 1.2.5
 		 * 
 		 */
 		public static function deactivate( $network_wide ) {
@@ -181,7 +181,7 @@ if ( ! class_exists( 'Easy_Google_Fonts' ) ) :
 		 * @param    int    $blog_id    ID of the new blog.
 		 *
 		 * @since 1.2
-		 * @version 1.2.4
+		 * @version 1.2.5
 		 * 
 		 */
 		public function activate_new_site( $blog_id ) {
@@ -204,7 +204,7 @@ if ( ! class_exists( 'Easy_Google_Fonts' ) ) :
 		 * @return   array|false    The blog ids, false if no matches.
 		 *
 		 * @since 1.2
-		 * @version 1.2.4
+		 * @version 1.2.5
 		 * 
 		 */
 		private static function get_blog_ids() {
@@ -226,7 +226,7 @@ if ( ! class_exists( 'Easy_Google_Fonts' ) ) :
 		 * when the plugin is activated.
 		 *
 		 * @since 1.2
-		 * @version 1.2.4
+		 * @version 1.2.5
 		 * 
 		 */
 		private static function single_activate() {
@@ -241,7 +241,7 @@ if ( ! class_exists( 'Easy_Google_Fonts' ) ) :
 		 * when the plugin is deactivated.
 		 *
 		 * @since 1.2
-		 * @version 1.2.4
+		 * @version 1.2.5
 		 * 
 		 */
 		private static function single_deactivate() {
