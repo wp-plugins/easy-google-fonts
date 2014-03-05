@@ -94,6 +94,9 @@ e.g.
 9. View and manage all of your custom controls in the admin area.
 
 == Changelog ==
+= 1.2.5 =
+* Performance enhancement for older browsers implemented. Safe to upgrade.
+
 = 1.2 =
 * Big Update: Complete Rewrite of Plugin
 * New controls: Background Color, Margin, Padding and Display.
