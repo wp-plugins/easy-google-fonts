@@ -4,6 +4,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "ABeeZee",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic"
@@ -21,6 +22,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Abel",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -36,12 +38,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Abril Fatface",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v6",
    "lastModified": "2014-01-07",
@@ -52,6 +55,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Aclonica",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -67,6 +71,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Acme",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -82,6 +87,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Actor",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -97,6 +103,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Adamina",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -112,6 +119,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Advent Pro",
+   "category": "sans-serif",
    "variants": [
     "100",
     "200",
@@ -122,9 +130,9 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "greek"
+    "greek",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -141,12 +149,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Aguafina Script",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -157,12 +166,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Akronim",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -173,12 +183,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Aladin",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -189,6 +200,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Aldrich",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -204,6 +216,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Alef",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "700"
@@ -221,6 +234,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Alegreya",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -230,8 +244,8 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -247,6 +261,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Alegreya SC",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -256,8 +271,8 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -273,6 +288,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Alegreya Sans",
+   "category": "sans-serif",
    "variants": [
     "100",
     "100italic",
@@ -290,9 +306,9 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "vietnamese"
+    "vietnamese",
+    "latin-ext"
    ],
    "version": "v1",
    "lastModified": "2013-12-05",
@@ -316,6 +332,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Alegreya Sans SC",
+   "category": "sans-serif",
    "variants": [
     "100",
     "100italic",
@@ -333,9 +350,9 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "vietnamese"
+    "vietnamese",
+    "latin-ext"
    ],
    "version": "v1",
    "lastModified": "2013-12-05",
@@ -359,12 +376,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Alex Brush",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -375,6 +393,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Alfa Slab One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -390,6 +409,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Alice",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -405,6 +425,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Alike",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -420,6 +441,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Alike Angular",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -435,13 +457,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Allan",
+   "category": "display",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -453,6 +476,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Allerta",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -468,6 +492,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Allerta Stencil",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -483,12 +508,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Allura",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -499,6 +525,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Almendra",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -506,8 +533,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v6",
    "lastModified": "2014-01-07",
@@ -521,12 +548,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Almendra Display",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -537,6 +565,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Almendra SC",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -552,12 +581,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Amarante",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -568,6 +598,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Amaranth",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -589,6 +620,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Amatic SC",
+   "category": "handwriting",
    "variants": [
     "regular",
     "700"
@@ -606,6 +638,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Amethysta",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -621,12 +654,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Anaheim",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -637,12 +671,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Andada",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -653,14 +688,15 @@
   {
    "kind": "webfonts#webfont",
    "family": "Andika",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
     "cyrillic-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -671,6 +707,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Angkor",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -686,6 +723,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Annie Use Your Telescope",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -701,6 +739,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Anonymous Pro",
+   "category": "monospace",
    "variants": [
     "regular",
     "italic",
@@ -708,15 +747,15 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
+    "greek-ext",
     "cyrillic-ext",
     "greek",
-    "greek-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v4",
-   "lastModified": "2014-01-07",
+   "lastModified": "2014-03-18",
    "files": {
     "regular": "http://themes.googleusercontent.com/static/fonts/anonymouspro/v4/Zhfjj_gat3waL4JSju74E-V_5zh5b-_HiooIRUBwn1A.ttf",
     "italic": "http://themes.googleusercontent.com/static/fonts/anonymouspro/v4/q0u6LFHwttnT_69euiDbWKwIsuKDCXG0NQm7BvAgx-c.ttf",
@@ -727,6 +766,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Antic",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -742,6 +782,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Antic Didone",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -757,6 +798,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Antic Slab",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -772,12 +814,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Anton",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -788,6 +831,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Arapey",
+   "category": "serif",
    "variants": [
     "regular",
     "italic"
@@ -805,12 +849,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Arbutus",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -821,12 +866,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Arbutus Slab",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -837,6 +883,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Architects Daughter",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -852,12 +899,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Archivo Black",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -868,6 +916,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Archivo Narrow",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -875,8 +924,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -890,6 +939,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Arimo",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -897,13 +947,13 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
+    "greek-ext",
     "cyrillic-ext",
     "greek",
-    "greek-ext",
     "cyrillic",
-    "vietnamese"
+    "vietnamese",
+    "latin-ext"
    ],
    "version": "v6",
    "lastModified": "2014-01-07",
@@ -917,12 +967,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Arizonia",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -933,12 +984,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Armata",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -949,6 +1001,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Artifika",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -964,6 +1017,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Arvo",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -985,6 +1039,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Asap",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -992,8 +1047,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -1007,6 +1062,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Asset",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -1022,6 +1078,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Astloch",
+   "category": "display",
    "variants": [
     "regular",
     "700"
@@ -1039,6 +1096,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Asul",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "700"
@@ -1056,6 +1114,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Atomic Age",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -1071,6 +1130,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Aubrey",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -1086,12 +1146,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Audiowide",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -1102,12 +1163,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Autour One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -1118,12 +1180,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Average",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -1134,12 +1197,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Average Sans",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -1150,12 +1214,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Averia Gruesa Libre",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -1166,6 +1231,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Averia Libre",
+   "category": "display",
    "variants": [
     "300",
     "300italic",
@@ -1191,6 +1257,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Averia Sans Libre",
+   "category": "display",
    "variants": [
     "300",
     "300italic",
@@ -1216,6 +1283,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Averia Serif Libre",
+   "category": "display",
    "variants": [
     "300",
     "300italic",
@@ -1241,6 +1309,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Bad Script",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -1257,6 +1326,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Balthazar",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -1272,6 +1342,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Bangers",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -1287,12 +1358,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Basic",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -1303,6 +1375,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Battambang",
+   "category": "display",
    "variants": [
     "regular",
     "700"
@@ -1320,6 +1393,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Baumans",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -1335,6 +1409,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Bayon",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -1350,6 +1425,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Belgrano",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -1365,12 +1441,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Belleza",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -1381,14 +1458,15 @@
   {
    "kind": "webfonts#webfont",
    "family": "BenchNine",
+   "category": "sans-serif",
    "variants": [
     "300",
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -1401,6 +1479,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Bentham",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -1416,12 +1495,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Berkshire Swash",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -1432,6 +1512,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Bevan",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -1447,12 +1528,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Bigelow Rules",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -1463,6 +1545,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Bigshot One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -1478,12 +1561,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Bilbo",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -1494,12 +1578,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Bilbo Swash Caps",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -1510,14 +1595,15 @@
   {
    "kind": "webfonts#webfont",
    "family": "Bitter",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -1530,12 +1616,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Black Ops One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -1546,6 +1633,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Bokor",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -1561,6 +1649,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Bonbon",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -1576,6 +1665,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Boogaloo",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -1591,6 +1681,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Bowlby One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -1606,12 +1697,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Bowlby One SC",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v6",
    "lastModified": "2014-01-07",
@@ -1622,6 +1714,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Brawler",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -1637,12 +1730,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Bree Serif",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -1653,12 +1747,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Bubblegum Sans",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -1669,12 +1764,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Bubbler One",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -1685,6 +1781,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Buda",
+   "category": "display",
    "variants": [
     "300"
    ],
@@ -1700,13 +1797,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Buenard",
+   "category": "serif",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -1718,12 +1816,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Butcherman",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -1734,12 +1833,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Butterfly Kids",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -1750,6 +1850,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Cabin",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -1779,6 +1880,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Cabin Condensed",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "500",
@@ -1800,6 +1902,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Cabin Sketch",
+   "category": "display",
    "variants": [
     "regular",
     "700"
@@ -1817,6 +1920,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Caesar Dressing",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -1832,6 +1936,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Cagliostro",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -1847,6 +1952,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Calligraffitti",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -1862,6 +1968,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Cambo",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -1877,6 +1984,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Candal",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -1892,6 +2000,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Cantarell",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -1913,12 +2022,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Cantata One",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -1929,12 +2039,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Cantora One",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -1945,12 +2056,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Capriola",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -1961,16 +2073,17 @@
   {
    "kind": "webfonts#webfont",
    "family": "Cardo",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
     "700"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
+    "greek-ext",
     "greek",
-    "greek-ext"
+    "latin-ext"
    ],
    "version": "v6",
    "lastModified": "2014-01-07",
@@ -1983,6 +2096,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Carme",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -1998,6 +2112,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Carrois Gothic",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -2013,6 +2128,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Carrois Gothic SC",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -2028,6 +2144,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Carter One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -2043,6 +2160,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Caudex",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -2050,10 +2168,10 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
+    "greek-ext",
     "greek",
-    "greek-ext"
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -2067,6 +2185,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Cedarville Cursive",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -2082,6 +2201,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Ceviche One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -2097,6 +2217,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Changa One",
+   "category": "display",
    "variants": [
     "regular",
     "italic"
@@ -2114,12 +2235,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Chango",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -2130,13 +2252,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Chau Philomene One",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -2148,12 +2271,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Chela One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -2164,12 +2288,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Chelsea Market",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -2180,6 +2305,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Chenla",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -2195,6 +2321,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Cherry Cream Soda",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -2210,13 +2337,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Cherry Swash",
+   "category": "display",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -2228,6 +2356,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Chewy",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -2243,12 +2372,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Chicle",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -2259,6 +2389,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Chivo",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -2280,6 +2411,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Cinzel",
+   "category": "serif",
    "variants": [
     "regular",
     "700",
@@ -2299,6 +2431,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Cinzel Decorative",
+   "category": "display",
    "variants": [
     "regular",
     "700",
@@ -2318,12 +2451,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Clicker Script",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -2334,6 +2468,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Coda",
+   "category": "display",
    "variants": [
     "regular",
     "800"
@@ -2351,6 +2486,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Coda Caption",
+   "category": "sans-serif",
    "variants": [
     "800"
    ],
@@ -2366,13 +2502,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Codystar",
+   "category": "display",
    "variants": [
     "300",
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -2384,12 +2521,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Combo",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -2400,17 +2538,18 @@
   {
    "kind": "webfonts#webfont",
    "family": "Comfortaa",
+   "category": "display",
    "variants": [
     "300",
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
     "cyrillic-ext",
     "greek",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -2423,6 +2562,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Coming Soon",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -2438,12 +2578,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Concert One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -2454,12 +2595,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Condiment",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -2470,6 +2612,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Content",
+   "category": "display",
    "variants": [
     "regular",
     "700"
@@ -2487,6 +2630,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Contrail One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -2502,6 +2646,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Convergence",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -2517,6 +2662,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Cookie",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -2532,6 +2678,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Copse",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -2547,6 +2694,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Corben",
+   "category": "display",
    "variants": [
     "regular",
     "700"
@@ -2564,12 +2712,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Courgette",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -2580,6 +2729,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Cousine",
+   "category": "monospace",
    "variants": [
     "regular",
     "italic",
@@ -2587,16 +2737,16 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
+    "greek-ext",
     "cyrillic-ext",
     "greek",
-    "greek-ext",
     "cyrillic",
-    "vietnamese"
+    "vietnamese",
+    "latin-ext"
    ],
    "version": "v7",
-   "lastModified": "2014-01-07",
+   "lastModified": "2014-03-17",
    "files": {
     "regular": "http://themes.googleusercontent.com/static/fonts/cousine/v7/GYX4bPXObJNJo63QJEUnLg.ttf",
     "italic": "http://themes.googleusercontent.com/static/fonts/cousine/v7/1WtIuajLoo8vjVwsrZ3eOg.ttf",
@@ -2607,6 +2757,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Coustard",
+   "category": "serif",
    "variants": [
     "regular",
     "900"
@@ -2624,6 +2775,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Covered By Your Grace",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -2639,6 +2791,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Crafty Girls",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -2654,6 +2807,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Creepster",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -2669,13 +2823,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Crete Round",
+   "category": "serif",
    "variants": [
     "regular",
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -2687,6 +2842,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Crimson Text",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -2712,12 +2868,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Croissant One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -2728,6 +2885,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Crushed",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -2743,6 +2901,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Cuprum",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -2750,9 +2909,9 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -2766,12 +2925,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Cutive",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -2782,15 +2942,16 @@
   {
    "kind": "webfonts#webfont",
    "family": "Cutive Mono",
+   "category": "monospace",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
-   "lastModified": "2014-01-07",
+   "lastModified": "2014-03-18",
    "files": {
     "regular": "http://themes.googleusercontent.com/static/fonts/cutivemono/v2/ncWQtFVKcSs8OW798v30k6CWcynf_cDxXwCLxiixG1c.ttf"
    }
@@ -2798,6 +2959,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Damion",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -2813,6 +2975,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Dancing Script",
+   "category": "handwriting",
    "variants": [
     "regular",
     "700"
@@ -2830,6 +2993,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Dangrek",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -2845,6 +3009,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Dawning of a New Day",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -2860,6 +3025,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Days One",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -2875,6 +3041,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Delius",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -2890,6 +3057,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Delius Swash Caps",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -2905,6 +3073,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Delius Unicase",
+   "category": "handwriting",
    "variants": [
     "regular",
     "700"
@@ -2922,6 +3091,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Della Respira",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -2937,12 +3107,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Denk One",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -2953,12 +3124,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Devonshire",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -2969,16 +3141,17 @@
   {
    "kind": "webfonts#webfont",
    "family": "Didact Gothic",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
+    "greek-ext",
     "cyrillic-ext",
     "greek",
-    "greek-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -2989,28 +3162,30 @@
   {
    "kind": "webfonts#webfont",
    "family": "Diplomata",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
-   "version": "v2",
-   "lastModified": "2014-01-07",
+   "version": "v4",
+   "lastModified": "2014-03-27",
    "files": {
-    "regular": "http://themes.googleusercontent.com/static/fonts/diplomata/v2/u-ByBiKgN6rTMA36H3kcKg.ttf"
+    "regular": "http://themes.googleusercontent.com/static/fonts/diplomata/v4/u-ByBiKgN6rTMA36H3kcKg.ttf"
    }
   },
   {
    "kind": "webfonts#webfont",
    "family": "Diplomata SC",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -3021,13 +3196,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Domine",
+   "category": "serif",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -3039,12 +3215,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Donegal One",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -3055,12 +3232,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Doppio One",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -3071,6 +3249,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Dorsa",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -3086,6 +3265,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Dosis",
+   "category": "sans-serif",
    "variants": [
     "200",
     "300",
@@ -3096,8 +3276,8 @@
     "800"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -3114,12 +3294,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Dr Sugiyama",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -3130,6 +3311,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Droid Sans",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "700"
@@ -3147,6 +3329,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Droid Sans Mono",
+   "category": "monospace",
    "variants": [
     "regular"
    ],
@@ -3154,7 +3337,7 @@
     "latin"
    ],
    "version": "v5",
-   "lastModified": "2014-01-07",
+   "lastModified": "2014-03-18",
    "files": {
     "regular": "http://themes.googleusercontent.com/static/fonts/droidsansmono/v5/ns-m2xQYezAtqh7ai59hJcwD6PD0c3_abh9zHKQtbGU.ttf"
    }
@@ -3162,6 +3345,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Droid Serif",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -3183,12 +3367,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Duru Sans",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -3199,12 +3384,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Dynalight",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -3215,15 +3401,16 @@
   {
    "kind": "webfonts#webfont",
    "family": "EB Garamond",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
     "cyrillic-ext",
     "cyrillic",
-    "vietnamese"
+    "vietnamese",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -3234,12 +3421,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Eagle Lake",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -3250,12 +3438,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Eater",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -3266,6 +3455,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Economica",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -3273,8 +3463,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -3288,6 +3478,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Electrolize",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -3303,13 +3494,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Elsie",
+   "category": "display",
    "variants": [
     "regular",
     "900"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -3321,13 +3513,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Elsie Swash Caps",
+   "category": "display",
    "variants": [
     "regular",
     "900"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -3339,12 +3532,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Emblema One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -3355,12 +3549,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Emilys Candy",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -3371,6 +3566,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Engagement",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -3386,12 +3582,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Englebert",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -3402,13 +3599,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Enriqueta",
+   "category": "serif",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -3420,6 +3618,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Erica One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -3435,12 +3634,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Esteban",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -3451,12 +3651,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Euphoria Script",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -3467,12 +3668,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Ewert",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -3483,6 +3685,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Exo",
+   "category": "sans-serif",
    "variants": [
     "100",
     "100italic",
@@ -3504,8 +3707,8 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -3533,6 +3736,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Exo 2",
+   "category": "sans-serif",
    "variants": [
     "100",
     "100italic",
@@ -3554,9 +3758,9 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v1",
    "lastModified": "2013-12-05",
@@ -3584,6 +3788,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Expletus Sans",
+   "category": "display",
    "variants": [
     "regular",
     "italic",
@@ -3613,6 +3818,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Fanwood Text",
+   "category": "serif",
    "variants": [
     "regular",
     "italic"
@@ -3630,6 +3836,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Fascinate",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -3645,6 +3852,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Fascinate Inline",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -3660,6 +3868,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Faster One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -3675,6 +3884,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Fasthand",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -3690,12 +3900,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Fauna One",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -3706,6 +3917,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Federant",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -3721,6 +3933,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Federo",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -3736,12 +3949,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Felipa",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -3752,12 +3966,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Fenix",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -3768,6 +3983,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Finger Paint",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -3783,12 +3999,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Fjalla One",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -3799,6 +4016,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Fjord One",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -3814,6 +4032,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Flamenco",
+   "category": "display",
    "variants": [
     "300",
     "regular"
@@ -3831,6 +4050,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Flavors",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -3846,13 +4066,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Fondamento",
+   "category": "handwriting",
    "variants": [
     "regular",
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -3864,6 +4085,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Fontdiner Swanky",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -3879,14 +4101,15 @@
   {
    "kind": "webfonts#webfont",
    "family": "Forum",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
     "cyrillic-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -3897,12 +4120,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Francois One",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v7",
    "lastModified": "2014-01-07",
@@ -3913,12 +4137,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Freckle Face",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -3929,6 +4154,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Fredericka the Great",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -3944,6 +4170,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Fredoka One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -3959,6 +4186,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Freehand",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -3974,12 +4202,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Fresca",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -3990,6 +4219,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Frijole",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -4005,12 +4235,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Fruktur",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -4021,6 +4252,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Fugaz One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -4036,6 +4268,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "GFS Didot",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -4051,6 +4284,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "GFS Neohellenic",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -4072,12 +4306,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Gabriela",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -4088,12 +4323,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Gafata",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -4104,6 +4340,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Galdeano",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -4119,12 +4356,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Galindo",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -4135,6 +4373,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Gentium Basic",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -4142,8 +4381,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -4157,6 +4396,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Gentium Book Basic",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -4164,8 +4404,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -4179,6 +4419,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Geo",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic"
@@ -4196,6 +4437,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Geostar",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -4211,6 +4453,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Geostar Fill",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -4226,6 +4469,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Germania One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -4241,12 +4485,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Gilda Display",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -4257,6 +4502,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Give You Glory",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -4272,12 +4518,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Glass Antiqua",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -4288,12 +4535,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Glegoo",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -4304,6 +4552,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Gloria Hallelujah",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -4319,6 +4568,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Goblin One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -4334,6 +4584,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Gochi Hand",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -4349,6 +4600,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Gorditas",
+   "category": "display",
    "variants": [
     "regular",
     "700"
@@ -4366,6 +4618,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Goudy Bookletter 1911",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -4381,6 +4634,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Graduate",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -4396,12 +4650,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Grand Hotel",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -4412,6 +4667,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Gravitas One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -4427,12 +4683,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Great Vibes",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -4443,12 +4700,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Griffy",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -4459,12 +4717,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Gruppo",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -4475,14 +4734,15 @@
   {
    "kind": "webfonts#webfont",
    "family": "Gudea",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -4495,12 +4755,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Habibi",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -4511,12 +4772,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Hammersmith One",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -4527,12 +4789,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Hanalei",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -4543,12 +4806,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Hanalei Fill",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -4559,6 +4823,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Handlee",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -4574,6 +4839,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Hanuman",
+   "category": "serif",
    "variants": [
     "regular",
     "700"
@@ -4591,12 +4857,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Happy Monkey",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -4607,12 +4874,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Headland One",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -4623,6 +4891,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Henny Penny",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -4638,12 +4907,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Herr Von Muellerhoff",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -4654,6 +4924,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Holtwood One SC",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -4669,6 +4940,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Homemade Apple",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -4684,12 +4956,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Homenaje",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -4700,6 +4973,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "IM Fell DW Pica",
+   "category": "serif",
    "variants": [
     "regular",
     "italic"
@@ -4717,6 +4991,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "IM Fell DW Pica SC",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -4732,6 +5007,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "IM Fell Double Pica",
+   "category": "serif",
    "variants": [
     "regular",
     "italic"
@@ -4749,6 +5025,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "IM Fell Double Pica SC",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -4764,6 +5041,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "IM Fell English",
+   "category": "serif",
    "variants": [
     "regular",
     "italic"
@@ -4781,6 +5059,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "IM Fell English SC",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -4796,6 +5075,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "IM Fell French Canon",
+   "category": "serif",
    "variants": [
     "regular",
     "italic"
@@ -4813,6 +5093,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "IM Fell French Canon SC",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -4828,6 +5109,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "IM Fell Great Primer",
+   "category": "serif",
    "variants": [
     "regular",
     "italic"
@@ -4845,6 +5127,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "IM Fell Great Primer SC",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -4860,6 +5143,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Iceberg",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -4875,6 +5159,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Iceland",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -4890,12 +5175,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Imprima",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -4906,16 +5192,17 @@
   {
    "kind": "webfonts#webfont",
    "family": "Inconsolata",
+   "category": "monospace",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v7",
-   "lastModified": "2014-01-07",
+   "lastModified": "2014-03-18",
    "files": {
     "regular": "http://themes.googleusercontent.com/static/fonts/inconsolata/v7/7bMKuoy6Nh0ft0SHnIGMuaCWcynf_cDxXwCLxiixG1c.ttf",
     "700": "http://themes.googleusercontent.com/static/fonts/inconsolata/v7/AIed271kqQlcIRSOnQH0yXe1Pd76Vl7zRpE7NLJQ7XU.ttf"
@@ -4924,12 +5211,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Inder",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -4940,6 +5228,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Indie Flower",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -4955,13 +5244,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Inika",
+   "category": "serif",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -4973,6 +5263,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Irish Grover",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -4988,6 +5279,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Istok Web",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -4995,10 +5287,10 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
     "cyrillic-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v6",
    "lastModified": "2014-01-07",
@@ -5012,6 +5304,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Italiana",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -5027,12 +5320,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Italianno",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -5043,6 +5337,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Jacques Francois",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -5058,6 +5353,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Jacques Francois Shadow",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -5073,12 +5369,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Jim Nightshade",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -5089,12 +5386,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Jockey One",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -5105,12 +5403,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Jolly Lodger",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -5121,6 +5420,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Josefin Sans",
+   "category": "sans-serif",
    "variants": [
     "100",
     "100italic",
@@ -5154,6 +5454,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Josefin Slab",
+   "category": "serif",
    "variants": [
     "100",
     "100italic",
@@ -5187,12 +5488,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Joti One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -5203,6 +5505,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Judson",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -5222,6 +5525,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Julee",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -5237,12 +5541,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Julius Sans One",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -5253,6 +5558,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Junge",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -5268,6 +5574,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Jura",
+   "category": "sans-serif",
    "variants": [
     "300",
     "regular",
@@ -5275,12 +5582,12 @@
     "600"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
+    "greek-ext",
     "cyrillic-ext",
     "greek",
-    "greek-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -5294,6 +5601,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Just Another Hand",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -5309,12 +5617,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Just Me Again Down Here",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v6",
    "lastModified": "2014-01-07",
@@ -5325,6 +5634,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Kameron",
+   "category": "serif",
    "variants": [
     "regular",
     "700"
@@ -5342,6 +5652,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Kantumruy",
+   "category": "sans-serif",
    "variants": [
     "300",
     "regular",
@@ -5361,6 +5672,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Karla",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -5368,8 +5680,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -5383,12 +5695,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Kaushan Script",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -5399,12 +5712,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Kavoon",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -5415,6 +5729,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Kdam Thmor",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -5430,12 +5745,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Keania One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -5446,13 +5762,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Kelly Slab",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -5463,6 +5780,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Kenia",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -5478,6 +5796,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Khmer",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -5493,6 +5812,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Kite One",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -5508,12 +5828,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Knewave",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -5524,12 +5845,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Kotta One",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -5540,6 +5862,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Koulen",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -5555,6 +5878,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Kranky",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -5570,6 +5894,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Kreon",
+   "category": "serif",
    "variants": [
     "300",
     "regular",
@@ -5589,6 +5914,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Kristi",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -5604,12 +5930,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Krona One",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -5620,6 +5947,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "La Belle Aurore",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -5635,6 +5963,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Lancelot",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -5650,6 +5979,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Lato",
+   "category": "sans-serif",
    "variants": [
     "100",
     "100italic",
@@ -5683,6 +6013,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "League Script",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -5698,6 +6029,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Leckerli One",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -5713,13 +6045,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Ledger",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -5730,14 +6063,15 @@
   {
    "kind": "webfonts#webfont",
    "family": "Lekton",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -5750,6 +6084,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Lemon",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -5765,14 +6100,15 @@
   {
    "kind": "webfonts#webfont",
    "family": "Libre Baskerville",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -5785,13 +6121,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Life Savers",
+   "category": "display",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -5803,12 +6140,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Lilita One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -5819,12 +6157,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Lily Script One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -5835,12 +6174,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Limelight",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -5851,6 +6191,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Linden Hill",
+   "category": "serif",
    "variants": [
     "regular",
     "italic"
@@ -5868,24 +6209,26 @@
   {
    "kind": "webfonts#webfont",
    "family": "Lobster",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
     "cyrillic-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
-   "version": "v6",
-   "lastModified": "2014-01-07",
+   "version": "v8",
+   "lastModified": "2014-03-20",
    "files": {
-    "regular": "http://themes.googleusercontent.com/static/fonts/lobster/v6/9LpJGtNuM1D8FAZ2BkJH2Q.ttf"
+    "regular": "http://themes.googleusercontent.com/static/fonts/lobster/v8/9LpJGtNuM1D8FAZ2BkJH2Q.ttf"
    }
   },
   {
    "kind": "webfonts#webfont",
    "family": "Lobster Two",
+   "category": "display",
    "variants": [
     "regular",
     "italic",
@@ -5907,6 +6250,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Londrina Outline",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -5922,6 +6266,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Londrina Shadow",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -5937,6 +6282,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Londrina Sketch",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -5952,6 +6298,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Londrina Solid",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -5967,6 +6314,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Lora",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -5974,9 +6322,9 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v7",
    "lastModified": "2014-01-07",
@@ -5990,6 +6338,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Love Ya Like A Sister",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -6005,6 +6354,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Loved by the King",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -6020,12 +6370,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Lovers Quarrel",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -6036,6 +6387,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Luckiest Guy",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -6051,6 +6403,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Lusitana",
+   "category": "serif",
    "variants": [
     "regular",
     "700"
@@ -6068,6 +6421,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Lustria",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -6083,6 +6437,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Macondo",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -6098,6 +6453,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Macondo Swash Caps",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -6113,13 +6469,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Magra",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -6131,6 +6488,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Maiden Orange",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -6146,6 +6504,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Mako",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -6161,12 +6520,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Marcellus",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -6177,12 +6537,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Marcellus SC",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -6193,13 +6554,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Marck Script",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -6210,12 +6572,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Margarine",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -6226,6 +6589,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Marko One",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -6241,13 +6605,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Marmelad",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -6258,6 +6623,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Marvel",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -6279,6 +6645,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Mate",
+   "category": "serif",
    "variants": [
     "regular",
     "italic"
@@ -6296,6 +6663,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Mate SC",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -6311,6 +6679,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Maven Pro",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "500",
@@ -6332,12 +6701,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "McLaren",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -6348,6 +6718,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Meddon",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -6363,12 +6734,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "MedievalSharp",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v6",
    "lastModified": "2014-01-07",
@@ -6379,6 +6751,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Medula One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -6394,6 +6767,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Megrim",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -6409,12 +6783,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Meie Script",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -6425,13 +6800,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Merienda",
+   "category": "handwriting",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -6443,6 +6819,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Merienda One",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -6458,6 +6835,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Merriweather",
+   "category": "serif",
    "variants": [
     "300",
     "300italic",
@@ -6469,8 +6847,8 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v6",
    "lastModified": "2014-01-07",
@@ -6488,6 +6866,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Merriweather Sans",
+   "category": "sans-serif",
    "variants": [
     "300",
     "300italic",
@@ -6499,8 +6878,8 @@
     "800italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -6518,6 +6897,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Metal",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -6533,12 +6913,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Metal Mania",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -6549,12 +6930,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Metamorphous",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -6565,6 +6947,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Metrophobic",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -6580,6 +6963,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Michroma",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -6595,12 +6979,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Milonga",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -6611,6 +6996,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Miltonian",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -6626,6 +7012,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Miltonian Tattoo",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -6641,6 +7028,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Miniver",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -6656,12 +7044,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Miss Fajardose",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -6672,12 +7061,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Modern Antiqua",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -6688,12 +7078,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Molengo",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -6704,12 +7095,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Molle",
+   "category": "handwriting",
    "variants": [
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -6720,13 +7112,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Monda",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -6738,6 +7131,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Monofett",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -6753,6 +7147,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Monoton",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -6768,12 +7163,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Monsieur La Doulaise",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -6784,6 +7180,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Montaga",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -6799,6 +7196,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Montez",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -6814,6 +7212,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Montserrat",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "700"
@@ -6831,6 +7230,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Montserrat Alternates",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "700"
@@ -6848,6 +7248,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Montserrat Subrayada",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "700"
@@ -6865,6 +7266,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Moul",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -6880,6 +7282,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Moulpali",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -6895,6 +7298,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Mountains of Christmas",
+   "category": "display",
    "variants": [
     "regular",
     "700"
@@ -6912,12 +7316,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Mouse Memoirs",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -6928,12 +7333,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Mr Bedfort",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -6944,12 +7350,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Mr Dafoe",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -6960,12 +7367,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Mr De Haviland",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -6976,12 +7384,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Mrs Saint Delafield",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -6992,12 +7401,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Mrs Sheppards",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -7008,6 +7418,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Muli",
+   "category": "sans-serif",
    "variants": [
     "300",
     "300italic",
@@ -7029,12 +7440,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Mystery Quest",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -7045,6 +7457,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Neucha",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -7061,6 +7474,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Neuton",
+   "category": "serif",
    "variants": [
     "200",
     "300",
@@ -7070,8 +7484,8 @@
     "800"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v6",
    "lastModified": "2014-01-07",
@@ -7087,12 +7501,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "New Rocker",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -7103,13 +7518,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "News Cycle",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v10",
    "lastModified": "2014-01-07",
@@ -7121,12 +7537,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Niconne",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -7137,6 +7554,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Nixie One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -7152,6 +7570,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Nobile",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -7173,6 +7592,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Nokora",
+   "category": "serif",
    "variants": [
     "regular",
     "700"
@@ -7190,12 +7610,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Norican",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -7206,12 +7627,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Nosifer",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -7222,6 +7644,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Nothing You Could Do",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -7237,6 +7660,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Noticia Text",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -7244,9 +7668,9 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "vietnamese"
+    "vietnamese",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -7260,6 +7684,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Noto Sans",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -7267,26 +7692,28 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
+    "greek-ext",
     "cyrillic-ext",
     "greek",
-    "greek-ext",
     "cyrillic",
-    "vietnamese"
+    "vietnamese",
+    "latin-ext",
+    "devanagari"
    ],
-   "version": "v2",
-   "lastModified": "2014-01-07",
+   "version": "v4",
+   "lastModified": "2014-02-24",
    "files": {
-    "regular": "http://themes.googleusercontent.com/static/fonts/notosans/v2/0Ue9FiUJwVhi4NGfHJS5uA.ttf",
-    "italic": "http://themes.googleusercontent.com/static/fonts/notosans/v2/dLcNKMgJ1H5RVoZFraDz0qCWcynf_cDxXwCLxiixG1c.ttf",
-    "700": "http://themes.googleusercontent.com/static/fonts/notosans/v2/PIbvSEyHEdL91QLOQRnZ1y3USBnSvpkopQaUR-2r7iU.ttf",
-    "700italic": "http://themes.googleusercontent.com/static/fonts/notosans/v2/9Z3uUWMRR7crzm1TjRicDne1Pd76Vl7zRpE7NLJQ7XU.ttf"
+    "regular": "http://themes.googleusercontent.com/static/fonts/notosans/v4/0Ue9FiUJwVhi4NGfHJS5uA.ttf",
+    "italic": "http://themes.googleusercontent.com/static/fonts/notosans/v4/dLcNKMgJ1H5RVoZFraDz0qCWcynf_cDxXwCLxiixG1c.ttf",
+    "700": "http://themes.googleusercontent.com/static/fonts/notosans/v4/PIbvSEyHEdL91QLOQRnZ1y3USBnSvpkopQaUR-2r7iU.ttf",
+    "700italic": "http://themes.googleusercontent.com/static/fonts/notosans/v4/9Z3uUWMRR7crzm1TjRicDne1Pd76Vl7zRpE7NLJQ7XU.ttf"
    }
   },
   {
    "kind": "webfonts#webfont",
    "family": "Noto Serif",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -7294,13 +7721,13 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
+    "greek-ext",
     "cyrillic-ext",
     "greek",
-    "greek-ext",
     "cyrillic",
-    "vietnamese"
+    "vietnamese",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -7314,6 +7741,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Nova Cut",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -7329,6 +7757,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Nova Flat",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -7344,6 +7773,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Nova Mono",
+   "category": "monospace",
    "variants": [
     "regular"
    ],
@@ -7352,7 +7782,7 @@
     "greek"
    ],
    "version": "v5",
-   "lastModified": "2014-01-07",
+   "lastModified": "2014-03-18",
    "files": {
     "regular": "http://themes.googleusercontent.com/static/fonts/novamono/v5/6-SChr5ZIaaasJFBkgrLNw.ttf"
    }
@@ -7360,6 +7790,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Nova Oval",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -7375,6 +7806,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Nova Round",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -7390,6 +7822,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Nova Script",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -7405,6 +7838,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Nova Slim",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -7420,6 +7854,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Nova Square",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -7435,6 +7870,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Numans",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -7450,6 +7886,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Nunito",
+   "category": "sans-serif",
    "variants": [
     "300",
     "regular",
@@ -7469,6 +7906,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Odor Mean Chey",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -7484,6 +7922,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Offside",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -7499,6 +7938,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Old Standard TT",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -7518,12 +7958,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Oldenburg",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -7534,13 +7975,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Oleo Script",
+   "category": "display",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -7552,13 +7994,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Oleo Script Swash Caps",
+   "category": "display",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -7570,6 +8013,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Open Sans",
+   "category": "sans-serif",
    "variants": [
     "300",
     "300italic",
@@ -7583,45 +8027,47 @@
     "800italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
+    "greek-ext",
     "cyrillic-ext",
     "greek",
-    "greek-ext",
     "cyrillic",
-    "vietnamese"
+    "vietnamese",
+    "latin-ext",
+    "devanagari"
    ],
-   "version": "v7",
-   "lastModified": "2014-01-07",
+   "version": "v8",
+   "lastModified": "2014-02-24",
    "files": {
-    "300": "http://themes.googleusercontent.com/static/fonts/opensans/v7/DXI1ORHCpsQm3Vp6mXoaTS3USBnSvpkopQaUR-2r7iU.ttf",
-    "300italic": "http://themes.googleusercontent.com/static/fonts/opensans/v7/PRmiXeptR36kaC0GEAetxi9-WlPSxbfiI49GsXo3q0g.ttf",
-    "regular": "http://themes.googleusercontent.com/static/fonts/opensans/v7/IgZJs4-7SA1XX_edsoXWog.ttf",
-    "italic": "http://themes.googleusercontent.com/static/fonts/opensans/v7/O4NhV7_qs9r9seTo7fnsVKCWcynf_cDxXwCLxiixG1c.ttf",
-    "600": "http://themes.googleusercontent.com/static/fonts/opensans/v7/MTP_ySUJH_bn48VBG8sNSi3USBnSvpkopQaUR-2r7iU.ttf",
-    "600italic": "http://themes.googleusercontent.com/static/fonts/opensans/v7/PRmiXeptR36kaC0GEAetxpZ7xm-Bj30Bj2KNdXDzSZg.ttf",
-    "700": "http://themes.googleusercontent.com/static/fonts/opensans/v7/k3k702ZOKiLJc3WVjuplzC3USBnSvpkopQaUR-2r7iU.ttf",
-    "700italic": "http://themes.googleusercontent.com/static/fonts/opensans/v7/PRmiXeptR36kaC0GEAetxne1Pd76Vl7zRpE7NLJQ7XU.ttf",
-    "800": "http://themes.googleusercontent.com/static/fonts/opensans/v7/EInbV5DfGHOiMmvb1Xr-hi3USBnSvpkopQaUR-2r7iU.ttf",
-    "800italic": "http://themes.googleusercontent.com/static/fonts/opensans/v7/PRmiXeptR36kaC0GEAetxg89PwPrYLaRFJ-HNCU9NbA.ttf"
+    "300": "http://themes.googleusercontent.com/static/fonts/opensans/v8/DXI1ORHCpsQm3Vp6mXoaTS3USBnSvpkopQaUR-2r7iU.ttf",
+    "300italic": "http://themes.googleusercontent.com/static/fonts/opensans/v8/PRmiXeptR36kaC0GEAetxi9-WlPSxbfiI49GsXo3q0g.ttf",
+    "regular": "http://themes.googleusercontent.com/static/fonts/opensans/v8/IgZJs4-7SA1XX_edsoXWog.ttf",
+    "italic": "http://themes.googleusercontent.com/static/fonts/opensans/v8/O4NhV7_qs9r9seTo7fnsVKCWcynf_cDxXwCLxiixG1c.ttf",
+    "600": "http://themes.googleusercontent.com/static/fonts/opensans/v8/MTP_ySUJH_bn48VBG8sNSi3USBnSvpkopQaUR-2r7iU.ttf",
+    "600italic": "http://themes.googleusercontent.com/static/fonts/opensans/v8/PRmiXeptR36kaC0GEAetxpZ7xm-Bj30Bj2KNdXDzSZg.ttf",
+    "700": "http://themes.googleusercontent.com/static/fonts/opensans/v8/k3k702ZOKiLJc3WVjuplzC3USBnSvpkopQaUR-2r7iU.ttf",
+    "700italic": "http://themes.googleusercontent.com/static/fonts/opensans/v8/PRmiXeptR36kaC0GEAetxne1Pd76Vl7zRpE7NLJQ7XU.ttf",
+    "800": "http://themes.googleusercontent.com/static/fonts/opensans/v8/EInbV5DfGHOiMmvb1Xr-hi3USBnSvpkopQaUR-2r7iU.ttf",
+    "800italic": "http://themes.googleusercontent.com/static/fonts/opensans/v8/PRmiXeptR36kaC0GEAetxg89PwPrYLaRFJ-HNCU9NbA.ttf"
    }
   },
   {
    "kind": "webfonts#webfont",
    "family": "Open Sans Condensed",
+   "category": "sans-serif",
    "variants": [
     "300",
     "300italic",
     "700"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
+    "greek-ext",
     "cyrillic-ext",
     "greek",
-    "greek-ext",
     "cyrillic",
-    "vietnamese"
+    "vietnamese",
+    "latin-ext"
    ],
    "version": "v7",
    "lastModified": "2014-01-07",
@@ -7634,14 +8080,15 @@
   {
    "kind": "webfonts#webfont",
    "family": "Oranienbaum",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
     "cyrillic-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -7652,6 +8099,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Orbitron",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "500",
@@ -7673,13 +8121,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Oregano",
+   "category": "display",
    "variants": [
     "regular",
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -7691,12 +8140,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Orienta",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -7707,6 +8157,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Original Surfer",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -7722,14 +8173,15 @@
   {
    "kind": "webfonts#webfont",
    "family": "Oswald",
+   "category": "sans-serif",
    "variants": [
     "300",
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v8",
    "lastModified": "2014-01-07",
@@ -7742,6 +8194,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Over the Rainbow",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -7757,6 +8210,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Overlock",
+   "category": "display",
    "variants": [
     "regular",
     "italic",
@@ -7766,8 +8220,8 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -7783,12 +8237,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Overlock SC",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -7799,6 +8254,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Ovo",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -7814,14 +8270,15 @@
   {
    "kind": "webfonts#webfont",
    "family": "Oxygen",
+   "category": "sans-serif",
    "variants": [
     "300",
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -7834,15 +8291,16 @@
   {
    "kind": "webfonts#webfont",
    "family": "Oxygen Mono",
+   "category": "monospace",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
-   "lastModified": "2014-01-07",
+   "lastModified": "2014-03-18",
    "files": {
     "regular": "http://themes.googleusercontent.com/static/fonts/oxygenmono/v2/DigTu7k4b7OmM8ubt1Qza6CWcynf_cDxXwCLxiixG1c.ttf"
    }
@@ -7850,17 +8308,18 @@
   {
    "kind": "webfonts#webfont",
    "family": "PT Mono",
+   "category": "monospace",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
     "cyrillic-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v2",
-   "lastModified": "2014-01-07",
+   "lastModified": "2014-03-18",
    "files": {
     "regular": "http://themes.googleusercontent.com/static/fonts/ptmono/v2/QUbM8H9yJK5NhpQ0REO6Wg.ttf"
    }
@@ -7868,6 +8327,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "PT Sans",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -7875,10 +8335,10 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
     "cyrillic-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v6",
    "lastModified": "2014-01-07",
@@ -7892,15 +8352,16 @@
   {
    "kind": "webfonts#webfont",
    "family": "PT Sans Caption",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
     "cyrillic-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v7",
    "lastModified": "2014-01-07",
@@ -7912,15 +8373,16 @@
   {
    "kind": "webfonts#webfont",
    "family": "PT Sans Narrow",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
     "cyrillic-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -7932,6 +8394,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "PT Serif",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -7939,10 +8402,10 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
     "cyrillic-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v6",
    "lastModified": "2014-01-07",
@@ -7956,15 +8419,16 @@
   {
    "kind": "webfonts#webfont",
    "family": "PT Serif Caption",
+   "category": "serif",
    "variants": [
     "regular",
     "italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
     "cyrillic-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v6",
    "lastModified": "2014-01-07",
@@ -7976,6 +8440,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Pacifico",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -7991,6 +8456,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Paprika",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -8006,12 +8472,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Parisienne",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8022,12 +8489,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Passero One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v6",
    "lastModified": "2014-01-07",
@@ -8038,14 +8506,15 @@
   {
    "kind": "webfonts#webfont",
    "family": "Passion One",
+   "category": "display",
    "variants": [
     "regular",
     "700",
     "900"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -8058,12 +8527,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Pathway Gothic One",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8074,13 +8544,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Patrick Hand",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "vietnamese"
+    "vietnamese",
+    "latin-ext"
    ],
    "version": "v8",
    "lastModified": "2014-01-07",
@@ -8091,13 +8562,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Patrick Hand SC",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "vietnamese"
+    "vietnamese",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8108,6 +8580,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Patua One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -8123,6 +8596,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Paytone One",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -8138,12 +8612,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Peralta",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8154,6 +8629,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Permanent Marker",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -8169,12 +8645,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Petit Formal Script",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8185,6 +8662,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Petrona",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -8200,6 +8678,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Philosopher",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -8222,12 +8701,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Piedra",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -8238,6 +8718,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Pinyon Script",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -8253,12 +8734,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Pirata One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8269,12 +8751,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Plaster",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -8285,17 +8768,18 @@
   {
    "kind": "webfonts#webfont",
    "family": "Play",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
+    "greek-ext",
     "cyrillic-ext",
     "greek",
-    "greek-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -8307,12 +8791,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Playball",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -8323,6 +8808,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Playfair Display",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -8332,9 +8818,9 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v8",
    "lastModified": "2014-01-07",
@@ -8350,6 +8836,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Playfair Display SC",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -8359,9 +8846,9 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8377,6 +8864,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Podkova",
+   "category": "serif",
    "variants": [
     "regular",
     "700"
@@ -8394,13 +8882,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Poiret One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8411,6 +8900,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Poller One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -8426,6 +8916,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Poly",
+   "category": "serif",
    "variants": [
     "regular",
     "italic"
@@ -8443,6 +8934,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Pompiere",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -8458,12 +8950,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Pontano Sans",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8474,6 +8967,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Port Lligat Sans",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -8489,6 +8983,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Port Lligat Slab",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -8504,6 +8999,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Prata",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -8519,6 +9015,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Preahvihear",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -8534,14 +9031,15 @@
   {
    "kind": "webfonts#webfont",
    "family": "Press Start 2P",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
     "greek",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8552,12 +9050,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Princess Sofia",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8568,6 +9067,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Prociono",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -8583,13 +9083,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Prosto One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8600,6 +9101,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Puritan",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -8621,12 +9123,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Purple Purse",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8637,12 +9140,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Quando",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8653,6 +9157,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Quantico",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -8674,13 +9179,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Quattrocento",
+   "category": "serif",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -8692,6 +9198,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Quattrocento Sans",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -8699,8 +9206,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v6",
    "lastModified": "2014-01-07",
@@ -8714,6 +9221,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Questrial",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -8729,6 +9237,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Quicksand",
+   "category": "sans-serif",
    "variants": [
     "300",
     "regular",
@@ -8748,12 +9257,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Quintessential",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8764,12 +9274,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Qwigley",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -8780,12 +9291,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Racing Sans One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8796,13 +9308,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Radley",
+   "category": "serif",
    "variants": [
     "regular",
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v7",
    "lastModified": "2014-01-07",
@@ -8814,6 +9327,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Raleway",
+   "category": "sans-serif",
    "variants": [
     "100",
     "200",
@@ -8845,12 +9359,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Raleway Dots",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8861,6 +9376,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Rambla",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -8868,8 +9384,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8883,12 +9399,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Rammetto One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -8899,12 +9416,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Ranchers",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8915,6 +9433,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Rancho",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -8930,6 +9449,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Rationale",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -8945,6 +9465,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Redressed",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -8960,6 +9481,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Reenie Beanie",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -8975,12 +9497,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Revalia",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -8991,12 +9514,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Ribeye",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -9007,12 +9531,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Ribeye Marrow",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -9023,12 +9548,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Righteous",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -9039,12 +9565,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Risque",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -9055,6 +9582,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Roboto",
+   "category": "sans-serif",
    "variants": [
     "100",
     "100italic",
@@ -9070,13 +9598,13 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
+    "greek-ext",
     "cyrillic-ext",
     "greek",
-    "greek-ext",
     "cyrillic",
-    "vietnamese"
+    "vietnamese",
+    "latin-ext"
    ],
    "version": "v10",
    "lastModified": "2014-01-07",
@@ -9098,6 +9626,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Roboto Condensed",
+   "category": "sans-serif",
    "variants": [
     "300",
     "300italic",
@@ -9107,13 +9636,13 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
+    "greek-ext",
     "cyrillic-ext",
     "greek",
-    "greek-ext",
     "cyrillic",
-    "vietnamese"
+    "vietnamese",
+    "latin-ext"
    ],
    "version": "v9",
    "lastModified": "2014-01-07",
@@ -9129,6 +9658,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Roboto Slab",
+   "category": "serif",
    "variants": [
     "100",
     "300",
@@ -9136,13 +9666,13 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
+    "greek-ext",
     "cyrillic-ext",
     "greek",
-    "greek-ext",
     "cyrillic",
-    "vietnamese"
+    "vietnamese",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -9156,6 +9686,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Rochester",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -9171,6 +9702,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Rock Salt",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -9186,6 +9718,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Rokkitt",
+   "category": "serif",
    "variants": [
     "regular",
     "700"
@@ -9203,12 +9736,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Romanesco",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -9219,13 +9753,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Ropa Sans",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -9237,6 +9772,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Rosario",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -9258,13 +9794,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Rosarivo",
+   "category": "serif",
    "variants": [
     "regular",
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -9276,6 +9813,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Rouge Script",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -9291,14 +9829,15 @@
   {
    "kind": "webfonts#webfont",
    "family": "Ruda",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "700",
     "900"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -9311,13 +9850,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Rufina",
+   "category": "serif",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -9329,12 +9869,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Ruge Boogie",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -9345,12 +9886,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Ruluko",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -9361,12 +9903,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Rum Raisin",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -9377,14 +9920,15 @@
   {
    "kind": "webfonts#webfont",
    "family": "Ruslan Display",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
     "cyrillic-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -9395,13 +9939,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Russo One",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -9412,12 +9957,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Ruthie",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -9428,12 +9974,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Rye",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -9444,12 +9991,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Sacramento",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -9460,6 +10008,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Sail",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -9475,6 +10024,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Salsa",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -9490,13 +10040,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Sanchez",
+   "category": "serif",
    "variants": [
     "regular",
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -9508,12 +10059,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Sancreek",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -9524,6 +10076,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Sansita One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -9539,12 +10092,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Sarina",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -9555,6 +10109,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Satisfy",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -9570,6 +10125,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Scada",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "italic",
@@ -9577,9 +10133,9 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -9593,6 +10149,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Schoolbell",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -9608,12 +10165,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Seaweed Script",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -9624,12 +10182,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Sevillana",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -9640,13 +10199,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Seymour One",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -9657,6 +10217,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Shadows Into Light",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -9672,12 +10233,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Shadows Into Light Two",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -9688,6 +10250,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Shanti",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -9703,6 +10266,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Share",
+   "category": "display",
    "variants": [
     "regular",
     "italic",
@@ -9710,8 +10274,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -9725,6 +10289,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Share Tech",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -9740,6 +10305,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Share Tech Mono",
+   "category": "monospace",
    "variants": [
     "regular"
    ],
@@ -9747,7 +10313,7 @@
     "latin"
    ],
    "version": "v2",
-   "lastModified": "2014-01-07",
+   "lastModified": "2014-03-18",
    "files": {
     "regular": "http://themes.googleusercontent.com/static/fonts/sharetechmono/v2/RQxK-3RA0Lnf3gnnnNrAscwD6PD0c3_abh9zHKQtbGU.ttf"
    }
@@ -9755,12 +10321,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Shojumaru",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -9771,6 +10338,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Short Stack",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -9786,6 +10354,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Siemreap",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -9801,6 +10370,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Sigmar One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -9816,6 +10386,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Signika",
+   "category": "sans-serif",
    "variants": [
     "300",
     "regular",
@@ -9823,8 +10394,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -9838,6 +10409,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Signika Negative",
+   "category": "sans-serif",
    "variants": [
     "300",
     "regular",
@@ -9845,8 +10417,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -9860,6 +10432,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Simonetta",
+   "category": "display",
    "variants": [
     "regular",
     "italic",
@@ -9867,8 +10440,8 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -9882,13 +10455,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Sintony",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -9900,6 +10474,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Sirin Stencil",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -9915,6 +10490,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Six Caps",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -9930,13 +10506,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Skranji",
+   "category": "display",
    "variants": [
     "regular",
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -9948,6 +10525,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Slackey",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -9963,6 +10541,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Smokum",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -9978,6 +10557,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Smythe",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -9993,13 +10573,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Sniglet",
+   "category": "display",
    "variants": [
     "regular",
     "800"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -10011,6 +10592,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Snippet",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -10026,12 +10608,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Snowburst One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -10042,6 +10625,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Sofadi One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -10057,6 +10641,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Sofia",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -10072,12 +10657,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Sonsie One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -10088,13 +10674,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Sorts Mill Goudy",
+   "category": "serif",
    "variants": [
     "regular",
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -10106,6 +10693,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Source Code Pro",
+   "category": "monospace",
    "variants": [
     "200",
     "300",
@@ -10116,11 +10704,11 @@
     "900"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
-   "lastModified": "2014-01-07",
+   "lastModified": "2014-03-18",
    "files": {
     "200": "http://themes.googleusercontent.com/static/fonts/sourcecodepro/v4/leqv3v-yTsJNC7nFznSMqaXvKVW_haheDNrHjziJZVk.ttf",
     "300": "http://themes.googleusercontent.com/static/fonts/sourcecodepro/v4/leqv3v-yTsJNC7nFznSMqVP7R5lD_au4SZC6Ks_vyWs.ttf",
@@ -10134,6 +10722,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Source Sans Pro",
+   "category": "sans-serif",
    "variants": [
     "200",
     "200italic",
@@ -10149,9 +10738,9 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "vietnamese"
+    "vietnamese",
+    "latin-ext"
    ],
    "version": "v7",
    "lastModified": "2014-01-07",
@@ -10173,6 +10762,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Special Elite",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -10188,6 +10778,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Spicy Rice",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -10203,12 +10794,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Spinnaker",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v6",
    "lastModified": "2014-01-07",
@@ -10219,6 +10811,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Spirax",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -10234,6 +10827,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Squada One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -10249,12 +10843,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Stalemate",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -10265,13 +10860,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Stalinist One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -10282,6 +10878,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Stardos Stencil",
+   "category": "display",
    "variants": [
     "regular",
     "700"
@@ -10299,12 +10896,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Stint Ultra Condensed",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -10315,12 +10913,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Stint Ultra Expanded",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -10331,13 +10930,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Stoke",
+   "category": "serif",
    "variants": [
     "300",
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -10349,6 +10949,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Strait",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -10364,6 +10965,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Sue Ellen Francisco",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -10379,6 +10981,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Sunshiney",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -10394,6 +10997,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Supermercado One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -10409,6 +11013,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Suwannaphum",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -10424,6 +11029,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Swanky and Moo Moo",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -10439,6 +11045,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Syncopate",
+   "category": "sans-serif",
    "variants": [
     "regular",
     "700"
@@ -10456,6 +11063,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Tangerine",
+   "category": "handwriting",
    "variants": [
     "regular",
     "700"
@@ -10473,6 +11081,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Taprom",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -10488,12 +11097,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Tauri",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -10504,6 +11114,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Telex",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -10519,14 +11130,15 @@
   {
    "kind": "webfonts#webfont",
    "family": "Tenor Sans",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
     "cyrillic-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -10537,12 +11149,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Text Me One",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -10553,6 +11166,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "The Girl Next Door",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -10568,6 +11182,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Tienne",
+   "category": "serif",
    "variants": [
     "regular",
     "700",
@@ -10587,6 +11202,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Tinos",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -10594,13 +11210,13 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
+    "greek-ext",
     "cyrillic-ext",
     "greek",
-    "greek-ext",
     "cyrillic",
-    "vietnamese"
+    "vietnamese",
+    "latin-ext"
    ],
    "version": "v6",
    "lastModified": "2014-01-07",
@@ -10614,12 +11230,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Titan One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -10630,6 +11247,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Titillium Web",
+   "category": "sans-serif",
    "variants": [
     "200",
     "200italic",
@@ -10644,8 +11262,8 @@
     "900"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -10666,6 +11284,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Trade Winds",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -10681,12 +11300,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Trocchi",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -10697,6 +11317,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Trochut",
+   "category": "display",
    "variants": [
     "regular",
     "italic",
@@ -10716,12 +11337,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Trykker",
+   "category": "serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -10732,6 +11354,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Tulpen One",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -10747,6 +11370,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Ubuntu",
+   "category": "sans-serif",
    "variants": [
     "300",
     "300italic",
@@ -10758,12 +11382,12 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
+    "greek-ext",
     "cyrillic-ext",
     "greek",
-    "greek-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -10781,16 +11405,17 @@
   {
    "kind": "webfonts#webfont",
    "family": "Ubuntu Condensed",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
+    "greek-ext",
     "cyrillic-ext",
     "greek",
-    "greek-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v4",
    "lastModified": "2014-01-07",
@@ -10801,6 +11426,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Ubuntu Mono",
+   "category": "monospace",
    "variants": [
     "regular",
     "italic",
@@ -10808,15 +11434,15 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
+    "greek-ext",
     "cyrillic-ext",
     "greek",
-    "greek-ext",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v4",
-   "lastModified": "2014-01-07",
+   "lastModified": "2014-03-18",
    "files": {
     "regular": "http://themes.googleusercontent.com/static/fonts/ubuntumono/v4/EgeuS9OtEmA0y_JRo03MQaCWcynf_cDxXwCLxiixG1c.ttf",
     "italic": "http://themes.googleusercontent.com/static/fonts/ubuntumono/v4/KAKuHXAHZOeECOWAHsRKA0eOrDcLawS7-ssYqLr2Xp4.ttf",
@@ -10827,6 +11453,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Ultra",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -10842,6 +11469,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Uncial Antiqua",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -10857,13 +11485,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Underdog",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -10874,12 +11503,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Unica One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -10890,6 +11520,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "UnifrakturCook",
+   "category": "display",
    "variants": [
     "700"
    ],
@@ -10905,6 +11536,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "UnifrakturMaguntia",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -10920,6 +11552,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Unkempt",
+   "category": "display",
    "variants": [
     "regular",
     "700"
@@ -10937,6 +11570,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Unlock",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -10952,6 +11586,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Unna",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -10967,6 +11602,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "VT323",
+   "category": "monospace",
    "variants": [
     "regular"
    ],
@@ -10974,7 +11610,7 @@
     "latin"
    ],
    "version": "v5",
-   "lastModified": "2014-01-07",
+   "lastModified": "2014-03-18",
    "files": {
     "regular": "http://themes.googleusercontent.com/static/fonts/vt323/v5/ITU2YQfM073o1iYK3nSOmQ.ttf"
    }
@@ -10982,12 +11618,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Vampiro One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -10998,12 +11635,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Varela",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -11014,6 +11652,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Varela Round",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -11029,6 +11668,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Vast Shadow",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -11044,6 +11684,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Vibur",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -11059,6 +11700,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Vidaloka",
+   "category": "serif",
    "variants": [
     "regular"
    ],
@@ -11074,12 +11716,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Viga",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -11090,12 +11733,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Voces",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -11106,6 +11750,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Volkhov",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -11127,6 +11772,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Vollkorn",
+   "category": "serif",
    "variants": [
     "regular",
     "italic",
@@ -11148,6 +11794,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Voltaire",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -11163,6 +11810,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Waiting for the Sunrise",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -11178,6 +11826,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Wallpoet",
+   "category": "display",
    "variants": [
     "regular"
    ],
@@ -11193,6 +11842,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Walter Turncoat",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -11208,12 +11858,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Warnes",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v3",
    "lastModified": "2014-01-07",
@@ -11224,12 +11875,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Wellfleet",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -11240,12 +11892,13 @@
   {
    "kind": "webfonts#webfont",
    "family": "Wendy One",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v2",
    "lastModified": "2014-01-07",
@@ -11256,6 +11909,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Wire One",
+   "category": "sans-serif",
    "variants": [
     "regular"
    ],
@@ -11271,6 +11925,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Yanone Kaffeesatz",
+   "category": "sans-serif",
    "variants": [
     "200",
     "300",
@@ -11278,8 +11933,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ],
    "version": "v5",
    "lastModified": "2014-01-07",
@@ -11293,6 +11948,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Yellowtail",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -11308,13 +11964,14 @@
   {
    "kind": "webfonts#webfont",
    "family": "Yeseva One",
+   "category": "display",
    "variants": [
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext"
    ],
    "version": "v7",
    "lastModified": "2014-01-07",
@@ -11325,6 +11982,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Yesteryear",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],
@@ -11340,6 +11998,7 @@
   {
    "kind": "webfonts#webfont",
    "family": "Zeyada",
+   "category": "handwriting",
    "variants": [
     "regular"
    ],

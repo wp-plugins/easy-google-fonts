@@ -14,7 +14,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2014, Titanium Themes
- * @version   1.2.5
+ * @version   1.3
  * 
  */
 .accordion-section-content a {
@@ -119,11 +119,23 @@
 	text-transform: capitalize;
 }
 
-.tt-font-color-container {
+.tt-font-color-container,
+.tt-background-color-container {
 	margin-bottom: 5px;
 }
-.tt-font-color-container input.wp-color-picker{
+.tt-font-color-container input.wp-color-picker,
+.tt-background-color-container input.wp-color-picker{
 	width: 65px;
+	-webkit-border-radius: 3px 0 0 3px;
+	border-radius: 3px 0 0 3px;
+	height: 24px;
+}
+.tt-font-color-container .wp-picker-clear,
+.tt-font-color-container .wp-picker-default,
+.tt-background-color-container .wp-picker-clear,
+.tt-background-color-container .wp-picker-default {
+	-webkit-border-radius: 0 3px 3px 0;
+	border-radius: 0 3px 3px 0;
 }
 
 .tt-font-control .wp-picker-container .ui-widget-content {
