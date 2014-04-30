@@ -11,7 +11,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2014, Titanium Themes
- * @version   1.3
+ * @version   1.3.1
  * 
  */
 if ( ! class_exists( 'EGF_Frontend' ) ) :
@@ -42,7 +42,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * settings page and menu.
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		function __construct() {
@@ -62,7 +62,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @return    object    A single instance of this class.
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		public static function get_instance() {
@@ -79,14 +79,17 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * Register Custom Actions
 		 *
 		 * Add any custom actions in this function.
+		 * We add a high action to wp_head to ensure
+		 * that our styles are outputted as late as 
+		 * possible.
 		 * 
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		public function register_actions() {
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_stylesheets' ) );
-			add_action( 'wp_head', array( $this, 'output_styles' ) );
+			add_action( 'wp_head', array( $this, 'output_styles' ), 999 );
 		}
 
 		/**
@@ -95,7 +98,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * Add any custom filters in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		public function register_filters() {
@@ -114,7 +117,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 *
 		 * @global $wp_customize
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		public function enqueue_stylesheets() {
@@ -123,22 +126,24 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 			$transient = isset( $wp_customize ) ? false : true;
 			$options   = EGF_Register_Options::get_options( $transient );
 
-			foreach ( $options as $option ) {
+			if ( $options ) {
+				foreach ( $options as $option ) {
 
-				$subset = empty( $option['subset'] ) ? '' : '&subset=' . $option['subset'];
+					$subset = empty( $option['subset'] ) ? '' : '&subset=' . $option['subset'];
 
-				if ( ! empty( $option['stylesheet_url'] ) ) {
+					if ( ! empty( $option['stylesheet_url'] ) ) {
 
-					$handle = "{$option['font_id']}-{$option['font_weight_style']}";
+						$handle = "{$option['font_id']}-{$option['font_weight_style']}";
 
-					if ( ! empty( $option['subset'] ) ) {
-						$handle .= '-' . $option['subset'];
+						if ( ! empty( $option['subset'] ) ) {
+							$handle .= '-' . $option['subset'];
+						}
+
+						// Load theme dependant third party plugins
+						wp_deregister_style( $handle );
+						wp_register_style( $handle, $option['stylesheet_url'] . $subset );
+						wp_enqueue_style( $handle );
 					}
-
-					// Load theme dependant third party plugins
-					wp_deregister_style( $handle );
-					wp_register_style( $handle, $option['stylesheet_url'] . $subset );
-					wp_enqueue_style( $handle );
 				}
 			}
 		}
@@ -152,7 +157,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @link http://codex.wordpress.org/Function_Reference/add_action 	add_action()
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		public function output_styles() {
@@ -199,7 +204,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @return string $output 	Inline styles
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		public function generate_css( $option, $force_styles = false ) {
@@ -317,7 +322,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @return string $output 	Inline styles
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		public function generate_customizer_css( $option, $selector, $id = '', $force_styles = false ) {
@@ -477,7 +482,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @return array $arr The object converted into an associative array
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		public function object_to_array( $obj ) {

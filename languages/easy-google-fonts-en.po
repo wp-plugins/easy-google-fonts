@@ -237,7 +237,7 @@ msgstr ""
 
 #: includes/class-egf-register-options.php:433
 #: views/customizer/control-toggle.php:20
-msgid "Edit Font Properties"
+msgid "Edit Font"
 msgstr ""
 
 #: includes/class-egf-register-options.php:584

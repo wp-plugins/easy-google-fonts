@@ -8,7 +8,7 @@
  * previewer. Big performance enhancement in this version, this
  * file has been completely rewritten from the ground up.
  *
- * v1.2
+ * v1.3.1
  *
  * PLEASE NOTE: The following jQuery plugin dependancies are required
  * in order for this file to run correctly:
@@ -19,7 +19,7 @@
  * 4. JSON2 Library
  *
  * @since 1.2
- * @version 1.3
+ * @version 1.3.1
  *
  * @todo : Increase dependancy on underscore.js and backbone.js 
  *     in future versions and avoid tying data to the DOM.
@@ -41,7 +41,7 @@
 		 * @return void
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 */
 		option.init = function() {
 			option.initToggle();		
@@ -58,7 +58,7 @@
 		 * @return void
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 */
 		option.initToggle = function() {
 
@@ -97,7 +97,7 @@
 		 * @return void
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.initTabs = function() {
@@ -139,7 +139,7 @@
 		 * @return {void}
 		 * 
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.initFontControls = function() {
@@ -182,7 +182,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.initFontSelection = function( id, settings, defaultSettings ) {
@@ -342,7 +342,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */	
 		option.resetFontControl = function( id, settings, defaultSettings ) {
@@ -370,7 +370,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */		
 		option.resetFontStyles = function( id, settings, defaultSettings ) {
@@ -416,7 +416,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */		
 		option.resetFontAppearance = function( id, settings, defaultSettings ) {
@@ -449,7 +449,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.resetFontPositioning = function( id, settings, defaultSettings ) {
@@ -478,7 +478,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.initFontColor = function( id, settings, defaultSettings ) {
@@ -511,7 +511,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.initBackgroundColor = function( id, settings, defaultSettings ) {
@@ -542,7 +542,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.initFontSizeSlider = function( id, settings, defaultSettings ) {
@@ -604,7 +604,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.initLetterSpacingSlider = function( id, defaultSettings ) {
@@ -666,7 +666,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.initLineHeightSlider = function( id, defaultSettings ) {
@@ -729,7 +729,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.initMarginSliders = function( id, defaultSettings ) {
@@ -812,7 +812,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.initPaddingSliders = function( id, defaultSettings ) {
@@ -892,7 +892,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.initDisplay = function( id, defaultSettings ) {
@@ -917,7 +917,7 @@
 		 * @return {object} font 	The font object if it exists
 		 * 
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.getFont = function( id ) {
@@ -939,7 +939,7 @@
 		 * @return {object} font 	The font object if it exists
 		 * 
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.getFontFamilyOptions = function( subset ) {
@@ -989,7 +989,7 @@
 		 * @return {object} font 	The font object if it exists
 		 * 
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.getGoogleFontsBySubset = function( subset ) {
@@ -1028,7 +1028,7 @@
 		 * @return {object} fonts 	The default font objects
 		 * 
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */		
 		option.getDefaultFonts = function() {
@@ -1051,7 +1051,7 @@
 		 * @return {object} The default settings object
 		 * 
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */	
 		option.getDefaultSettings = function( id ) {
@@ -1069,7 +1069,7 @@
 		 * @return {object} newSettings 	Current settings parsed with defaults
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.initSettings = function( id ) {
@@ -1099,7 +1099,7 @@
 		 * @return {object} settings   Object containing the current settings
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.getSettings = function( id, changed ) {
@@ -1187,7 +1187,7 @@
 		 * @return {string}    The json settings object as a string
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.getSettingsValue = function( id, changed ) {
@@ -1210,7 +1210,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.updateSettings = function( id, changed, triggerChange ) {
@@ -1241,7 +1241,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3
+		 * @version 1.3.1
 		 * 
 		 */
 		option.triggerChange = function( id ) {

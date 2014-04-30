@@ -94,6 +94,11 @@ e.g.
 9. View and manage all of your custom controls in the admin area.
 
 == Changelog ==
+
+= 1.3.1 =
+* Changed order of style outputs
+* Futher UI Improvements
+
 = 1.3 =
 * Critical Update: Made the plugin WordPress 3.9 compatible
 * Performance tuned the plugin
