@@ -13,7 +13,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2014, Titanium Themes
- * @version   1.3.1
+ * @version   1.3.2
  * 
  */
 if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
@@ -45,7 +45,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * settings page and menu.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		function __construct() {
@@ -65,7 +65,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * @return    object    A single instance of this class.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public static function get_instance() {
@@ -84,7 +84,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * Add any custom actions in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function register_actions() {
@@ -96,11 +96,10 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * Add any custom filters in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function register_filters() {
-
 		}
 		
 		/**
@@ -120,7 +119,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * @return array $fonts - All websafe fonts with their properties
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public static function get_default_fonts() {
@@ -210,7 +209,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * @return array $fonts - All websafe fonts with their properties
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public static function get_google_fonts() {
@@ -232,7 +231,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 			$json  = array();
 			
 			// Check if transient is set
-			if ( false === get_transient( 'tt_font_google_fonts' ) ) {
+			if ( false === get_transient( 'tt_font_google_fonts_list' ) ) {
 
 				/*
 				 * First we want to try to update the font transient with the
@@ -292,6 +291,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 
 					$atts = array( 
 						'name'         => $item['family'],
+						'category'     => $item['category'],
 						'font_type'    => 'google',
 						'font_weights' => $item['variants'],
 						'subsets'      => $item['subsets'],
@@ -309,10 +309,10 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 				$fonts = apply_filters( 'tt_font_google_fonts_array', $fonts );
 				
 				// Set transient for google fonts
-				set_transient( 'tt_font_google_fonts', $fonts, 14 * DAY_IN_SECONDS );
+				set_transient( 'tt_font_google_fonts_list', $fonts, 14 * DAY_IN_SECONDS );
 
 			} else {
-				$fonts = get_transient( 'tt_font_google_fonts' );
+				$fonts = get_transient( 'tt_font_google_fonts_list' );
 			}
 
 			return apply_filters( 'tt_font_get_google_fonts', $fonts );
@@ -327,7 +327,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * @return array All fonts with their properties
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public static function get_all_fonts() {
@@ -358,7 +358,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * @return string $api_key - The Google API Key
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public static function get_google_api_key() {
@@ -379,7 +379,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * @return string $api_key - The Google API Key
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public static function set_google_api_key( $api_key ) {
@@ -398,7 +398,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * @return string $api_key - The Google API Key
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public static function is_valid_google_api_key( $api_key = '' ) {
@@ -430,7 +430,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * all of the fonts as an array to the user.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public static function delete_font_transients() {
@@ -451,7 +451,7 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 * @return array $fonts - All websafe fonts with their properties
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public static function get_font( $id = '' ) {

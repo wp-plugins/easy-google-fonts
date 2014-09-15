@@ -11,7 +11,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2014, Titanium Themes
- * @version   1.3.1
+ * @version   1.3.2
  * 
  */
 if ( ! class_exists( 'EGF_Frontend' ) ) :
@@ -42,7 +42,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * settings page and menu.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		function __construct() {
@@ -62,7 +62,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @return    object    A single instance of this class.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public static function get_instance() {
@@ -84,7 +84,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * possible.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function register_actions() {
@@ -98,7 +98,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * Add any custom filters in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function register_filters() {
@@ -111,39 +111,124 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * Enqueues the required stylesheet for the selected google
 		 * fonts. By using wp_enqueue_style() we can ensure that 
 		 * the stylesheet for each font is only being included on
-		 * the page once.
+		 * the page once. 
+		 * 
+		 * Update: This function now combines the call to 
+		 *     google in one http request.
 		 *
 		 * @link http://codex.wordpress.org/Function_Reference/wp_register_style 	wp_register_style()
 		 *
 		 * @global $wp_customize
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function enqueue_stylesheets() {
 			global $wp_customize;
 
-			$transient = isset( $wp_customize ) ? false : true;
-			$options   = EGF_Register_Options::get_options( $transient );
+			$transient         = isset( $wp_customize ) ? false : true;
+			$options           = EGF_Register_Options::get_options( $transient );
+			$stylesheet_handle = 'tt-easy-google-fonts-css';
+			$font_families     = array();
+			$font_family_sets  = array();
+			$subsets           = array();
+			$protocol          = is_ssl() ? 'https' : 'http';
 
 			if ( $options ) {
+
 				foreach ( $options as $option ) {
 
-					$subset = empty( $option['subset'] ) ? '' : '&subset=' . $option['subset'];
+					// Convert option to array if it is in JSON format
+					if ( is_string( $option ) ) {
+						$option = json_decode( $option );
+					}
 
+					// Convert option to array if it is a StdClass Object
+					if ( is_object( $option ) ) {
+						$option = $this->object_to_array( $option );
+					}
+
+					/**
+					 * Check Font Type:
+					 *
+					 * If the current font is a google font then we
+					 * add it to the $font_families array and enqueue
+					 * the font after we have gone through all of the
+					 * $options. Otherwise, if this font is a custom
+					 * font enqueued by a developer then we enqueue
+					 * it straight away. This allows developers to hook
+					 * into the custom filters in this plugin and make
+					 * local fonts available in the customizer which
+					 * will automatically enqueue on the frontend.
+					 * 
+					 */
 					if ( ! empty( $option['stylesheet_url'] ) ) {
 
-						$handle = "{$option['font_id']}-{$option['font_weight_style']}";
+						if ( strpos( $option['stylesheet_url'], 'fonts.googleapis' ) !== false ) {
+							
+							// Generate array key
+							$key = str_replace( ' ', '+', $option['font_name'] );
 
-						if ( ! empty( $option['subset'] ) ) {
-							$handle .= '-' . $option['subset'];
+							// Initialise the font array if this is a new font
+							if ( ! isset( $font_families[ $key ] ) ) {
+								$font_families[ $key ] = array();
+							}
+
+							/**
+							 * Add the font weight to the font family if
+							 * it hasn't been added already.
+							 */
+							if ( ! in_array( $option['font_weight_style'], $font_families[ $key ] ) ) {
+								$font_families[ $key ][] = $option['font_weight_style'];
+							}
+
+							// Populate subset
+							if ( ! empty( $option['subset'] ) && ! in_array( $option['subset'], $subsets ) ) {
+								$subsets[] = $option['subset'];
+							}
+
+						} else {
+							
+							// Fallback enqueue method
+							$subset = empty( $option['subset'] ) ? '' : '&subset=' . $option['subset'];
+							$handle = "{$option['font_id']}-{$option['font_weight_style']}";
+
+							if ( ! empty( $option['subset'] ) ) {
+								$handle .= '-' . $option['subset'];
+							}
+
+							// Enqueue custom font using wp_enqueue_style()
+							wp_deregister_style( $handle );
+							wp_register_style( $handle, $option['stylesheet_url'] . $subset );
+							wp_enqueue_style( $handle );
 						}
+					}					
+				}
 
-						// Load theme dependant third party plugins
-						wp_deregister_style( $handle );
-						wp_register_style( $handle, $option['stylesheet_url'] . $subset );
-						wp_enqueue_style( $handle );
+				/**
+				 * Check if Google Fonts Exist:
+				 * 
+				 * Checks if the user has selected any google fonts
+				 * to enqueue on the frontend and requests the fonts
+				 * from Google in a single http request.
+				 * 
+				 */
+				if ( ! empty( $font_families ) && is_array( $font_families ) ) {
+
+					foreach ( $font_families as $font_family => $variants ) {
+						$font_family_sets[] = $font_family . ':' . implode( ',', $variants );
 					}
+
+					$query_args = array(
+						'family' => implode( '|', $font_family_sets ),
+						'subset' => implode( ',', array_unique( $subsets ) ),
+					);
+
+					$request_url = add_query_arg( $query_args, "{$protocol}://fonts.googleapis.com/css" );
+
+					wp_deregister_style( $stylesheet_handle );
+					wp_register_style( $stylesheet_handle, esc_url( $request_url ) );
+					wp_enqueue_style( $stylesheet_handle );
 				}
 			}
 		}
@@ -157,7 +242,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @link http://codex.wordpress.org/Function_Reference/add_action 	add_action()
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function output_styles() {
@@ -204,13 +289,23 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @return string $output 	Inline styles
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function generate_css( $option, $force_styles = false ) {
 			$output     = '';
 			$importance = $force_styles ? '!important' : ''; 
 
+			// If properties are a json string decode them into an array
+			if ( is_string( $option ) ) {
+				$option = json_decode( $option );
+			}
+
+			// Typecast properties as array if we are already customizing (as it has turned into a stdClass object)
+			if ( is_object( $option ) ) {
+				$option = $this->object_to_array( $option );
+			}
+			
 			// Font Family
 			if ( ! empty( $option['font_name'] ) ) {
 				$output .= "font-family: {$option['font_name']}{$importance}; ";
@@ -322,7 +417,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @return string $output 	Inline styles
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function generate_customizer_css( $option, $selector, $id = '', $force_styles = false ) {
@@ -482,7 +577,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @return array $arr The object converted into an associative array
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function object_to_array( $obj ) {

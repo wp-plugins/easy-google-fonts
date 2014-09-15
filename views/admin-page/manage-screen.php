@@ -10,7 +10,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2014, Titanium Themes
- * @version   1.3.1
+ * @version   1.3.2
  * 
  */
 ?>
@@ -89,7 +89,7 @@
 							</div>
 						</td>
 						<td class=""><?php echo $selector_output; ?></td>
-						<td class=""><input autocomplete="off" data-control-reference="<?php echo $control_id; ?>" class="tt-force-styles" type="checkbox" <?php checked( $force_styles, 'true' ); ?>></td>
+						<td class=""><input autocomplete="off" data-control-reference="<?php echo $control_id; ?>" class="tt-force-styles" type="checkbox" <?php checked( $force_styles, true ); ?>></td>
 						<td><span class="spinner" style=""></span></td>	
 					</tr>
 					<?php $row_count++; ?>

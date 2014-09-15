@@ -5,7 +5,7 @@
  * the WordPress Customizer screen. It contains all of the js
  * code necessary to enable the live real time theme previewer.
  *
- * v1.3.1
+ * v1.3.2
  *
  * PLEASE NOTE: The following jQuery plugin dependancies are 
  * required in order for this file to run correctly:
@@ -16,7 +16,7 @@
  * 4. JSON2 Library
  *
  * @since 1.2
- * @version 1.3.1
+ * @version 1.3.2
  *
  * @todo : Increase dependancy on underscore.js and backbone.js 
  *     in future versions and avoid tying data to the DOM.
@@ -43,7 +43,7 @@
 		 * @uses object _wpCustomizeSettings  
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		preview.init = function() {
@@ -217,7 +217,6 @@
 										break;
 								}
 							}
-
 						});
 					});	
 				}
@@ -237,7 +236,7 @@
 		 * @param {obj} 	obj    Object containing all of the current settings
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		preview.setFontStylesheet = function( id, obj ) {
@@ -261,7 +260,7 @@
 		 * @param {string} 	importance 	Whether to force styles using !important
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		preview.setFontName = function( id, selector, obj, importance ) {
@@ -298,7 +297,7 @@
 		 * @param {string} 	importance 	Whether to force styles using !important
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		preview.setFontWeight = function( id, selector, obj, importance ) {
@@ -335,7 +334,7 @@
 		 * @param {string} 	importance 	Whether to force styles using !important
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		preview.setFontStyle = function( id, selector, obj, importance ) {
@@ -372,7 +371,7 @@
 		 * @param {string} 	importance 	Whether to force styles using !important
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		preview.setTextDecoration = function( id, selector, obj, importance ) {
@@ -409,7 +408,7 @@
 		 * @param {string} 	importance 	Whether to force styles using !important
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		preview.setTextTransform = function( id, selector, obj, importance ) {
@@ -446,7 +445,7 @@
 		 * @param {string} 	importance 	Whether to force styles using !important
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		preview.setFontSize = function( id, selector, obj, importance ) {
@@ -483,7 +482,7 @@
 		 * @param {string} 	importance 	Whether to force styles using !important
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		preview.setLineHeight = function( id, selector, obj, importance ) {
@@ -521,7 +520,7 @@
 		 * @param {string} 	importance 	Whether to force styles using !important
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		preview.setLetterSpacing = function( id, selector, obj, importance ) {
@@ -561,7 +560,7 @@
 		 * @param {string} 	position 	Which position to control
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		preview.setMargin = function( id, selector, obj, importance, position ) {
@@ -601,7 +600,7 @@
 		 * @param {string} 	position 	Which position to control
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		preview.setPadding = function( id, selector, obj, importance, position ) {
@@ -639,7 +638,7 @@
 		 * @param {string} 	importance 	Whether to force styles using !important
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		preview.setDisplay = function( id, selector, obj, importance ) {

@@ -8,7 +8,7 @@
  * previewer. Big performance enhancement in this version, this
  * file has been completely rewritten from the ground up.
  *
- * v1.3.1
+ * v1.3.2
  *
  * PLEASE NOTE: The following jQuery plugin dependancies are required
  * in order for this file to run correctly:
@@ -19,7 +19,7 @@
  * 4. JSON2 Library
  *
  * @since 1.2
- * @version 1.3.1
+ * @version 1.3.2
  *
  * @todo : Increase dependancy on underscore.js and backbone.js 
  *     in future versions and avoid tying data to the DOM.
@@ -41,7 +41,7 @@
 		 * @return void
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 */
 		option.init = function() {
 			option.initToggle();		
@@ -58,7 +58,7 @@
 		 * @return void
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 */
 		option.initToggle = function() {
 
@@ -97,7 +97,7 @@
 		 * @return void
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.initTabs = function() {
@@ -139,7 +139,7 @@
 		 * @return {void}
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.initFontControls = function() {
@@ -182,7 +182,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.initFontSelection = function( id, settings, defaultSettings ) {
@@ -342,7 +342,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */	
 		option.resetFontControl = function( id, settings, defaultSettings ) {
@@ -370,7 +370,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */		
 		option.resetFontStyles = function( id, settings, defaultSettings ) {
@@ -416,7 +416,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */		
 		option.resetFontAppearance = function( id, settings, defaultSettings ) {
@@ -449,7 +449,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.resetFontPositioning = function( id, settings, defaultSettings ) {
@@ -478,7 +478,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.initFontColor = function( id, settings, defaultSettings ) {
@@ -511,7 +511,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.initBackgroundColor = function( id, settings, defaultSettings ) {
@@ -542,7 +542,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.initFontSizeSlider = function( id, settings, defaultSettings ) {
@@ -604,7 +604,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.initLetterSpacingSlider = function( id, defaultSettings ) {
@@ -666,7 +666,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.initLineHeightSlider = function( id, defaultSettings ) {
@@ -729,7 +729,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.initMarginSliders = function( id, defaultSettings ) {
@@ -812,7 +812,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.initPaddingSliders = function( id, defaultSettings ) {
@@ -892,7 +892,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.initDisplay = function( id, defaultSettings ) {
@@ -917,7 +917,7 @@
 		 * @return {object} font 	The font object if it exists
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.getFont = function( id ) {
@@ -939,7 +939,7 @@
 		 * @return {object} font 	The font object if it exists
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.getFontFamilyOptions = function( subset ) {
@@ -948,14 +948,19 @@
 				subset = 'all';
 			}
 
-			var output       = '';
-			var defaultFonts = option.getDefaultFonts();
-			var googleFonts  = option.getGoogleFontsBySubset( subset );
+			var output           = '';
+			var defaultFonts     = option.getDefaultFonts();
+			var googleFonts      = option.getGoogleFontsBySubset( subset );
+			var displayFonts     = {};
+			var handwritingFonts = {};
+			var monospaceFonts   = {};
+			var serifFonts       = {};
+			var sansSerifFonts   = {};
 
-			output += '<option value="">&mdash; Theme Default &mdash;</option>';
+			output += '<option value="">' + ttFontTranslation.themeDefault + '</option>';
 			
 			if ( 'all' === subset ) {
-				output += '<optgroup label="Standard Web Fonts" class="css_label">';
+				output += '<optgroup label="' + ttFontTranslation.standardFontLabel + '" class="css_label">';
 
 				// Default font output
 				$.each( defaultFonts, function( key, value ) {
@@ -964,15 +969,75 @@
 
 				output += '</optgroup>';
 			}
-
-			// Google font output
-			output += '<optgroup label="Google Fonts" class="google_label">';
-			
+	
+			// Sort google fonts according to category
 			$.each( googleFonts, function( key, value ) {
-				output += '<option data-font-type="google" value="' + key + '">' + value.name + '</option>';
+				switch( value.category ) {
+					case 'display' :
+						displayFonts[ key ] = value;
+						break;
+
+					case 'handwriting' :
+						handwritingFonts[ key ] = value;
+						break;
+
+					case 'monospace' :
+						monospaceFonts[ key ] = value;
+						break;
+
+					case 'sans-serif' :
+						sansSerifFonts[ key ] = value;
+						break;
+
+					case 'serif' :
+						serifFonts[ key ] = value;
+						break;
+				}
 			});
 
-			output += '</optgroup>';
+			// Build font group html markup
+			output += option.buildGoogleFontGroupOutput( ttFontTranslation.serifFontLabel, serifFonts );
+			output += option.buildGoogleFontGroupOutput( ttFontTranslation.sansSerifFontLabel, sansSerifFonts );
+			output += option.buildGoogleFontGroupOutput( ttFontTranslation.displayFontLabel, displayFonts );
+			output += option.buildGoogleFontGroupOutput( ttFontTranslation.handwritingFontLabel, handwritingFonts );
+			output += option.buildGoogleFontGroupOutput( ttFontTranslation.monospaceFontLabel, monospaceFonts );
+
+			return output;
+		};
+
+		/**
+		 * Build Google Font Option Markup
+		 *
+		 * @description - Builds a string containing the html 
+		 *     markup for an option group. Designed to be used
+		 *     in a select menu.
+		 * 
+		 * @param  {string} label  - To be used as the option group label
+		 * @param  {object} obj    - JSON font object
+		 * @return {string} output - HTML markup if fonts exist, empty string if empty object
+		 *
+		 * @since 1.3.2
+		 * @version 1.3.2
+		 * 
+		 */
+		option.buildGoogleFontGroupOutput = function( label, obj ) {
+			
+			// Fallback
+			label = label || ttFontTranslation.fallbackFontLabel;
+			obj   = obj   || {};
+
+			// Build output
+			var output = '';
+
+			if ( ! $.isEmptyObject( obj ) ) {
+				output += '<optgroup label="' + label + '" class="google_label">';
+
+				$.each( obj, function( key, value ) {
+					output += '<option data-font-type="google" value="' + key + '">' + value.name + '</option>';
+				});
+
+				output += '</optgroup>';
+			}
 
 			return output;
 		};
@@ -989,7 +1054,7 @@
 		 * @return {object} font 	The font object if it exists
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.getGoogleFontsBySubset = function( subset ) {
@@ -1028,7 +1093,7 @@
 		 * @return {object} fonts 	The default font objects
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */		
 		option.getDefaultFonts = function() {
@@ -1051,7 +1116,7 @@
 		 * @return {object} The default settings object
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */	
 		option.getDefaultSettings = function( id ) {
@@ -1069,7 +1134,7 @@
 		 * @return {object} newSettings 	Current settings parsed with defaults
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.initSettings = function( id ) {
@@ -1099,7 +1164,7 @@
 		 * @return {object} settings   Object containing the current settings
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.getSettings = function( id, changed ) {
@@ -1187,7 +1252,7 @@
 		 * @return {string}    The json settings object as a string
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.getSettingsValue = function( id, changed ) {
@@ -1203,6 +1268,14 @@
 		 * @description Updates the hidden settings input
 		 *     with the new settings object passed as the
 		 *     parameter.
+		 *
+		 * Note: In this version we are forcing the 'changed' variable
+		 * to 'all' regardless of the value passed in the parameter. 
+		 * This is to allow persistant settings as the user changes 
+		 * the page within the customizer with a minimal performance
+		 * impact.
+		 *
+		 * @todo - Explore an alternative to forcing the changed value.
 		 * 
 		 * @param  {string} id       		The id of the control to update.
 		 * @param  {string} changed    		Flag to indicate the field that has been changed.
@@ -1210,13 +1283,15 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.updateSettings = function( id, changed, triggerChange ) {
 			if ( ! changed ) {
 				changed = 'all';
 			}
+
+			changed = 'all';
 
 			// Update hidden input
 			$( '#' + id + '-settings' ).val( option.getSettingsValue( id, changed ) );
@@ -1241,7 +1316,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		option.triggerChange = function( id ) {

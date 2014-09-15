@@ -11,7 +11,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2014, Titanium Themes
- * @version   1.3.1
+ * @version   1.3.2
  * 
  */
 ?>
@@ -35,7 +35,7 @@
 					$weight = (int) substr( $value, 0, 3 );
 				}	
 			?>
-			<option value="<?php echo $value ?>" data-stylesheet-url="<?php echo $font['urls'][ $value ] ?>" data-font-weight="<?php echo $weight; ?>" data-font-style="<?php echo $style_data; ?>">
+			<option value="<?php echo $value ?>" data-stylesheet-url="<?php echo $font['urls'][ $value ] ?>" data-font-weight="<?php echo $weight; ?>" data-font-style="<?php echo $style_data; ?>" <?php selected( $font_weight_style, $value ); ?>>
 				<?php echo $value; ?>
 			</option>
 		<?php endforeach; ?>

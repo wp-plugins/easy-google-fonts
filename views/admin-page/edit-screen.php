@@ -72,7 +72,7 @@
 						<h3><?php _e( 'Force Styles Override (Optional)', $this->plugin_slug ); ?></h3>
 						<p><?php _e( "Please check the box below if you wish to override all of the styles for the selectors above that are forced in your theme's stylesheet.", $this->plugin_slug ); ?></p>
 						<?php $force_styles = get_post_meta( $this->control_instance->ID, 'force_styles', true ); ?>
-						<input id="control-force-styles" type="checkbox" <?php checked( $force_styles, true ); ?>>
+						<input autocomplete="off" id="control-force-styles" type="checkbox" <?php checked( $force_styles, true ); ?>>
 
 				</div><!-- /#post-body-content -->
 			</div><!-- /#post-body -->

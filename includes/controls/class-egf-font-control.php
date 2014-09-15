@@ -17,7 +17,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2014, Titanium Themes
- * @version   1.3.1
+ * @version   1.3.2
  * 
  */
 if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control' ) ) :
@@ -143,7 +143,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * @param mixed $callback
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function add_tab( $id, $label, $callback, $selected = false ) {
@@ -160,7 +160,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * @param string $id
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function remove_tab( $id ) {
@@ -171,77 +171,78 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * Get Font Control Title
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_control_title() {
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/control-title.php' );
+
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/control-title.php' );
 		}
 
 		/**
 		 * [get_control_start description]
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_control_start() {
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/control-start.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/control-start.php' );
 		}
 
 		/**
 		 * [get_control_start description]
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_control_end() {
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/control-end.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/control-end.php' );
 		}
 
 		/**
 		 * [get_control_start description]
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_control_properties_start() {
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/properties-start.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/properties-start.php' );
 		}
 
 		/**
 		 * [get_control_start description]
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_control_properties_end() {
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/properties-end.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/properties-end.php' );
 		}
 
 		/**
 		 * [get_control_start description]
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_control_toggle() {
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/control-toggle.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/control-toggle.php' );
 		}
 
 		/**
 		 * [get_control_tabs description]
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_control_tabs() {
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/control-tabs.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/control-tabs.php' );
 		}
 
 		/**
@@ -256,11 +257,11 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * @link http://codex.wordpress.org/Function_Reference/plugin_dir_path 	plugin_dir_path()
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_control_tab_panes() {
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/control-tab-panes.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/control-tab-panes.php' );
 		}
 
 		/**
@@ -274,7 +275,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 *     - Display
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_style_controls() {
@@ -297,7 +298,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 *     - Letter Spacing
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_appearance_controls() {
@@ -319,7 +320,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * @todo Implement Border Controls in the next release
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_positioning_controls() {
@@ -338,7 +339,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 *     - tt_font_subset_options
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_subset_control() {
@@ -364,7 +365,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$font_subset_options = apply_filters( 'tt_font_subset_options', $font_subset_options );
 
 			// Get control view
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/styles/subsets.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/controls/styles/subsets.php' );
 		}
 
 		/**
@@ -378,7 +379,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * @uses EGF_Font_Utilities::get_default_fonts() 	defined in includes\class-egf-font-utilities
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_font_family_control() {
@@ -393,9 +394,45 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			// Get all font families
 			$google_fonts  = EGF_Font_Utilities::get_google_fonts();
 			$default_fonts = EGF_Font_Utilities::get_default_fonts();
+
+			// Init subset array
+			$google_subsets = array(
+				'display'     => array(),
+				'handwriting' => array(),
+				'monospace'   => array(),
+				'sans-serif'  => array(),
+				'serif'       => array(),
+			);
+
+			// Populate subsets
+			foreach ( $google_fonts as $id => $properties ) {
+				if ( ! empty( $properties['category'] ) ) {
+					switch ( $properties['category'] ) {
+						case 'display':
+							$google_subsets['display'][ $id ] = $properties;
+							break;
+
+						case 'handwriting':
+							$google_subsets['handwriting'][ $id ] = $properties;
+							break;
+
+						case 'monospace':
+							$google_subsets['monospace'][ $id ] = $properties;
+							break;
+
+						case 'sans-serif':
+							$google_subsets['sans-serif'][ $id ] = $properties;
+							break;
+
+						case 'serif':
+							$google_subsets['serif'][ $id ] = $properties;
+							break;
+					}
+				}
+			}
 	
 			// Get control view
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/styles/font-family.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/controls/styles/font-family.php' );
 		}
 
 		/**
@@ -407,7 +444,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * @uses EGF_Font_Utilities::get_font() 	defined in includes\class-egf-font-utilities
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_font_weight_control() {
@@ -419,7 +456,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$font_weight_style         = empty( $this_value['font_weight_style'] ) ? $default_font_weight_style : $this_value['font_weight_style'];
 
 			// Get control view
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/styles/font-weight.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/controls/styles/font-weight.php' );
 		}
 
 		/**
@@ -431,7 +468,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 *     - tt_font_text_decoration_options
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_text_decoration_control() {
@@ -452,7 +489,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$text_decoration_options = apply_filters( 'tt_font_text_decoration_options', $text_decoration_options );
 
 			// Get control view
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/styles/text-decoration.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/controls/styles/text-decoration.php' );
 		}
 
 		/**
@@ -464,7 +501,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 *     - tt_font_text_transform_options
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_text_transform_control() {
@@ -484,7 +521,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$text_transform_options = apply_filters( 'tt_font_text_transform_options', $text_transform_options );
 
 			// Get control view
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/styles/text-transform.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/controls/styles/text-transform.php' );
 		}
 
 		/**
@@ -499,7 +536,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 *     - Font Name
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_hidden_style_controls() {
@@ -520,7 +557,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$current_font_name      = isset( $this_value['font_name'] )      ? $this_value['font_name']      : $default_font_name;
 
 			// Get control view
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/styles/hidden-inputs.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/controls/styles/hidden-inputs.php' );
 		}
 
 		/**
@@ -529,7 +566,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * Gets the font color input control.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_font_color_control() {
@@ -539,7 +576,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$current_color = isset( $value['font_color'] ) ? $value['font_color'] : $default_color;
 
 			// Get control view
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/appearance/font-color.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/controls/appearance/font-color.php' );
 		}
 
 		/**
@@ -548,7 +585,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * Gets the background color input control.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_background_color_control() {
@@ -558,7 +595,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$current_color = isset( $value['background_color'] ) ? $value['background_color'] : $default_color;
 
 			// Get control view
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/appearance/background-color.php' );			
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/controls/appearance/background-color.php' );			
 		}
 
 		/**
@@ -567,7 +604,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * Gets the font size slider input control.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_font_size_control() {
@@ -584,7 +621,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$current_unit   = $default_unit;
 			
 			// Get control view
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/appearance/font-size.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/controls/appearance/font-size.php' );
 		}
 
 		/**
@@ -593,7 +630,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * Gets the line height slider input control.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */	
 		public function get_line_height_control() {
@@ -607,7 +644,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$current_amount = isset( $value['line_height'] ) ? $value['line_height'] : '';
 
 			// Get control view
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/appearance/line-height.php' );			
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/controls/appearance/line-height.php' );			
 		}
 
 		/**
@@ -616,7 +653,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * Gets the line height slider input control.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */	
 		public function get_letter_spacing_control() {
@@ -632,7 +669,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$current_unit   = $default_unit;
 			
 			// Get control view
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/appearance/letter-spacing.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/controls/appearance/letter-spacing.php' );
 		}
 
 		/**
@@ -641,7 +678,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * Gets the display select control.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 */
 		public function get_display_control() {
 			
@@ -652,7 +689,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			);
 
 			// Get control view
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/positioning/display.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/controls/positioning/display.php' );
 		}
 		
 		/**
@@ -662,7 +699,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * left and right.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 */
 		public function get_margin_controls() {
 			$value     = $this->value();
@@ -688,7 +725,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$current_amount_right  = isset( $value['margin_right']['amount'] )  ? $value['margin_right']['amount']  : $default_amount_right;
 
 			// Get control view
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/positioning/margin.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/controls/positioning/margin.php' );
 		}
 
 		/**
@@ -698,7 +735,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * left and right.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_padding_controls() {
@@ -726,7 +763,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 			$current_amount_right  = isset( $value['padding_right']['amount'] )  ? $value['padding_right']['amount']  : $default_amount_right;
 
 			// Get control view
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/positioning/padding.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/controls/positioning/padding.php' );
 		}
 
 		/**
@@ -736,12 +773,12 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * left and right.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_border_controls() {
 			// Get control view
-			include( plugin_dir_path( dirname(__FILE__) ) . '../views/customizer/controls/positioning/border.php' );
+			include( Easy_Google_Fonts::get_views_path() . '/customizer/controls/positioning/border.php' );
 		}
 
 		/**
@@ -754,7 +791,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * @link http://codex.wordpress.org/Function_Reference/wp_parse_args 	wp_parse_args()
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function get_hidden_control_input() {
@@ -773,7 +810,7 @@ if ( ! class_exists( 'EGF_Font_Control' ) && class_exists( 'WP_Customize_Control
 		 * manage and update.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function render_content() {

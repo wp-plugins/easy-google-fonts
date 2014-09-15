@@ -17,7 +17,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2014, Titanium Themes
- * @version   1.3.1
+ * @version   1.3.2
  * 
  */
 if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
@@ -57,7 +57,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * settings page and menu.
 		 *
 		 * @since 1.3
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		function __construct() {
@@ -65,8 +65,12 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 			$this->plugin_slug = 'easy-google-fonts';
 			$this->include_control_class();
 
-			$this->register_actions();		
+			/**
+			 * We need to register the filter before the action here
+			 * to filter the options before the customizer uses it.
+			 */
 			$this->register_filters();
+			$this->register_actions();		
 		}
 
 		/**
@@ -75,7 +79,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * @return    object    A single instance of this class.
 		 *
 		 * @since 1.3
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public static function get_instance() {
@@ -94,7 +98,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * Add any custom actions in this function.
 		 * 
 		 * @since 1.3
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function register_actions() {
@@ -112,7 +116,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * Add any custom filters in this function.
 		 * 
 		 * @since 1.3
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function register_filters() {
@@ -126,7 +130,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * loaded yet.
 		 *
 		 * @since 1.3
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function include_control_class() {
@@ -151,7 +155,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * @return array complete list of fonts
 		 *
 		 * @since  1.3
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 */
 		public function customize_load_all_fonts() {
 			return EGF_Font_Utilities::get_all_fonts();
@@ -167,7 +171,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * @return void
 		 *
 		 * @since  1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function customize_controls_enqueue_scripts() {
@@ -215,7 +219,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * @return void
 		 *
 		 * @since  1.3
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function customize_live_preview_scripts() {
@@ -253,7 +257,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * @return void
 		 *
 		 * @since  1.3
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function customize_preview_styles() {
@@ -280,7 +284,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * @return array $controls 	Control properties which will be enqueues as a JSON object on the page
 		 *
 		 * @since  1.3
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function customize_live_preview_l10n() {
@@ -298,7 +302,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 					'force_styles' => $value['properties']['force_styles'],
 					'json'         => array(),
 					'selector'     => $value['properties']['selector'],
-					'setting'     => array(
+					'setting'      => array(
 							'capability'           => 'edit_theme_options',
 							'id'                   => "tt_font_theme_options[{$key}]",
 							'default'              => $value['default'],
@@ -316,19 +320,38 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 
 		/**
 		 * Load Customizer Translation JS Object
+		 *
+		 * Loads in all of the strings defined in the array as
+		 * as JSON object in the customizer.
+		 *
+		 * Custom Filters:
+		 *     - tt_font_customize_control_l10n
+		 *
 		 * 
-		 * @return void
+		 * @return array $translations - String variables 
 		 *
 		 * @since  1.3
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function customize_control_l10n() {
+			// Build l10n array
 			$translations = array(
-				'themeDefault' => '&mdash; ' . __( 'Theme Default', 'easy-google-fonts' ) . ' &mdash;',
-
+				'ajax_url'             => admin_url( 'admin-ajax.php' ),
+				'confirmation'         => __( 'This page is asking you to confirm that you want to leave - data you have entered may not be saved.', 'easy-google-fonts' ),
+				'deleteAllWarning'     => __( "Warning! You are about to permanently delete all font controls. 'Cancel' to stop, 'OK' to delete.", 'easy-google-fonts' ),
+				'deleteWarning'        => __( "You are about to permanently delete this font control. 'Cancel' to stop, 'OK' to delete.", 'easy-google-fonts' ),
+				'displayFontLabel'     => __( 'Google Display Fonts', 'easy-google-fonts' ),
+				'fallbackFontLabel'    => __( 'Google Fonts', 'easy-google-fonts' ),
+				'handwritingFontLabel' => __( 'Google Handwriting Fonts', 'easy-google-fonts' ),
+				'monospaceFontLabel'   => __( 'Google Monospace Fonts', 'easy-google-fonts' ),
+				'serifFontLabel'       => __( 'Google Serif Fonts', 'easy-google-fonts' ),
+				'sansSerifFontLabel'   => __( 'Google Sans Serif Fonts', 'easy-google-fonts' ),
+				'standardFontLabel'    => __( 'Standard Web Fonts', 'easy-google-fonts' ),
+				'themeDefault'         => '&mdash; ' . __( 'Theme Default', 'easy-google-fonts' ) . ' &mdash;',
 			);
-			return $translations;
+
+			return apply_filters( 'tt_font_customize_control_l10n', $translations );
 		}
 
 		/**
@@ -338,7 +361,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * the font setting is being saved.
 		 * 
 		 * @since  1.3
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function customize_save_tt_font_theme_options() {
@@ -354,7 +377,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * saved.
 		 * 
 		 * @since  1.3
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function customize_save_after() {
@@ -375,7 +398,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * @param 	object	$wp_customize	Object that holds the customizer data
 		 * 
 		 * @since  1.3
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function register_controls( $wp_customize ) {
@@ -383,17 +406,40 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 			if ( ! isset( $wp_customize ) ) {
 				return;
 			}
-			
+
 			$tt_font_options = EGF_Register_Options::get_options( false );
 			
 			// Get the array of option parameters
 			$option_parameters = EGF_Register_Options::get_option_parameters();
 
+			// Get customizer panels
+			$panels = EGF_Register_Options::get_panels();
+
 			// Get list of tabs
 			$tabs = EGF_Register_Options::get_setting_tabs();
 
 			/**
-			 * 1. Register Section
+			 * 1. Add Panels
+			 *
+			 * Add the panels to the customizer:
+			 * Add panels to the customizer based on each $panel
+			 * from EGF_Register_Options::get_panels() using the 
+			 * new panels API in the customizer.
+			 * 
+			 */
+			if ( method_exists( $wp_customize, 'add_panel' ) ) {
+				foreach ( $panels as $panel ) {
+					$wp_customize->add_panel( $panel['name'], array(
+						'priority'       => $panel['priority'],
+						'capability'     => $panel['capability'],
+						'title'          => $panel['title'],
+						'description'    => $panel['description']
+					) );
+				}
+			}
+		
+			/**
+			 * 2. Register Sections
 			 *
 			 * Add Each Customizer Section: 
 			 * Add each customizer section based on each $tab section
@@ -404,17 +450,19 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 				// Add $tab section
 				$wp_customize->add_section( 'tt_font_' . $tab['name'], array(
 					'title'       => $tab['title'],
-					'description' => $tab['description']
+					'description' => $tab['description'],
+					'panel'       => $tab['panel'],
 				) );
 			}
 
 			/**
-			 * 2. Add Settings to Sections
-			 * 3. Register Control for Each Setting
+			 * 3. Add Settings to Sections
+			 * 4. Register Control for Each Setting
 			 *  
 			 */
 			$priority = 0;
 			foreach ( $option_parameters as $option_parameter ) {
+
 				/**
 				 * Set Transport Method:
 				 * 
@@ -468,8 +516,6 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 				// Set control $priority
 				$priority += 20;
 
-
-
 				switch ( $option_parameter['type'] ) {
 					case 'font' :
 						$wp_customize->add_control( 
@@ -492,8 +538,6 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 						break;
 				}
 			}
-
 		}
-
 	}
 endif;

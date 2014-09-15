@@ -13,7 +13,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2014, Titanium Themes
- * @version   1.3.1
+ * @version   1.3.2
  * 
  */
 if ( ! class_exists( 'EGF_Ajax' ) ) :
@@ -43,7 +43,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 		 * settings page and menu.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		function __construct() {
@@ -63,7 +63,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 		 * @return    object    A single instance of this class.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public static function get_instance() {
@@ -82,7 +82,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 		 * Add any custom actions in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function register_actions() {
@@ -100,7 +100,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 		 * Add any custom filters in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function register_filters() {
@@ -114,7 +114,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 		 * updates the Google API key.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function set_google_api_key() {
@@ -143,10 +143,13 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 		 * Updates the 'force_styles' meta option for a 
 		 * particular font control instance. If this is
 		 * set to true then the !important modifer will
-		 * be added to the styles upon output.
+		 * be added to the styles upon output. Note: the
+		 * js plugin passes the boolean true as the string
+		 * 'true', therefore we need to do a string 
+		 * comparison to check the users intent.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function force_font_control_styles() {
@@ -160,7 +163,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 
 			if ( isset( $_POST['controlId'] ) ) {
 				$control_id = $_POST['controlId'];
-				$switch     = isset( $_POST['force-styles'] ) ? $_POST['force-styles'] : false;
+				$switch     = ( isset( $_POST['force-styles'] ) && 'true' == $_POST['force-styles'] ) ? true : false;
 				$control    = EGF_Posttype::get_font_control( $control_id );
 
 				if ( $control ) {
@@ -180,7 +183,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 		 * client.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function create_control_instance() {
@@ -233,7 +236,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 		 * client.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function update_control_instance() {
@@ -247,7 +250,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 			}
 			
 			// Get control attributes	
-			$control_id   = isset( $_POST['controlId'] ) ? (string) $_POST['controlId'] : (string) '0';
+			$control_id   = isset( $_POST['controlId'] )   ? (string) $_POST['controlId'] : (string) '0';
 			$control_name = isset( $_POST['controlName'] ) ? (string) $_POST['controlName'] : __( 'Custom Sidebar', $this->plugin_slug );
 			$force_styles = false;
 			$description  = '';
@@ -324,7 +327,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 		 * it deletes all control instances from the database.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		function delete_all_control_instances() {

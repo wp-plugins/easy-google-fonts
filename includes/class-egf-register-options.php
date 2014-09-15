@@ -17,7 +17,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2014, Titanium Themes
- * @version   1.3.1
+ * @version   1.3.2
  * 
  */
 if ( ! class_exists( 'EGF_Register_Options' ) ) :
@@ -34,24 +34,38 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		/**
 		 * Slug of the plugin screen.
 		 * 
-		 * @var      string
-		 * @since    1.2
+		 * @var     null
+		 * @since   1.2
 		 *
 		 */
 		protected $plugin_screen_hook_suffix = null;
 
+		/**
+		 * Slug of the plugin screen.
+		 * 
+		 * @var      string
+		 * @since    1.2
+		 *
+		 */
 		public static $slug = 'easy-google-fonts';
 
+		/**
+		 * Validation Flag
+		 * 
+		 * @var   boolean	
+		 * @since 1.2
+		 * 
+		 */
 		public $validated;
 		
 		/**
 		 * Constructor Function
 		 * 
-		 * Initialize the plugin by loading admin scripts & styles and adding a
-		 * settings page and menu.
+		 * Initialize the plugin by loading admin scripts & 
+		 * styles and adding a settings page and menu.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		function __construct() {
@@ -72,7 +86,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return    object    A single instance of this class.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public static function get_instance() {
@@ -91,7 +105,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * Add any custom actions in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function register_actions() {
@@ -105,11 +119,12 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * Add any custom filters in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function register_filters() {
-			add_filter( 'tt_font_get_option_parameters', array( $this, 'get_custom_option_parameters' ), 0 );
+			add_filter( 'option_tt_font_theme_options', array( $this, 'prep_option_for_customizer' ), 5 );
+			add_filter( 'tt_font_get_option_parameters', array( $this, 'get_custom_option_parameters' ), 0 );	
 		}
 
 		/**
@@ -121,7 +136,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @link http://codex.wordpress.org/Function_Reference/register_setting 	register_setting()
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function register_settings() {
@@ -135,13 +150,14 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		/**
 		 * Validate Settings
 		 * 
-		 * @param  [type] $input [description]
-		 * @return [type]        [description]
+		 * @param  array $input - The array of settings
+		 * @return array $input - The array of settings after sanitization
 		 *
-		 * @todo  Increase sanitization checks
+		 * @todo  Increase sanitization checks and reduce number
+		 *     of times this callback function is ran.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function validate_settings( $input ) {
@@ -187,7 +203,13 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 			 * $setting is all of the properties in the option
 			 *
 			 */
+			
 			foreach ( $input as $option => $setting ) {
+
+				if ( ! isset( $all_options[ $option ] )  ) {
+					unset( $input[ $option ] );
+					continue;
+				}
 
 				$defaults = $all_options[ $option ]['default'];
 
@@ -224,7 +246,6 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 			// Set validated flag
 			$this->validated = true;
 	
-			
 			return $input;
 		}
 
@@ -235,7 +256,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return array $arr The object converted into an associative array
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function object_to_array( $obj ) {
@@ -251,10 +272,10 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		}
 
 		/**
-		 * [add_settings_section description]
+		 * Add Settings Section
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function add_settings_section() {
@@ -289,7 +310,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * section specified for each tab.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function settings_section_callback() {
@@ -316,7 +337,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return	array	$settings_by_tab	array of arrays of settings by tab
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public static function get_settings_by_tab() {
@@ -356,21 +377,36 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 
 		/**
 		 * Get Setting Tabs
+		 *
+		 * Returns an array of tabs that will be used as sections
+		 * in the WordPress customizer. Theme authors can now hook 
+		 * into this array filter and add their own sections to 
+		 * group a set of controls. Subsection support within a 
+		 * section will be added in future versions.
+		 *
+		 * Custom Filters:
+		 *     - tt_font_typography_panel_id
+		 *     - tt_font_typography_description
+		 *     - tt_font_custom_typography_panel_id
+		 *     - tt_font_custom_typography_description
+		 *     - tt_font_get_settings_page_tabs
+		 *
 		 * 
-		 * @return [type] [description]
+		 * @return array $tabs - Array of tabs with their properties
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public static function get_setting_tabs() {
-
+			// Tabs
 			$tabs = array(
 				'typography'=> array(
-					'name'     => 'typography',
-					'title'    => __( 'Typography', 'easy-google-fonts' ),
-					'description' => apply_filters( 'tt_font_typography_description', __( 'Your theme has typography support. You can create custom font controls on the Google Fonts screen in the Settings section.', 'easy-google-fonts' ) ),
-					'sections' => array(
+					'name'        => 'typography',
+					'title'       => __( 'Default Typography', 'easy-google-fonts' ),
+					'panel'       => apply_filters( 'tt_font_typography_panel_id', 'tt_font_typography_panel' ),
+					'description' => apply_filters( 'tt_font_typography_description', __( 'Your theme has typography support. You can create custom font controls on the google fonts screen in the settings section.', 'easy-google-fonts' ) ),
+					'sections'    => array(
 						// Test section
 						'default' => array(
 							'name'        => 'default',
@@ -378,13 +414,14 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 							'description' => __( 'Default theme font options', 'easy-google-fonts' ),
 						),
 					)
-				),	
+				),
 
 				'theme-typography'=> array(
-					'name'     => 'theme-typography',
-					'title'    => __( 'Theme Typography', 'easy-google-fonts' ),
-					'description' => __( 'Custom Theme Typography', 'easy-google-fonts' ),
-					'sections' => array(
+					'name'        => 'theme-typography',
+					'title'       => __( 'Theme Typography', 'easy-google-fonts' ),
+					'panel'       => apply_filters( 'tt_font_custom_typography_panel_id', 'tt_font_typography_panel' ),
+					'description' => apply_filters( 'tt_font_custom_typography_description', __( 'Any custom font controls that you have created for your website will appear below. To create more controls visit the google fonts screen in the settings section.', 'easy-google-fonts' ) ),
+					'sections'    => array(
 						// Test section
 						'custom' => array(
 							'name'        => 'custom',
@@ -394,10 +431,51 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 					)
 				),
 			);
-
+			
+			// Return tabs
 			return apply_filters( 'tt_font_get_settings_page_tabs', $tabs );
 		}
-		
+
+		/**
+		 * Get Panels
+		 *
+		 * Returns an array of panels that will be used as panels
+		 * in the WordPress customizer. Theme authors can now hook 
+		 * into this array filter and add their own panels in 
+		 * the customizer.
+		 *
+		 * Custom Filters:
+		 *     - tt_font_get_panels
+		 *
+		 * 
+		 * @return array $panels - Array of panels with their properties
+		 *
+		 * @since 1.3.2
+		 * @version 1.3.2
+		 * 
+		 */
+		public static function get_panels() {
+			$panels = array(
+				'tt_font_typography_panel' => array(
+					'name'        => 'tt_font_typography_panel',
+					'title'       => __( 'Typography', 'easy-google-fonts' ),
+					'priority'    => 10,
+					'capability'  => 'edit_theme_options',
+					'description' => __( 'Your theme has typography support. You can create custom font controls on the google fonts screen in the settings section.', 'easy-google-fonts' ),
+				),
+			);
+
+			$panels = apply_filters( 'tt_font_get_panels', $panels );
+
+			// Parse panels against defaults to ensure all $args are present.
+			foreach ( $panels as $id => $panel ) {
+				$font_controls[ $id ] = self::parse_customizer_panel( $panel );
+			}
+
+			// return panels
+			return $panels;
+		}
+	
 		/**
 		 * Parse Font Controls
 		 *
@@ -428,7 +506,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return array $control   The font control parsed with the default values
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public static function parse_font_control_array( $args ) {
@@ -552,6 +630,37 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		}
 
 		/**
+		 * Parse Customizer Panel
+		 *
+		 * Parse any panels against a set of defaults using
+		 * wp_parse_args(). This is to ensure that every 
+		 * panel property is populated in order for the
+		 * plugin to function correctly.
+		 * 
+		 * @param  array $args [description]
+		 * @return array       [description]
+		 *
+		 * @since 1.0
+		 * @version 1.0
+		 * 
+		 */
+		public static function parse_customizer_panel( $args ) {
+			$defaults = array(
+				'name'        => 'tt_font_typography_panel',
+				'title'       => __( 'Typography', 'easy-google-fonts' ),
+				'priority'    => 10,
+				'capability'  => 'edit_theme_options',
+				'description' => __( 'Your theme has typography support. You can create custom font controls on the Google Fonts screen in the Settings section.', 'easy-google-fonts' ),
+			);
+
+			// Parse the panel passed in the parameter with the defaults
+			$panel = wp_parse_args( $args, $defaults );
+
+			// Return the panel
+			return $panel;
+		}
+
+		/**
 		 * Get Theme Font Option Parameters
 		 * 
 		 * Array that holds parameters for all default font options in this theme. 
@@ -567,7 +676,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return	array	$options	array of arrays of option parameters
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */		
 		public static function get_option_parameters() {
@@ -581,7 +690,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 				 * Customizer
 				 *
 				 * @since 1.2
-				 * @version 1.3.1
+				 * @version 1.3.2
 				 * 
 				 */
 				'tt_default_body' => array(
@@ -661,7 +770,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return	array	$options	array of arrays of option parameters
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */		
 		public static function get_custom_option_parameters( $options ) {
@@ -706,7 +815,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 							'type'        => 'font',
 							'description' => $description,
 							'section'     => 'default',
-							'tab'         => 'typography',
+							'tab'         => 'theme-typography',
 							'transport'   => 'postMessage',
 							'since'       => '1.0',
 							'properties'  => array(
@@ -739,7 +848,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return	array	$defaults	associative array of option defaults
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public static function get_option_defaults() {
@@ -784,7 +893,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return	array	$tt_font_options	current values for all Theme options
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public static function get_options( $with_transient = true ) {
@@ -803,10 +912,12 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 				delete_transient( 'tt_font_theme_options' );
 
 				// Parse the stored options with the defaults
-				$tt_font_options = wp_parse_args( get_option( 'tt_font_theme_options', array() ), $option_defaults );
+				$all_options     = get_option( 'tt_font_theme_options', array() );
+				$tt_font_options = wp_parse_args( $all_options, $option_defaults );
 
 				// Remove redundant options
 				foreach ( $tt_font_options as $key => $value ) {
+
 					if ( ! isset( $option_defaults[ $key ] ) ) {
 						unset( $tt_font_options[ $key ] );
 					}
@@ -815,10 +926,63 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 				// Set the transient
 				set_transient( 'tt_font_theme_options', $tt_font_options, 0 );
 			}
-				
+
 			// Return the parsed array
 			return wp_parse_args( $tt_font_options, $option_defaults );	
 		}
 
+		/**
+		 * Prepare JSON for Customizer
+		 *
+		 * Turns JSON options back into their array 
+		 * equivalent so that they can be used by
+		 * the WP_Customize_Setting class. This allows
+		 * the customizer to preserve the state of any
+		 * font controls that the user has edited even
+		 * when they navigate to a different page in the
+		 * customizer. 
+		 * 
+		 * @param  array $options - The options either as JSON or as an array
+		 * @return array $options - The options as an array
+		 *
+		 * @since 1.3.2
+		 * @version 1.3.2
+		 * 
+		 */
+		public function prep_option_for_customizer( $options = array() ) {
+			
+			remove_filter( 'option_tt_font_theme_options', array( $this, 'prep_option_for_customizer' ), 5 );
+			
+			if ( empty( $options ) ) {
+				$options = array();
+			}
+
+			// Return the options if we are not in the customizer
+			foreach ( $options as $option ) {
+
+				/**
+				 * Add font color and background color for this
+				 * option to prevent errors parsing JSON when the
+				 * user navigates to another page in the customizer.
+				 * 
+				 */
+				$option['font_color']       = '';
+				$option['background_color'] = '';
+
+				// Convert option to array if it is in JSON format
+				if ( is_string( $option ) ) {
+					$option = json_decode( $option );
+				}
+
+				// Convert option to array if it is a StdClass Object
+				if ( is_object( $option ) ) {
+					$option = Easy_Google_Fonts::object_to_array( $option );
+				}
+			}
+
+			add_filter( 'option_tt_font_theme_options', array( $this, 'prep_option_for_customizer' ), 5 );
+
+			return $options;
+		}
 	}
 endif;

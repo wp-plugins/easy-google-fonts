@@ -11,7 +11,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2014, Titanium Themes
- * @version   1.3.1
+ * @version   1.3.2
  * 
  */
 if ( ! class_exists( 'Easy_Google_Fonts_Admin' ) ) :
@@ -42,7 +42,7 @@ if ( ! class_exists( 'Easy_Google_Fonts_Admin' ) ) :
 		 * settings page and menu.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		function __construct() {
@@ -62,7 +62,7 @@ if ( ! class_exists( 'Easy_Google_Fonts_Admin' ) ) :
 		 * @return    object    A single instance of this class.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public static function get_instance() {
@@ -81,7 +81,7 @@ if ( ! class_exists( 'Easy_Google_Fonts_Admin' ) ) :
 		 * Add any custom actions in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function register_actions() {
@@ -99,7 +99,7 @@ if ( ! class_exists( 'Easy_Google_Fonts_Admin' ) ) :
 		 * Add any custom filters in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function register_filters() {
@@ -114,7 +114,7 @@ if ( ! class_exists( 'Easy_Google_Fonts_Admin' ) ) :
 		 * @return    null    Return early if no settings page is registered.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function enqueue_admin_styles() {
@@ -128,7 +128,7 @@ if ( ! class_exists( 'Easy_Google_Fonts_Admin' ) ) :
 				wp_deregister_style( $this->plugin_slug .'-admin-styles' );
 				wp_register_style( 
 					$this->plugin_slug .'-admin-styles', 
-					plugins_url( '../assets/css/admin.css', __FILE__ ), 
+					Easy_Google_Fonts::get_css_url() . '/admin.css', 
 					array(), 
 					Easy_Google_Fonts::VERSION 
 				);
@@ -142,7 +142,7 @@ if ( ! class_exists( 'Easy_Google_Fonts_Admin' ) ) :
 		 * @return    null    Return early if no settings page is registered.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function enqueue_admin_scripts() {
@@ -171,41 +171,73 @@ if ( ! class_exists( 'Easy_Google_Fonts_Admin' ) ) :
 				// Load PostBox
 				wp_enqueue_script( 'postbox' );
 
-				if ( wp_is_mobile() ) 
-						wp_enqueue_script( 'jquery-touch-punch' );
+				if ( wp_is_mobile() ) {
+					wp_enqueue_script( 'jquery-touch-punch' );
+				}
 						
 				// Load Tag-it script
 				wp_deregister_script( $this->plugin_slug . '-tag-it-admin-script' );
 				wp_register_script( 
 					$this->plugin_slug . '-tag-it-admin-script', 
-					plugins_url( '../assets/js/tag-it.js', __FILE__ ), 
+					Easy_Google_Fonts::get_js_url() . '/tag-it.js',
 					array( 'jquery' ), 
 					Easy_Google_Fonts::VERSION 
 				);
 				wp_enqueue_script( $this->plugin_slug . '-tag-it-admin-script' );
 
-
 				// Load admin page js
 				wp_deregister_script( $this->plugin_slug . '-admin-script' );
 				wp_register_script( 
 					$this->plugin_slug . '-admin-script', 
-					plugins_url( '../assets/js/admin.js', __FILE__ ), 
+					Easy_Google_Fonts::get_js_url() . '/admin.js',
 					array( 'jquery','jquery-ui-core', 'jquery-ui-widget' ), 
 					Easy_Google_Fonts::VERSION 
 				);
 				wp_enqueue_script( $this->plugin_slug . '-admin-script' );
 
 				// Load in customizer control javascript object
-				$controlsL10n = array(
-					'ajax_url'         => admin_url( 'admin-ajax.php' ),
-					'confirmation'     => __( 'This page is asking you to confirm that you want to leave - data you have entered may not be saved.', 'theme-translate' ),
-					'deleteAllWarning' => __( "Warning! You are about to permanently delete all font controls. 'Cancel' to stop, 'OK' to delete.", 'theme-translate' ),
-					'deleteWarning'    => __( "You are about to permanently delete this font control. 'Cancel' to stop, 'OK' to delete.", 'theme-translate' ),
-
-				);
-				wp_localize_script( $this->plugin_slug . '-admin-script', 'ttFontl10n', $controlsL10n );
-
+				wp_localize_script( $this->plugin_slug . '-admin-script', 'ttFontl10n', $this->get_l10n() );
 			}
+		}
+
+		/**
+		 * Get Translation Object
+		 *
+		 * Returns an array of strings to be enqueued as a 
+		 * JSON object on the admin page. This allows the 
+		 * plugin to remain fully translatable. Developers
+		 * can add/modify this array by hooking into the
+		 * appropriate filter.
+		 *
+		 * Custom Filters:
+		 *     - tt_font_admin_l10n
+		 *
+		 * 
+		 * @return array $l10n - An array of translatable strings.
+		 *
+		 * @since 1.3.2
+		 * @version 1.3.2
+		 * 
+		 */
+		public function get_l10n() {
+			// Create an array of translatable strings
+			$l10n = array(
+				'ajax_url'             => admin_url( 'admin-ajax.php' ),
+				'confirmation'         => __( 'This page is asking you to confirm that you want to leave - data you have entered may not be saved.', 'easy-google-fonts' ),
+				'deleteAllWarning'     => __( "Warning! You are about to permanently delete all font controls. 'Cancel' to stop, 'OK' to delete.", 'easy-google-fonts' ),
+				'deleteWarning'        => __( "You are about to permanently delete this font control. 'Cancel' to stop, 'OK' to delete.", 'easy-google-fonts' ),
+				'displayFontLabel'     => __( 'Google Display Fonts', 'easy-google-fonts' ),
+				'fallbackFontLabel'    => __( 'Google Fonts', 'easy-google-fonts' ),
+				'handwritingFontLabel' => __( 'Google Handwriting Fonts', 'easy-google-fonts' ),
+				'monospaceFontLabel'   => __( 'Google Monospace Fonts', 'easy-google-fonts' ),
+				'serifFontLabel'       => __( 'Google Serif Fonts', 'easy-google-fonts' ),
+				'sansSerifFontLabel'   => __( 'Google Sans Serif Fonts', 'easy-google-fonts' ),
+				'standardFontLabel'    => __( 'Standard Web Fonts', 'easy-google-fonts' ),
+				'themeDefault'         => __( '&mdash; Theme Default &mdash;', 'easy-google-fonts' ),
+			);
+
+			// Return the l10n array
+			return apply_filters( 'tt_font_admin_l10n', $l10n );
 		}
 
 		/**
@@ -218,7 +250,7 @@ if ( ! class_exists( 'Easy_Google_Fonts_Admin' ) ) :
 		 * @link http://codex.wordpress.org/Roles_and_Capabilities 	Roles and Capabilities
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function add_plugin_admin_menu() {
@@ -228,7 +260,7 @@ if ( ! class_exists( 'Easy_Google_Fonts_Admin' ) ) :
 			 *
 			 * NOTE:  Alternative menu locations are available via WordPress administration menu functions.
 			 *
-			 *        Administration Menus: http://codex.wordpress.org/Administration_Menus
+			 *   Administration Menus: http://codex.wordpress.org/Administration_Menus
 			 *
 			 *   For reference: http://codex.wordpress.org/Roles_and_Capabilities
 			 */
@@ -255,7 +287,7 @@ if ( ! class_exists( 'Easy_Google_Fonts_Admin' ) ) :
 		 * Render the settings page for this plugin.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function display_plugin_admin_page() {
@@ -269,7 +301,7 @@ if ( ! class_exists( 'Easy_Google_Fonts_Admin' ) ) :
 		 * Add settings action link to the plugins page.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */	
 		public function add_action_links( $links ) {
@@ -289,7 +321,7 @@ if ( ! class_exists( 'Easy_Google_Fonts_Admin' ) ) :
 		 * a hook by which to add their own screen options.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function add_screen_option() {
@@ -314,7 +346,7 @@ if ( ! class_exists( 'Easy_Google_Fonts_Admin' ) ) :
 		 * help tabs are only displayed on the custom admin page.
 		 *
 		 * @since 1.2
-		 * @version 1.3.1
+		 * @version 1.3.2
 		 * 
 		 */
 		public function add_help_tabs() {
@@ -329,70 +361,79 @@ if ( ! class_exists( 'Easy_Google_Fonts_Admin' ) ) :
 			if ( $this->plugin_screen_hook_suffix == $screen->id ) {
 			
 				// Overview Tab
-				$overview  = '<p>' . __( 'This screen is used for managing your custom font controls. It provides a way to create a custom font controls for any type of content in your theme.', 'theme-translate' ) . '</p>';
+				$overview  = '<p>' . __( 'This screen is used for managing your custom font controls. It provides a way to create a custom font controls for any type of content in your theme.', 'easy-google-fonts' ) . '</p>';
 				$overview .= '<p>' . __( 'From this screen you can:' ) . '</p>';
-				$overview .= '<ul><li>' . __( 'Create, edit, and delete custom font controls.', 'theme-translate' ) . '</li>';
-				$overview .= '<li>' . __( 'Manage all of your custom font controls.', 'theme-translate' ) . '</li>';
-				$overview .= '<li>' . __( 'Add a Google API key in order to enable automatic font updates.', 'theme-translate' ) . '</li></ul>';
-				$overview .= '<p><strong>' . __( 'Please Note: ', 'theme-translate' ) . '</strong>';
-				$overview .= __( 'This screen is used to manage/create new font controls. To preview fonts for each control please visit the typography section in the ', 'theme-translate' );
-				$overview .= '<a href="' . admin_url( 'customize.php' ) . '">' . __( 'customizer', 'theme-translate' ) . '</a></p>';
+				$overview .= '<ul><li>' . __( 'Create, edit, and delete custom font controls.', 'easy-google-fonts' ) . '</li>';
+				$overview .= '<li>' . __( 'Manage all of your custom font controls.', 'easy-google-fonts' ) . '</li>';
+				$overview .= '<li>' . __( 'Add a Google API key in order to enable automatic font updates.', 'easy-google-fonts' ) . '</li></ul>';
+				$overview .= '<p><strong>' . __( 'Please Note: ', 'easy-google-fonts' ) . '</strong>';
+				$overview .= __( 'This screen is used to manage/create new font controls. To preview fonts for each control please visit the typography section in the ', 'easy-google-fonts' );
+				$overview .= '<a href="' . admin_url( 'customize.php' ) . '">' . __( 'customizer', 'easy-google-fonts' ) . '</a></p>';
 
 				
 				$screen->add_help_tab( array(
 					'id'      => 'overview',
-					'title'   => __('Overview', 'theme-translate'),
+					'title'   => __('Overview', 'easy-google-fonts'),
 					'content' => $overview,
 				) );
 
 				$edit_content  = '';
 				$edit_content .= '<p>' . 'This screen is used for creating and managing individual custom font controls.'  . '</p>';
 				$edit_content .= '<p>' . __( 'From this screen you can:' ) . '</p>';
-				$edit_content .= '<ul><li>' . __( 'Create, edit, and delete custom font controls.', 'theme-translate' ) . '</li>';
-				$edit_content .= '<li>' . __( 'Add CSS Selectors: Add any CSS selectors/styles that you want this custom font control to manage.', 'theme-translate' ) . '</li>';
-				$edit_content .= '<li>' . __( "Force Styles Override (Optional): If your theme is forcing any styles in it's stylesheet for any styles managed by this control then check this option to force a stylesheet override.", 'theme-translate' ) . '</li></ul>';
-				$edit_content .= '<p><strong>' . __( 'Please Note: ', 'theme-translate' ) . '</strong>';
-				$edit_content .= __( 'This screen is used to manage/create new font controls. To preview fonts for each control please visit the typography section in the ', 'theme-translate' );
-				$edit_content .= '<a href="' . admin_url( 'customize.php' ) . '">' . __( 'customizer', 'theme-translate' ) . '</a></p>';
+				$edit_content .= '<ul><li>' . __( 'Create, edit, and delete custom font controls.', 'easy-google-fonts' ) . '</li>';
+				$edit_content .= '<li>' . __( 'Add CSS Selectors: Add any CSS selectors/styles that you want this custom font control to manage.', 'easy-google-fonts' ) . '</li>';
+				$edit_content .= '<li>' . __( "Force Styles Override (Optional): If your theme is forcing any styles in it's stylesheet for any styles managed by this control then check this option to force a stylesheet override.", 'easy-google-fonts' ) . '</li></ul>';
+				$edit_content .= '<p><strong>' . __( 'Please Note: ', 'easy-google-fonts' ) . '</strong>';
+				$edit_content .= __( 'This screen is used to manage/create new font controls. To preview fonts for each control please visit the typography section in the ', 'easy-google-fonts' );
+				$edit_content .= '<a href="' . admin_url( 'customize.php' ) . '">' . __( 'customizer', 'easy-google-fonts' ) . '</a></p>';
 
 				
 				$screen->add_help_tab( array(
 					'id'      => 'edit-controls',
-					'title'   => __( 'Edit Font Controls', 'theme-translate'),
+					'title'   => __( 'Edit Font Controls', 'easy-google-fonts'),
 					'content' => $edit_content,
 				) );
 
 				$manage_content  = '';
 				$manage_content .= '<p>' . 'This screen is used for managing all of your custom font controls.'  . '</p>';
 				$manage_content .= '<p>' . __( 'From this screen you can:' ) . '</p>';
-				$manage_content .= '<ul><li>' . __( 'View all of your custom font controls and the CSS selectors they are managing.', 'theme-translate' ) . '</li>';
-				$manage_content .= '<li>' . __( 'Delete any/all custom font controls.', 'theme-translate' ) . '</li>';
-				$manage_content .= '<li>' . __( "Force Styles Override (Optional): If your theme is forcing any styles in it's stylesheet for any styles managed by this control then check this option to force a stylesheet override.", 'theme-translate' ) . '</li></ul>';
-				$manage_content .= '<p><strong>' . __( 'Please Note: ', 'theme-translate' ) . '</strong>';
-				$manage_content .= __( 'This screen is used to manage/create new font controls. To preview fonts for each control please visit the typography section in the ', 'theme-translate' );
-				$manage_content .= '<a href="' . admin_url( 'customize.php' ) . '">' . __( 'customizer', 'theme-translate' ) . '</a></p>';
+				$manage_content .= '<ul><li>' . __( 'View all of your custom font controls and the CSS selectors they are managing.', 'easy-google-fonts' ) . '</li>';
+				$manage_content .= '<li>' . __( 'Delete any/all custom font controls.', 'easy-google-fonts' ) . '</li>';
+				$manage_content .= '<li>' . __( "Force Styles Override (Optional): If your theme is forcing any styles in it's stylesheet for any styles managed by this control then check this option to force a stylesheet override.", 'easy-google-fonts' ) . '</li></ul>';
+				$manage_content .= '<p><strong>' . __( 'Please Note: ', 'easy-google-fonts' ) . '</strong>';
+				$manage_content .= __( 'This screen is used to manage/create new font controls. To preview fonts for each control please visit the typography section in the ', 'easy-google-fonts' );
+				$manage_content .= '<a href="' . admin_url( 'customize.php' ) . '">' . __( 'customizer', 'easy-google-fonts' ) . '</a></p>';
 
 				$screen->add_help_tab( array(
 					'id'      => 'manage-controls',
-					'title'   => __( 'Manage Font Controls', 'theme-translate'),
+					'title'   => __( 'Manage Font Controls', 'easy-google-fonts'),
 					'content' => $manage_content,
 				) );
 
-				$api_content  = '<p>' . __( 'To acquire an API key, visit the <a href="https://code.google.com/apis/console" target="_blank">APIs Console</a>. In the Services pane, activate the Google Fonts Developer API; if the Terms of Service appear, read and accept them.', 'theme-translate' ) . '</p>';
-				$api_content .= '<p>' . __( 'Next, go to the API Access pane. The API key is near the bottom of that pane, in the section titled "Simple API Access."', 'theme-translate' ) . '</p>';
-				$api_content .= '<p>' . __( 'After you have an API key, please enter it in the Google Fonts API Key text field on the "Advanced" settings page.', 'theme-translate' ) . '</p>';
-				$api_content .= '<p>' . __( 'Once you have entered a valid API key this plugin will automatically update itself with the latest fonts from google.', 'theme-translate' ) . '</p>';
-
+				$api_content  = '<p><strong>' . __( 'How to get your Google API Key:', 'easy-google-fonts' ) . '</strong></p>';
+				$api_content .= '<p>';
+				$api_content .= '<ul>';
+				$api_content .= '<li>' . __( 'Visit the <a href="https://code.google.com/apis/console" target="_blank">Google APIs Console</a>.', 'easy-google-fonts' ) . '</li>';
+				$api_content .= '<li>' . __( 'Create a new project.', 'easy-google-fonts' ) . '</li>';
+				$api_content .= '<li>' . __( 'Select APIs Under the APIs & auth menu.', 'easy-google-fonts' ) . '</li>';
+				$api_content .= '<li>' . __( 'Turn on Web Fonts Developer API.', 'easy-google-fonts' ) . '</li>';
+				$api_content .= '<li>' . __( 'Select Credentials under the APIs & auth menu.', 'easy-google-fonts' ) . '</li>';
+				$api_content .= '<li>' . __( 'Create a new browser key and <strong>leave the referrer box empty</strong>.', 'easy-google-fonts' ) . '</li>';
+				$api_content .= '<li>' . __( 'Once you have an API key, you can enter it in the Google Fonts API Key text field on the "Advanced" settings page.', 'easy-google-fonts' ) . '</li>';
+				$api_content .= '</ul>';
+				$api_content .= '</p>';
+				$api_content .= '<p>' . __( 'Once you have entered a valid Google API key this plugin will automatically update itself with the latest fonts from google.', 'easy-google-fonts' ) . '</p>';
+				
 				$screen->add_help_tab( array(
 					'id'      => 'api-key',
-					'title'   => __( 'Advanced', 'theme-translate'),
+					'title'   => __( 'Google API Key Instructions', 'easy-google-fonts'),
 					'content' => $api_content,
 				) );
 
 				$screen->set_help_sidebar(
-					'<p><strong>' . __('For more information:', 'theme-translate') . '</strong></p>' .
-					'<p><a href="http://www.google.com/fonts#AboutPlace:about" target="_blank">' . __('Documentation on Google Fonts', 'theme-translate') . '</a></p>' .
-					'<p><a href="https://code.google.com/apis/console" target="_blank">' . __( 'Get Google Fonts API Key', 'theme-translate' ) . '</a></p>'
+					'<p><strong>' . __('For more information:', 'easy-google-fonts') . '</strong></p>' .
+					'<p><a href="http://www.google.com/fonts#AboutPlace:about" target="_blank">' . __('Documentation on Google Fonts', 'easy-google-fonts') . '</a></p>' .
+					'<p><a href="https://console.developers.google.com/" target="_blank">' . __( 'Get Google Fonts API Key', 'easy-google-fonts' ) . '</a></p>'
 				);
 			}	
 		}

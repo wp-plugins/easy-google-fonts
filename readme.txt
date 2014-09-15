@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: WordPress Google Fonts Plugin, Google Webfonts, Google Fonts WordPress, Typography, Webfonts, WordPress Webfonts, Fonts, WordPress Fonts, Theme Fonts, Theme Fonts Plugin
 Requires at least: 4.0
 Tested up to: 4.0
-Stable tag: 1.3
+Stable tag: 1.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -94,6 +94,16 @@ e.g.
 9. View and manage all of your custom controls in the admin area.
 
 == Changelog ==
+= 1.3.2 - Big Update =
+* Now combining all of the font requests from google fonts in a single http request.
+* Introducing Panels: A new customizer feature in WordPress 4.0 that makes it easier to manage alot of font controls. Our plugin creates a new panel called Typography. 
+* Google fonts are now separated into the following categories to make them easier to navigate: Serif, Sans Serif, Display, Handwriting, Monospace.
+* Now the plugin keeps font state when user switches page in customizer.
+* Now there is a separate section for default and custom font controls.
+* Improved the help tab in the admin area to help people obtain a google api key.
+* Synchronised Force Styles between the Manage Font Controls and the Edit Font Controls Screen
+* Fixed issue with the font weights not showing up for the customizer control.
+* The plugin now checks and handles occurances where theme developers have removed all default controls.
 
 = 1.3.1 =
 * Changed order of style outputs
