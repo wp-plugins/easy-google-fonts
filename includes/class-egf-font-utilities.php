@@ -435,7 +435,8 @@ if ( ! class_exists( 'EGF_Font_Utilities' ) ) :
 		 */
 		public static function delete_font_transients() {
 			delete_transient( 'tt_font_default_fonts' );
-			delete_transient( 'tt_font_google_fonts' );			
+			delete_transient( 'tt_font_google_fonts_list' );		
+			delete_transient( 'tt_font_google_fonts' );		
 		}
 
 		/**
