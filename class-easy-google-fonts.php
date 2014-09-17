@@ -422,6 +422,7 @@ if ( ! class_exists( 'Easy_Google_Fonts' ) ) :
 		 */
 		private static function single_deactivate() {
 			delete_transient( 'tt_font_default_fonts' );
+			delete_transient( 'tt_font_google_fonts_list' );
 			delete_transient( 'tt_font_google_fonts' );
 		}
 
