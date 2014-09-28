@@ -104,7 +104,7 @@ if ( ! class_exists( 'Easy_Google_Fonts_Admin' ) ) :
 		 */
 		public function register_filters() {
 			// Add an action link pointing to the options page.
-			$plugin_basename = plugin_basename( plugin_dir_path( __DIR__ ) . $this->plugin_slug . '.php' );
+			$plugin_basename = plugin_basename( plugin_dir_path( dirname( __FILE__ ) ) . $this->plugin_slug . '.php' );
 			add_filter( 'plugin_action_links_' . $plugin_basename, array( $this, 'add_action_links' ) );
 		}
 
