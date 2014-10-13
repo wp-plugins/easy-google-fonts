@@ -114,7 +114,8 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * the page once. 
 		 * 
 		 * Update: This function now combines the call to 
-		 *     google in one http request.
+		 *     google in one http request. It now uses 
+		 *     esc_url_raw()
 		 *
 		 * @link http://codex.wordpress.org/Function_Reference/wp_register_style 	wp_register_style()
 		 *
@@ -128,7 +129,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 
 			$transient         = isset( $wp_customize ) ? false : true;
 			$options           = EGF_Register_Options::get_options( $transient );
-			$stylesheet_handle = 'tt-easy-google-fonts-css';
+			$stylesheet_handle = 'tt-easy-google-fonts';
 			$font_families     = array();
 			$font_family_sets  = array();
 			$subsets           = array();
@@ -227,7 +228,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 					$request_url = add_query_arg( $query_args, "{$protocol}://fonts.googleapis.com/css" );
 
 					wp_deregister_style( $stylesheet_handle );
-					wp_register_style( $stylesheet_handle, esc_url( $request_url ) );
+					wp_register_style( $stylesheet_handle, esc_url_raw( $request_url ) );
 					wp_enqueue_style( $stylesheet_handle );
 				}
 			}
