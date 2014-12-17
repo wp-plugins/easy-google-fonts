@@ -8,7 +8,7 @@
  * previewer. Big performance enhancement in this version, this
  * file has been completely rewritten from the ground up.
  *
- * v1.3.2
+ * v1.3.3
  *
  * PLEASE NOTE: The following jQuery plugin dependancies are required
  * in order for this file to run correctly:
@@ -19,7 +19,7 @@
  * 4. JSON2 Library
  *
  * @since 1.2
- * @version 1.3.2
+ * @version 1.3.3
  *
  * @todo : Increase dependancy on underscore.js and backbone.js 
  *     in future versions and avoid tying data to the DOM.
@@ -41,7 +41,7 @@
 		 * @return void
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 */
 		option.init = function() {
 			option.initToggle();		
@@ -58,14 +58,13 @@
 		 * @return void
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 */
 		option.initToggle = function() {
-
 			$( '.tt-font-control' ).each( function(e) {
 				var control        = $(this);
 				var reset          = control.parent().find( '.tt-reset-font' );
-				var toggle         = control.find( '.dropdown.preview-thumbnail' );
+				var toggle         = control.find( '.egf-font-toggle-trigger' );
 				var properties     = control.find( '.tt-font-properties' );
 				var controlToggles = control.find( '.tt-font-toggle' );
 
@@ -97,7 +96,7 @@
 		 * @return void
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.initTabs = function() {
@@ -139,7 +138,7 @@
 		 * @return {void}
 		 * 
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.initFontControls = function() {
@@ -182,7 +181,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.initFontSelection = function( id, settings, defaultSettings ) {
@@ -342,7 +341,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */	
 		option.resetFontControl = function( id, settings, defaultSettings ) {
@@ -370,7 +369,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */		
 		option.resetFontStyles = function( id, settings, defaultSettings ) {
@@ -416,7 +415,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */		
 		option.resetFontAppearance = function( id, settings, defaultSettings ) {
@@ -449,7 +448,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.resetFontPositioning = function( id, settings, defaultSettings ) {
@@ -478,7 +477,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.initFontColor = function( id, settings, defaultSettings ) {
@@ -511,7 +510,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.initBackgroundColor = function( id, settings, defaultSettings ) {
@@ -542,7 +541,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.initFontSizeSlider = function( id, settings, defaultSettings ) {
@@ -604,7 +603,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.initLetterSpacingSlider = function( id, defaultSettings ) {
@@ -666,7 +665,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.initLineHeightSlider = function( id, defaultSettings ) {
@@ -729,7 +728,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.initMarginSliders = function( id, defaultSettings ) {
@@ -812,7 +811,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.initPaddingSliders = function( id, defaultSettings ) {
@@ -892,7 +891,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.initDisplay = function( id, defaultSettings ) {
@@ -917,7 +916,7 @@
 		 * @return {object} font 	The font object if it exists
 		 * 
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.getFont = function( id ) {
@@ -939,7 +938,7 @@
 		 * @return {object} font 	The font object if it exists
 		 * 
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.getFontFamilyOptions = function( subset ) {
@@ -1017,7 +1016,7 @@
 		 * @return {string} output - HTML markup if fonts exist, empty string if empty object
 		 *
 		 * @since 1.3.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.buildGoogleFontGroupOutput = function( label, obj ) {
@@ -1054,7 +1053,7 @@
 		 * @return {object} font 	The font object if it exists
 		 * 
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.getGoogleFontsBySubset = function( subset ) {
@@ -1093,7 +1092,7 @@
 		 * @return {object} fonts 	The default font objects
 		 * 
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */		
 		option.getDefaultFonts = function() {
@@ -1116,7 +1115,7 @@
 		 * @return {object} The default settings object
 		 * 
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */	
 		option.getDefaultSettings = function( id ) {
@@ -1134,7 +1133,7 @@
 		 * @return {object} newSettings 	Current settings parsed with defaults
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.initSettings = function( id ) {
@@ -1164,7 +1163,7 @@
 		 * @return {object} settings   Object containing the current settings
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.getSettings = function( id, changed ) {
@@ -1252,7 +1251,7 @@
 		 * @return {string}    The json settings object as a string
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.getSettingsValue = function( id, changed ) {
@@ -1283,7 +1282,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.updateSettings = function( id, changed, triggerChange ) {
@@ -1316,7 +1315,7 @@
 		 * @return {void}
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		option.triggerChange = function( id ) {
@@ -1333,5 +1332,13 @@
  * INITIALISE PLUGINS & JS ON DOCUMENT READY EVENT
  * ============================================================ */
 jQuery(document).ready(function($) {"use strict";
-	$(this).ttFontControls();
+	/**
+	 * Temprorary WordPress 4.1+ fix
+	 *
+	 * As WordPress has developed the customizer js api this
+	 * is a temporary patch for the plugin before it is 
+	 * completely rewritten in backbone.
+	 * 
+	 */
+	setTimeout(function(){ $(this).ttFontControls(); }, 200);
 });	

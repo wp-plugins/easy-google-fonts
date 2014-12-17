@@ -16,7 +16,7 @@
  * 4. JSON2 Library
  *
  * @since 1.2
- * @version 1.3.2
+ * @version 1.3.3
  *
  * @todo : Increase dependancy on underscore.js and backbone.js 
  *     in future versions and avoid tying data to the DOM.
@@ -43,7 +43,7 @@
 		 * @uses object _wpCustomizeSettings  
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		preview.init = function() {
@@ -236,7 +236,7 @@
 		 * @param {obj} 	obj    Object containing all of the current settings
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		preview.setFontStylesheet = function( id, obj ) {
@@ -260,7 +260,7 @@
 		 * @param {string} 	importance 	Whether to force styles using !important
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		preview.setFontName = function( id, selector, obj, importance ) {
@@ -297,7 +297,7 @@
 		 * @param {string} 	importance 	Whether to force styles using !important
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		preview.setFontWeight = function( id, selector, obj, importance ) {
@@ -334,7 +334,7 @@
 		 * @param {string} 	importance 	Whether to force styles using !important
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		preview.setFontStyle = function( id, selector, obj, importance ) {
@@ -371,7 +371,7 @@
 		 * @param {string} 	importance 	Whether to force styles using !important
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		preview.setTextDecoration = function( id, selector, obj, importance ) {
@@ -408,7 +408,7 @@
 		 * @param {string} 	importance 	Whether to force styles using !important
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		preview.setTextTransform = function( id, selector, obj, importance ) {
@@ -445,7 +445,7 @@
 		 * @param {string} 	importance 	Whether to force styles using !important
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		preview.setFontSize = function( id, selector, obj, importance ) {
@@ -482,7 +482,7 @@
 		 * @param {string} 	importance 	Whether to force styles using !important
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		preview.setLineHeight = function( id, selector, obj, importance ) {
@@ -520,7 +520,7 @@
 		 * @param {string} 	importance 	Whether to force styles using !important
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		preview.setLetterSpacing = function( id, selector, obj, importance ) {
@@ -560,7 +560,7 @@
 		 * @param {string} 	position 	Which position to control
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		preview.setMargin = function( id, selector, obj, importance, position ) {
@@ -600,7 +600,7 @@
 		 * @param {string} 	position 	Which position to control
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		preview.setPadding = function( id, selector, obj, importance, position ) {
@@ -638,7 +638,7 @@
 		 * @param {string} 	importance 	Whether to force styles using !important
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		preview.setDisplay = function( id, selector, obj, importance ) {

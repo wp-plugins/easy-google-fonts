@@ -2,9 +2,9 @@
 Contributors: sunny_johal, amit_kayasth
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=28M8NWPHVQNYU
 Tags: WordPress Google Fonts Plugin, Google Webfonts, Google Fonts WordPress, Typography, Webfonts, WordPress Webfonts, Fonts, WordPress Fonts, Theme Fonts, Theme Fonts Plugin
-Requires at least: 4.0
-Tested up to: 4.0
-Stable tag: 1.3.2
+Requires at least: 4.1
+Tested up to: 4.1
+Stable tag: 1.3.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -94,6 +94,10 @@ e.g.
 9. View and manage all of your custom controls in the admin area.
 
 == Changelog ==
+= 1.3.3 - WordPress 4.1+ Update =
+* Added patch for WordPress 4.1
+* The code is going to be rewritten in Backbone for future releases.
+
 = 1.3.2 - Big Update =
 * Now combining all of the font requests from google fonts in a single http request.
 * Introducing Panels: A new customizer feature in WordPress 4.0 that makes it easier to manage alot of font controls. Our plugin creates a new panel called Typography. 

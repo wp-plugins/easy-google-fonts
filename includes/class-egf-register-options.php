@@ -17,7 +17,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2014, Titanium Themes
- * @version   1.3.2
+ * @version   1.3.3
  * 
  */
 if ( ! class_exists( 'EGF_Register_Options' ) ) :
@@ -65,7 +65,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * styles and adding a settings page and menu.
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		function __construct() {
@@ -86,7 +86,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return    object    A single instance of this class.
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		public static function get_instance() {
@@ -105,7 +105,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * Add any custom actions in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		public function register_actions() {
@@ -119,7 +119,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * Add any custom filters in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		public function register_filters() {
@@ -136,7 +136,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @link http://codex.wordpress.org/Function_Reference/register_setting 	register_setting()
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		public function register_settings() {
@@ -157,7 +157,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 *     of times this callback function is ran.
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		public function validate_settings( $input ) {
@@ -256,7 +256,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return array $arr The object converted into an associative array
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		public function object_to_array( $obj ) {
@@ -275,7 +275,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * Add Settings Section
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		public function add_settings_section() {
@@ -310,7 +310,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * section specified for each tab.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		public function settings_section_callback() {
@@ -337,7 +337,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return	array	$settings_by_tab	array of arrays of settings by tab
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		public static function get_settings_by_tab() {
@@ -395,7 +395,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return array $tabs - Array of tabs with their properties
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		public static function get_setting_tabs() {
@@ -451,7 +451,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return array $panels - Array of panels with their properties
 		 *
 		 * @since 1.3.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		public static function get_panels() {
@@ -506,7 +506,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return array $control   The font control parsed with the default values
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		public static function parse_font_control_array( $args ) {
@@ -676,7 +676,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return	array	$options	array of arrays of option parameters
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */		
 		public static function get_option_parameters() {
@@ -690,7 +690,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 				 * Customizer
 				 *
 				 * @since 1.2
-				 * @version 1.3.2
+				 * @version 1.3.3
 				 * 
 				 */
 				'tt_default_body' => array(
@@ -770,7 +770,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return	array	$options	array of arrays of option parameters
 		 *
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */		
 		public static function get_custom_option_parameters( $options ) {
@@ -848,7 +848,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return	array	$defaults	associative array of option defaults
 		 * 
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		public static function get_option_defaults() {
@@ -893,7 +893,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return	array	$tt_font_options	current values for all Theme options
 		 * 
 		 * @since 1.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		public static function get_options( $with_transient = true ) {
@@ -946,7 +946,7 @@ if ( ! class_exists( 'EGF_Register_Options' ) ) :
 		 * @return array $options - The options as an array
 		 *
 		 * @since 1.3.2
-		 * @version 1.3.2
+		 * @version 1.3.3
 		 * 
 		 */
 		public function prep_option_for_customizer( $options = array() ) {
