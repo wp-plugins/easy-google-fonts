@@ -1340,5 +1340,5 @@ jQuery(document).ready(function($) {"use strict";
 	 * completely rewritten in backbone.
 	 * 
 	 */
-	setTimeout(function(){ $(this).ttFontControls(); }, 200);
+	setTimeout(function(){ $(this).ttFontControls(); }, 600);
 });	
