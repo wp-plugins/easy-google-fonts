@@ -31,7 +31,7 @@
  * @todo increase dependancy on JS in future releases.
  * 
  * @since 1.2
- * @version 1.3.3
+ * @version 1.3.4
  *
  * =============================================================== */
 
@@ -52,7 +52,7 @@
 		 *     for the Font Controls Admin Screen.
 		 *
 		 * @since 1.2
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		api.init = function() {
@@ -77,7 +77,7 @@
 		 *     interface.
 		 *
 		 * @since 1.2
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		api.registerChange = function() {
@@ -92,7 +92,7 @@
 		 *     interface.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		api.unregisterChange = function() {
@@ -110,7 +110,7 @@
 		 * @param  {function} callback       - Function to run after a successful ajax request
 		 * 
 		 * @since 1.2
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		api.createNewControl = function( controlName, processMethod, callback ) {
@@ -158,7 +158,7 @@
 		 * @param  {function} callback       - Function to run after a successful ajax request
 		 * 
 		 * @since 1.2
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		api.saveControl = function( controlName, controlId, turnOn, processMethod, callback ) {
@@ -210,7 +210,7 @@
 		 * @param  {function} callback       - Function to run after a successful ajax request
 		 * 
 		 * @since 1.2
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		api.deleteControl = function( controlId, processMethod, callback ) {
@@ -245,7 +245,7 @@
 		 * @param  {Function}   callback      - Function to execute after successful AJAX reequest.
 		 *
 		 * @since 1.2
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		api.deleteAllControls = function( processMethod, callback ) {
@@ -281,7 +281,7 @@
 		 * @param  {Function}   callback      - Function to execute after successful AJAX reequest.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		api.forceControls = function( controlId, turnOn, processMethod, callback ) {
@@ -334,7 +334,7 @@
 		 *     way to set placeholder text for input fields.
 		 *
 		 * @since 1.2
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		api.setupInputWithDefaultTitle = function() {
@@ -380,7 +380,7 @@
 		 *     exist on the Edit Font Controls page.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		api.registerEditEvents = function() {
@@ -489,7 +489,7 @@
 		 *     exist on the Manage Font Controls page.
 		 *
 		 * @since 1.2
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 */
 		api.registerManagementEvents = function() {
 			
@@ -636,7 +636,7 @@
 		 *     exist on the Advanced page.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		api.registerAdvancedEvents = function() {

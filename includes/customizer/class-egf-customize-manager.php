@@ -17,7 +17,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2014, Titanium Themes
- * @version   1.3.3
+ * @version   1.3.4
  * 
  */
 if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
@@ -57,7 +57,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * settings page and menu.
 		 *
 		 * @since 1.3
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		function __construct() {
@@ -79,7 +79,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * @return    object    A single instance of this class.
 		 *
 		 * @since 1.3
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		public static function get_instance() {
@@ -98,13 +98,14 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * Add any custom actions in this function.
 		 * 
 		 * @since 1.3
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		public function register_actions() {
 			add_action( 'customize_controls_enqueue_scripts', array( $this, 'customize_controls_enqueue_scripts' ) );
 			add_action( 'customize_preview_init', array( $this, 'customize_live_preview_scripts' ) );
 			add_action( 'customize_register', array( $this, 'customize_preview_styles' ) );
+			add_action( 'customize_register', array( $this, 'register_font_control_type' ) );
 			add_action( 'customize_register', array( $this, 'register_controls' ) );
 			add_action( 'customize_save_tt_font_theme_options', array( $this, 'customize_save_tt_font_theme_options' ) );
 			add_action( 'customize_save_after', array( $this, 'customize_save_after' ) );
@@ -116,7 +117,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * Add any custom filters in this function.
 		 * 
 		 * @since 1.3
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		public function register_filters() {
@@ -130,7 +131,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * loaded yet.
 		 *
 		 * @since 1.3
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		public function include_control_class() {
@@ -145,6 +146,22 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		}
 
 		/**
+		 * Register Font Control
+		 *
+		 * 
+		 * 
+		 * @param  [type] $wp_customize [description]
+		 * @return [type]               [description]
+		 *
+		 * @since 1.3.4
+		 * @version 1.3.4
+		 * 
+		 */
+		public function register_font_control_type( $wp_customize ) {
+			$wp_customize->register_control_type( 'EGF_Font_Control' );
+		}
+
+		/**
 		 * Load All Fonts in Customizer
 		 *
 		 * Loads the required fonts as a json object for the live
@@ -155,7 +172,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * @return array complete list of fonts
 		 *
 		 * @since  1.3
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 */
 		public function customize_load_all_fonts() {
 			return EGF_Font_Utilities::get_all_fonts();
@@ -171,13 +188,10 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * @return void
 		 *
 		 * @since  1.2
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		public function customize_controls_enqueue_scripts() {
-
-			// Load JSON Library by Douglas Crockford
-			wp_enqueue_script( 'json2' );
 
 			wp_enqueue_script( 'wp-color-picker' );
 			wp_enqueue_script( 'iris' );
@@ -185,26 +199,35 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 			// Load WordPress media lightbox
 			wp_enqueue_media();
 
-			// Load js for live customizer control
-			wp_deregister_script( $this->plugin_slug . '-customizer-controls-js' );
+			// Load chosen script
+			wp_deregister_script( $this->plugin_slug . '-chosen' );
 			wp_register_script( 
-				$this->plugin_slug . '-customizer-controls-js',
-				Easy_Google_Fonts::get_js_url() . '/customizer-controls.js',
-				array( 'jquery' ), 
+				$this->plugin_slug . '-chosen',
+				Easy_Google_Fonts::get_js_url() . '/chosen.jquery.js',
+				array( 'customize-controls', 'iris', 'underscore', 'wp-util', 'jquery' ), 
+				'1.3.0', 
+				false 
+			);
+			wp_enqueue_script( $this->plugin_slug . '-chosen' );
+
+			// Load js for live customizer control
+			wp_deregister_script( $this->plugin_slug . '-customize-controls-js' );
+			wp_register_script( 
+				$this->plugin_slug . '-customize-controls-js',
+				Easy_Google_Fonts::get_js_url() . '/customize-controls.js',
+				array( 'customize-controls', 'iris', 'underscore', 'wp-util', 'jquery' ), 
 				Easy_Google_Fonts::VERSION, 
 				false 
 			);
-			wp_enqueue_script( $this->plugin_slug . '-customizer-controls-js' );
+			wp_enqueue_script( $this->plugin_slug . '-customize-controls-js' );
 
-			// Load in customizer control javascript object
-			$previewl10n = $this->customize_live_preview_l10n();
-			wp_localize_script( $this->plugin_slug . '-customizer-controls-js', 'ttFontCustomizeSettings', $previewl10n );
-
+			// Load translation json object.
 			$translationl10n = $this->customize_control_l10n();
-			wp_localize_script( $this->plugin_slug . '-customizer-controls-js', 'ttFontTranslation', $translationl10n );
+			wp_localize_script( $this->plugin_slug . '-customize-controls-js', 'egfTranslation', $translationl10n );
 
+			// Load in all fonts as a json object.
 			$all_fonts = $this->customize_load_all_fonts();
-			wp_localize_script( $this->plugin_slug . '-customizer-controls-js', 'ttFontAllFonts', $all_fonts );
+			wp_localize_script( $this->plugin_slug . '-customize-controls-js', 'egfAllFonts', $all_fonts );
 		}
 
 		/**
@@ -218,31 +241,28 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * @return void
 		 *
 		 * @since  1.3
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		public function customize_live_preview_scripts() {
 			global $wp_customize;
 
-			// Load JSON Library by Douglas Crockford
-			wp_enqueue_script( 'json2' );
-
 			// Load js for live customizer control
-			wp_deregister_script( $this->plugin_slug . '-customizer-preview-js' );
+			wp_deregister_script( $this->plugin_slug . '-customize-preview-js' );
 			wp_register_script( 
-				$this->plugin_slug . '-customizer-preview-js',
-				Easy_Google_Fonts::get_js_url() . '/customizer-preview.js',
-				false, 
+				$this->plugin_slug . '-customize-preview-js',
+				Easy_Google_Fonts::get_js_url() . '/customize-preview.js',
+				array( 'customize-preview' ),
 				Easy_Google_Fonts::VERSION, 
 				false 
 			);
-			wp_enqueue_script( $this->plugin_slug . '-customizer-preview-js' );
+			wp_enqueue_script( $this->plugin_slug . '-customize-preview-js' );
 
 			$previewl10n = $this->customize_live_preview_l10n();
-			wp_localize_script( $this->plugin_slug . '-customizer-preview-js', 'ttFontPreviewControls', $previewl10n );
+			wp_localize_script( $this->plugin_slug . '-customize-preview-js', 'egfFontPreviewControls', $previewl10n );
 
 			$all_fonts = $this->customize_load_all_fonts();
-			wp_localize_script( $this->plugin_slug . '-customizer-preview-js', 'ttFontAllFonts', $all_fonts );
+			wp_localize_script( $this->plugin_slug . '-customize-preview-js', 'egfAllFonts', $all_fonts );
 		}
 
 		/**
@@ -256,12 +276,21 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * @return void
 		 *
 		 * @since  1.3
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		public function customize_preview_styles() {
 
 			wp_enqueue_style( 'wp-color-picker' );
+
+			// Load Chosen CSS
+			wp_register_style( 
+				$this->plugin_slug . '-chosen-css',
+				Easy_Google_Fonts::get_css_url() . '/chosen.css',
+				false, 
+				'1.3.0' 
+			);
+			wp_enqueue_style( $this->plugin_slug . '-chosen-css' );			
 
 			// Load CSS to style custom customizer controls
 			wp_register_style( 
@@ -283,7 +312,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * @return array $controls 	Control properties which will be enqueues as a JSON object on the page
 		 *
 		 * @since  1.3
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		public function customize_live_preview_l10n() {
@@ -330,7 +359,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * @return array $translations - String variables 
 		 *
 		 * @since  1.3
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		public function customize_control_l10n() {
@@ -360,7 +389,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * the font setting is being saved.
 		 * 
 		 * @since  1.3
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		public function customize_save_tt_font_theme_options() {
@@ -376,7 +405,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * saved.
 		 * 
 		 * @since  1.3
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		public function customize_save_after() {
@@ -397,7 +426,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 		 * @param 	object	$wp_customize	Object that holds the customizer data
 		 * 
 		 * @since  1.3
-		 * @version 1.3.3
+		 * @version 1.3.4
 		 * 
 		 */
 		public function register_controls( $wp_customize ) {
@@ -406,8 +435,8 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 				return;
 			}
 
-			$tt_font_options = EGF_Register_Options::get_options( false );
-			
+			$tt_font_options = EGF_Register_Options::get_options( false );		
+
 			// Get the array of option parameters
 			$option_parameters = EGF_Register_Options::get_option_parameters();
 
@@ -470,7 +499,8 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 				 * 
 				 * DEVELOPER NOTE: To change the transport type for each 
 				 * option modify the 'transport' value for the appropriate 
-				 * option in the $options array found in tt_font_get_option_parameters()
+				 * option in the $options array found in:
+				 * tt_font_get_option_parameters()
 				 * 
 				 */
 				$transport = empty( $option_parameter['transport'] ) ? 'refresh' : $option_parameter['transport'];
@@ -479,25 +509,11 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 				 * Add Setting To Customizer:
 				 * 
 				 * Adds $option_parameter setting to customizer
-				 * further properties are registered below. The
-				 * color properties are registered as separate 
-				 * settings for performance reasons.
+				 * further properties are registered below.
 				 * 
 				 */
 				$wp_customize->add_setting( 'tt_font_theme_options[' . $option_parameter['name'] . ']', array(
 					'default'        => $option_parameter['default'],
-					'type'           => 'option',
-					'transport'      => $transport,
-				) );
-
-				$wp_customize->add_setting( 'tt_font_theme_options[' . $option_parameter['name'] . '][font_color]', array(
-					'default'        => $option_parameter['default']['font_color'],
-					'type'           => 'option',
-					'transport'      => $transport,
-				) );
-
-				$wp_customize->add_setting( 'tt_font_theme_options[' . $option_parameter['name'] . '][background_color]', array(
-					'default'        => $option_parameter['default']['background_color'],
 					'type'           => 'option',
 					'transport'      => $transport,
 				) );
@@ -522,6 +538,7 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 								$wp_customize, 
 								$option_parameter['name'], 
 								array(
+									'id'       => '',
 									'label'    => $option_parameter['title'],
 									'section'  => 'tt_font_' . $option_parameter['tab'],
 									'settings' => 'tt_font_theme_options['. $option_parameter['name'] . ']',
@@ -532,7 +549,8 @@ if ( ! class_exists( 'EGF_Customize_Manager' ) ) :
 						);
 						break;
 
-					// Here in case we decide to implement an additional lightweight control
+					// Here in case we decide to implement 
+					// an additional lightweight control.
 					case 'font_basic':
 						break;
 				}
