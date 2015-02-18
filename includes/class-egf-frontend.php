@@ -368,7 +368,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 				}
 
 				// Bail if poperty has units but is empty.
-				if ( $property['has_units'] && empty( $option[ $id ]['amount'] ) ) {
+				if ( $property['has_units'] && empty( $option[ $key ]['amount'] ) ) {
 					continue;
 				}
 
@@ -399,7 +399,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 				if ( $property['has_units'] ) {
 					$output .= "{$property['property']}: {$option[ $key ]['amount']}{$option[ $key ]['unit']}{$importance}; ";
 				} else if ( 'font-family' == $property['property'] ) {
-					$output .= "{$property['property']}: '{$option[ $id ]}'{$importance}; ";
+					$output .= "{$property['property']}: '{$option[ $key ]}'{$importance}; ";
 				} else {
 					$output .= "{$property['property']}: {$option[ $key ]}{$importance}; ";
 				}
