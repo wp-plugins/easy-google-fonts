@@ -10,7 +10,7 @@
  * @author Patrick Filler - Harvest (Original Plugin Author)
  * 
  * @since 1.3.4
- * @version 1.3.4
+ * @version 1.3.5
  *
  * Information about the Original Plugin:
  *
