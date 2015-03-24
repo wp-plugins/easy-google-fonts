@@ -11,7 +11,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2014, Titanium Themes
- * @version   1.3.5
+ * @version   1.3.6
  * 
  */
 if ( ! class_exists( 'EGF_Frontend' ) ) :
@@ -42,7 +42,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * settings page and menu.
 		 *
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		function __construct() {
@@ -62,7 +62,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @return    object    A single instance of this class.
 		 *
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		public static function get_instance() {
@@ -84,7 +84,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * possible.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		public function register_actions() {
@@ -98,7 +98,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * Add any custom filters in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		public function register_filters() {
@@ -121,7 +121,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 *
 		 * @global $wp_customize
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		public function enqueue_stylesheets() {
@@ -221,7 +221,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 					wp_deregister_style( $stylesheet_handle );
 					wp_register_style( 
 						$stylesheet_handle, 
-						str_replace( '|:', '', $request_url )
+						str_replace( array( '|:', ':|' ), '', $request_url )
 					);
 					wp_enqueue_style( $stylesheet_handle );
 				}
@@ -237,7 +237,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @link http://codex.wordpress.org/Function_Reference/add_action 	add_action()
 		 *
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		public function output_styles() {
@@ -284,7 +284,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @return string $output 	Inline styles
 		 *
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		public function generate_css( $option, $force_styles = false ) {
@@ -349,7 +349,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @return string $output 	Inline styles
 		 *
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		public function generate_customizer_css( $option, $selector, $id = '', $force_styles = false ) {
@@ -427,7 +427,7 @@ if ( ! class_exists( 'EGF_Frontend' ) ) :
 		 * @return array $properties 	Array of settings with css properties.
 		 *
 		 * @since 1.3.4
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		public function get_css_properties() {		

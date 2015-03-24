@@ -7,8 +7,6 @@
  * code necessary to enable the custom controls used in the live
  * previewer.
  *
- * v1.3.2
- *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -31,7 +29,7 @@
  * @todo increase dependancy on JS in future releases.
  * 
  * @since 1.2
- * @version 1.3.5
+ * @version 1.3.6
  *
  * =============================================================== */
 
@@ -52,7 +50,7 @@
 		 *     for the Font Controls Admin Screen.
 		 *
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		api.init = function() {
@@ -77,7 +75,7 @@
 		 *     interface.
 		 *
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		api.registerChange = function() {
@@ -92,7 +90,7 @@
 		 *     interface.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		api.unregisterChange = function() {
@@ -110,7 +108,7 @@
 		 * @param  {function} callback       - Function to run after a successful ajax request
 		 * 
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		api.createNewControl = function( controlName, processMethod, callback ) {
@@ -158,7 +156,7 @@
 		 * @param  {function} callback       - Function to run after a successful ajax request
 		 * 
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		api.saveControl = function( controlName, controlId, turnOn, processMethod, callback ) {
@@ -210,7 +208,7 @@
 		 * @param  {function} callback       - Function to run after a successful ajax request
 		 * 
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		api.deleteControl = function( controlId, processMethod, callback ) {
@@ -245,7 +243,7 @@
 		 * @param  {Function}   callback      - Function to execute after successful AJAX reequest.
 		 *
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		api.deleteAllControls = function( processMethod, callback ) {
@@ -281,7 +279,7 @@
 		 * @param  {Function}   callback      - Function to execute after successful AJAX reequest.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		api.forceControls = function( controlId, turnOn, processMethod, callback ) {
@@ -334,7 +332,7 @@
 		 *     way to set placeholder text for input fields.
 		 *
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		api.setupInputWithDefaultTitle = function() {
@@ -380,7 +378,7 @@
 		 *     exist on the Edit Font Controls page.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		api.registerEditEvents = function() {
@@ -489,7 +487,7 @@
 		 *     exist on the Manage Font Controls page.
 		 *
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 */
 		api.registerManagementEvents = function() {
 			
@@ -636,7 +634,7 @@
 		 *     exist on the Advanced page.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.5
+		 * @version 1.3.6
 		 * 
 		 */
 		api.registerAdvancedEvents = function() {
