@@ -11,7 +11,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2014, Titanium Themes
- * @version   1.3.6
+ * @version   1.3.7
  * 
  */
 if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
@@ -81,7 +81,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * @uses Easy_Google_Fonts::get_instance() defined in \includes\class-easy-google-fonts.php
 		 *
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		function __construct() {
@@ -108,7 +108,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * @return    object    A single instance of this class.
 		 *
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		public static function get_instance() {
@@ -128,7 +128,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * admin settings page.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		private function set_urls() {
@@ -145,7 +145,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * admin settings page.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		public function set_font_controls() {
@@ -180,15 +180,15 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 			}
 
 			// Determine Screen via $_GET['action']
-			$action = isset( $_GET['action'] ) ? $_GET['action'] : false;
+			$action = isset( $_GET['action'] ) ? esc_attr( $_GET['action'] ) : false;
 
 			// Update current control id if it is passed in the URL
 			if ( isset( $_GET['control'] ) ) {
-				$this->current_control_id = $_GET['control'];
+				$this->current_control_id = esc_attr( $_GET['control'] );
 			}
 
 			// The control id of the current control being edited - Note this is a string representation of '0', not an integer
-			$this->control_selected_id = isset( $_GET['control'] ) ? $_GET['control'] : '0';
+			$this->control_selected_id = isset( $_GET['control'] ) ? esc_attr( $_GET['control'] ) : '0';
 
 			// Attempt to get a control instance if it exists 
 			$this->control_instance = EGF_Posttype::get_font_control( $this->control_selected_id );
@@ -222,7 +222,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * screen the user is currently on.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		public function set_screen_state() {
@@ -234,7 +234,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 
 			// Determine Screen
 			if ( isset( $_GET['screen'] ) ) {
-				switch ( $_GET['screen'] ) {
+				switch ( esc_attr( $_GET['screen'] ) ) {
 
 					case 'edit':
 						$this->is_edit_screen = true;
@@ -252,7 +252,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 
 			if ( ! $this->is_manage_screen && ! $this->is_advanced_screen ) {
 				// Determine Screen via $_GET['action']
-				$action = isset( $_GET['action'] ) ? $_GET['action'] : false;
+				$action = isset( $_GET['action'] ) ? esc_attr( $_GET['action'] ) : false;
 
 				if ( 'edit' == $action ) {
 					$this->is_edit_screen   = true;
@@ -310,7 +310,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * Add any custom actions in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		public function register_actions() {
@@ -322,7 +322,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * Add any custom filters in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		public function register_filters() {
@@ -337,7 +337,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * @return boolean true
 		 * 
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		public function is_edit_screen() {
@@ -354,7 +354,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * @return boolean true
 		 * 
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		public function is_create_screen() {
@@ -370,7 +370,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * @return boolean true
 		 * 
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		public function is_manage_screen() {
@@ -386,7 +386,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * @return boolean true
 		 * 
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		public function is_advanced_screen() {
@@ -400,7 +400,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * Gets the page container openining tag markup.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		public function get_page_start() {
@@ -413,7 +413,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * Gets the page container closing tag markup.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		public function get_page_end() {
@@ -427,7 +427,7 @@ if ( ! class_exists( 'EGF_Admin_Controller' ) ) :
 		 * settings page.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		public function get_page_tabs() {

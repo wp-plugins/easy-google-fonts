@@ -13,7 +13,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2014, Titanium Themes
- * @version   1.3.6
+ * @version   1.3.7
  * 
  */
 if ( ! class_exists( 'EGF_Ajax' ) ) :
@@ -43,7 +43,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 		 * settings page and menu.
 		 *
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		function __construct() {
@@ -63,7 +63,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 		 * @return    object    A single instance of this class.
 		 *
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		public static function get_instance() {
@@ -82,7 +82,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 		 * Add any custom actions in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		public function register_actions() {
@@ -100,7 +100,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 		 * Add any custom filters in this function.
 		 * 
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		public function register_filters() {
@@ -114,7 +114,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 		 * updates the Google API key.
 		 *
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		public function set_google_api_key() {
@@ -127,7 +127,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 			}
 
 			if ( isset( $_POST['apiKey'] ) ) {
-				$apiKey = $_POST['apiKey'];
+				$apiKey = esc_attr( $_POST['apiKey'] );
 				EGF_Font_Utilities::set_google_api_key( $apiKey );
 			}
 
@@ -149,7 +149,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 		 * comparison to check the users intent.
 		 *
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		public function force_font_control_styles() {
@@ -162,7 +162,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 			}
 
 			if ( isset( $_POST['controlId'] ) ) {
-				$control_id = $_POST['controlId'];
+				$control_id = esc_attr( $_POST['controlId'] );
 				$switch     = ( isset( $_POST['force-styles'] ) && 'true' == $_POST['force-styles'] ) ? true : false;
 				$control    = EGF_Posttype::get_font_control( $control_id );
 
@@ -183,7 +183,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 		 * client.
 		 *
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		public function create_control_instance() {
@@ -198,7 +198,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 
 			// Get Control Name
 			if( isset( $_POST['control_name'] ) ) {
-				$control_name =  $_POST['control_name'];
+				$control_name =  esc_attr( $_POST['control_name'] );
 			} else {
 				$control_name = __( 'Custom Font Control', $this->plugin_slug );
 			}
@@ -236,7 +236,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 		 * client.
 		 *
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		public function update_control_instance() {
@@ -250,8 +250,8 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 			}
 			
 			// Get control attributes	
-			$control_id   = isset( $_POST['controlId'] )   ? (string) $_POST['controlId'] : (string) '0';
-			$control_name = isset( $_POST['controlName'] ) ? (string) $_POST['controlName'] : __( 'Custom Sidebar', $this->plugin_slug );
+			$control_id   = isset( $_POST['controlId'] )   ? (string) esc_attr( $_POST['controlId'] ) : (string) '0';
+			$control_name = isset( $_POST['controlName'] ) ? (string) esc_attr( $_POST['controlName'] ) : __( 'Custom Font Control', $this->plugin_slug );
 			$force_styles = false;
 			$description  = '';
 
@@ -259,6 +259,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 
 			if ( isset( $_POST['control-selectors'] ) ) {
 				$selectors = (array) $_POST['control-selectors'];
+				$selectors = array_map( 'esc_attr', $selectors );
 			}
 
 			if ( isset( $_POST['force-styles'] ) ) {
@@ -327,7 +328,7 @@ if ( ! class_exists( 'EGF_Ajax' ) ) :
 		 * it deletes all control instances from the database.
 		 *
 		 * @since 1.2
-		 * @version 1.3.6
+		 * @version 1.3.7
 		 * 
 		 */
 		function delete_all_control_instances() {

@@ -2,9 +2,9 @@
 Contributors: sunny_johal, amit_kayasth
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=28M8NWPHVQNYU
 Tags: WordPress Google Fonts Plugin, Google Webfonts, Google Fonts WordPress, Typography, Webfonts, WordPress Webfonts, Fonts, WordPress Fonts, Theme Fonts, Theme Fonts Plugin
-Requires at least: 4.1
-Tested up to: 4.2
-Stable tag: 1.3.6
+Requires at least: 4.2
+Tested up to: 4.2.2
+Stable tag: 1.3.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -94,6 +94,12 @@ e.g.
 9. View and manage all of your custom controls in the admin area.
 
 == Changelog ==
+
+= 1.3.7 - Important Update =
+* Addressed potential security issue on the plugin admin page - Hardened security and escaped any attributes passed via the URL throughout the plugin.
+* Now added support for arabic and telegu and devangari subsets.
+* Updated JSON decode when parsing fonts for servers running an older version of PHP.
+
 = 1.3.6 - Updated Stylesheet Enqueue =
 * Addressed issue on certain servers where a 400 error was being returned when making a http request to google.
 
