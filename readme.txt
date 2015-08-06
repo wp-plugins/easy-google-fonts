@@ -3,8 +3,8 @@ Contributors: sunny_johal, amit_kayasth
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=28M8NWPHVQNYU
 Tags: WordPress Google Fonts Plugin, Google Webfonts, Google Fonts WordPress, Typography, Webfonts, WordPress Webfonts, Fonts, WordPress Fonts, Theme Fonts, Theme Fonts Plugin
 Requires at least: 4.2
-Tested up to: 4.2.2
-Stable tag: 1.3.7
+Tested up to: 4.2.4
+Stable tag: 1.3.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
