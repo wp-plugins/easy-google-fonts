@@ -20,7 +20,7 @@
  * 4. Backbone
  *
  * @since 1.3.4
- * @version 1.3.8
+ * @version 1.3.9
  *
  * @todo - Leverage backbone templates to load 
  *     <style> elements into the <head> instead 
@@ -46,7 +46,7 @@
 	 * @uses object egfFontPreviewControls  
 	 *
 	 * @since 1.3.4
-	 * @version 1.3.8
+	 * @version 1.3.9
 	 * 
 	 */
 	preview.init = function() {
@@ -105,7 +105,7 @@
 	 * @param {boolean} withUnits 	Whether this CSS property value has units.
 	 *
 	 * @since 1.3.4
-	 * @version 1.3.8
+	 * @version 1.3.9
 	 * 
 	 */
 	preview.setStyle = function( setting, styleId, selector, property, importance, withUnits ) {
@@ -150,7 +150,7 @@
 	 * @param {obj} 	obj    Object containing all of the current settings.
 	 *
 	 * @since 1.3.4
-	 * @version 1.3.8
+	 * @version 1.3.9
 	 * 
 	 */
 	preview.enqueueStylesheet = function( id ) {
@@ -180,7 +180,7 @@
 	 * @param {string} 	importance 	Whether to force styles using !important.
 	 *
 	 * @since 1.3.4
-	 * @version 1.3.8
+	 * @version 1.3.9
 	 * 
 	 */
 	preview.setFontFamily = function( id, selector, importance ) {
@@ -205,7 +205,7 @@
 	 * @param {string} 	importance 	Whether to force styles using !important.
 	 *
 	 * @since 1.3.4
-	 * @version 1.3.8
+	 * @version 1.3.9
 	 * 
 	 */
 	preview.setFontWeight = function( id, selector, importance ) {
@@ -230,7 +230,7 @@
 	 * @param {string} 	importance 	Whether to force styles using !important.
 	 *
 	 * @since 1.3.4
-	 * @version 1.3.8
+	 * @version 1.3.9
 	 * 
 	 */
 	preview.setFontStyle = function( id, selector, importance ) {
@@ -255,7 +255,7 @@
 	 * @param {string} 	importance 	Whether to force styles using !important.
 	 *
 	 * @since 1.3.4
-	 * @version 1.3.8
+	 * @version 1.3.9
 	 * 
 	 */
 	preview.setTextDecoration = function( id, selector, importance ) {
@@ -280,7 +280,7 @@
 	 * @param {string} 	importance 	Whether to force styles using !important.
 	 *
 	 * @since 1.3.4
-	 * @version 1.3.8
+	 * @version 1.3.9
 	 * 
 	 */
 	preview.setTextTransform = function( id, selector, importance ) {
@@ -305,7 +305,7 @@
 	 * @param {string} 	importance 	Whether to force styles using !important.
 	 *
 	 * @since 1.3.4
-	 * @version 1.3.8
+	 * @version 1.3.9
 	 * 
 	 */
 	preview.setFontColor = function( id, selector, importance ) {
@@ -330,7 +330,7 @@
 	 * @param {string} 	importance 	Whether to force styles using !important.
 	 *
 	 * @since 1.3.4
-	 * @version 1.3.8
+	 * @version 1.3.9
 	 * 
 	 */
 	preview.setBackgroundColor = function( id, selector, importance ) {
@@ -355,7 +355,7 @@
 	 * @param {string} 	importance 	Whether to force styles using !important.
 	 *
 	 * @since 1.3.4
-	 * @version 1.3.8
+	 * @version 1.3.9
 	 * 
 	 */
 	preview.setFontSize = function( id, selector, importance ) {
@@ -381,7 +381,7 @@
 	 * @param {string} 	importance 	Whether to force styles using !important.
 	 *
 	 * @since 1.3.4
-	 * @version 1.3.8
+	 * @version 1.3.9
 	 * 
 	 */
 	preview.setLineHeight = function( id, selector, importance ) {
@@ -406,7 +406,7 @@
 	 * @param {string} 	importance 	Whether to force styles using !important.
 	 *
 	 * @since 1.3.4
-	 * @version 1.3.8
+	 * @version 1.3.9
 	 * 
 	 */
 	preview.setLetterSpacing = function( id, selector, importance ) {
@@ -432,7 +432,7 @@
 	 * @param {string} 	importance 	Whether to force styles using !important.
 	 *
 	 * @since 1.3.4
-	 * @version 1.3.8
+	 * @version 1.3.9
 	 * 
 	 */
 	preview.setMargin = function( id, selector, importance ) {
@@ -465,7 +465,7 @@
 	 * @param {string} 	importance 	Whether to force styles using !important.
 	 *
 	 * @since 1.3.4
-	 * @version 1.3.8
+	 * @version 1.3.9
 	 * 
 	 */
 	preview.setPadding = function( id, selector, importance ) {
@@ -498,7 +498,7 @@
 	 * @param {string} 	importance 	Whether to force styles using !important.
 	 *
 	 * @since 1.3.4
-	 * @version 1.3.8
+	 * @version 1.3.9
 	 * 
 	 */
 	preview.setBorder = function( id, selector, importance ) {
@@ -550,7 +550,7 @@
 	 * @param {string} 	importance 	Whether to force styles using !important.
 	 *
 	 * @since 1.3.4
-	 * @version 1.3.8
+	 * @version 1.3.9
 	 * 
 	 */
 	preview.setBorderRadius = function( id, selector, importance ) {
@@ -589,7 +589,7 @@
 	 * @param {string} 	importance 	Whether to force styles using !important.
 	 *
 	 * @since 1.3.4
-	 * @version 1.3.8
+	 * @version 1.3.9
 	 * 
 	 */
 	preview.setDisplay = function( id, selector, importance ) {

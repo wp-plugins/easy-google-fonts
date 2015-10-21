@@ -14,7 +14,7 @@
  * @license   GPL-2.0+
  * @link      http://wordpress.org/plugins/easy-google-fonts/
  * @copyright Copyright (c) 2015, Titanium Themes
- * @version   1.3.8
+ * @version   1.3.9
  * 
  */
 .accordion-section-content a {
@@ -66,7 +66,8 @@
 	display: block;
 	position: relative;
 	cursor: pointer;
-	background: #EEEEEE;
+	background: #FFFFFF;
+	border: 1px solid #DDDDDD;
 }
 
 .egf-trigger-content {
@@ -77,7 +78,7 @@
 	line-height: 16px;
 	margin-right: 20px;
 	padding: 4px 5px;
-	border: 2px solid #eeeeee;
+	border: 2px solid #FFFFFF;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -86,7 +87,7 @@
 
 .egf-trigger-label{
 	color: #333;
-	background: #eeeeee;
+	background: #FFFFFF;
 	display: none;
 	max-width: 200px;
 }
@@ -155,12 +156,13 @@
 }
 
 .egf-customizer-tabs ul li.selected {
-	background: none repeat scroll 0 0 #FDFDFD;
+	background: none repeat scroll 0 0 #EEEEEE;
 	border-color: #DFDFDF;
 	border-radius: 2px 2px 0 0;
 	color: #777777;
 	margin-bottom: -1px;
-	padding-bottom: 4px;	
+	padding-bottom: 4px;
+	font-weight: bold;
 }
 
 .egf-font-properties {
@@ -270,6 +272,7 @@
 
 .egf-font-control .wp-picker-container .iris-picker {
 	border-color: transparent;
+	background: transparent;
 	margin-left: -11px;
 }
 
@@ -611,6 +614,7 @@
 
 .egf-font-control .ui-slider-horizontal {
 	height: .8em;
+	background: #FFFFFF;
 }
 .egf-font-control .ui-slider-horizontal .ui-slider-handle {
 	top: -.3em;
@@ -630,7 +634,7 @@
 /* Fields: Font Positioning Tab
 ----------------------------------*/
 .egf-font-toggle {
-	border: 1px solid #EEEEEE;
+	border: 1px solid #DDDDDD;
 	margin-bottom: 6px;
 }
 
@@ -680,15 +684,17 @@
 
 .egf-font-toggle.selected .customize-control-title.inner-control-title:after {
 	color: #555555;
-	content: "";
+	content: "\f142";
+	font: 400 20px/1 dashicons;
 }
 
 .toggle-section-content {
 	padding: 10px 15px;
-	border-top: 1px solid #EEEEEE;
+	border-top: 1px solid #DDDDDD;
 	display: none;
 }
 
 .egf-font-toggle.selected .toggle-section-content {
 	display: block;
+	background-color: #FBFBFB;
 }
