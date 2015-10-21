@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Adds google fonts to any theme without coding and integrates with the WordPress Customizer automatically for a realtime live preview.
 
 == Description ==
-> Our new WordPress theme is almost ready! Want to know when we launch? Awesome! [Visit our website](http://www.titaniumthemes.com) and enter your details and we will e-mail you as soon as we are ready :)
+> **Our new WordPress theme is almost ready!** Want to know when we launch? Awesome! [Visit our website](http://www.titaniumthemes.com) and enter your details and we will e-mail you as soon as we are ready :)
 
 For a quick video demo please view the [vimeo screencast](https://vimeo.com/77878709).
 
